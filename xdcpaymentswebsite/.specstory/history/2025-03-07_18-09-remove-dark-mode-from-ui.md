@@ -1,3 +1,152 @@
+## SpecStory
+
+## Remove Dark Mode from UI (3/7/2025, 6:09:38 PM)
+
+_**User**_
+
+have only light mode, remove dark mode related code and the option to toggle also from UI
+
+---
+
+_**Assistant**_
+
+I'll help remove the dark mode related code. Since this appears to be a UI change, we'll need to modify the HTML file to remove the dark mode toggle and any related styling.
+
+Here are the suggested changes:
+
+```html:bridge-demo-access-new.html
+// ... existing code ...
+<header>
+    <div class="header-content">
+        <div class="logo">
+            <img src="assets/bridge-logo.svg" alt="Bridge Logo">
+        </div>
+        <!-- Remove dark mode toggle button -->
+    </div>
+</header>
+// ... existing code ...
+
+<style>
+    // ... existing code ...
+    
+    /* Remove any dark theme related CSS variables and styles */
+    :root {
+        --bg-color: #ffffff;
+        --text-color: #333333;
+        --border-color: #e0e0e0;
+        --hover-color: #f5f5f5;
+    }
+
+    /* Remove any .dark-theme related styles if they exist */
+    
+    body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+    }
+    // ... existing code ...
+</style>
+
+<script>
+    // ... existing code ...
+    // Remove any dark mode toggle related JavaScript functions
+    // Remove any theme switching logic
+    // ... existing code ...
+</script>
+```
+
+This edit will:
+1. Remove the dark mode toggle button from the header
+2. Simplify the CSS variables to only include light mode colors
+3. Remove any `.dark-theme` related CSS classes and styles
+4. Remove any JavaScript functions related to theme switching
+
+Please note that without seeing the full content of your HTML file, I've provided a general structure for the changes. You may need to remove additional dark mode related code depending on your specific implementation. Let me know if you need more specific guidance once you share the full file content.
+
+---
+
+_**User**_
+
+can you check this index.html and make chnages
+
+---
+
+_**Assistant**_
+
+I notice this is actually `bridge-demo-access-new.html` rather than `index.html`. I'll help remove the dark mode related code from this file.
+
+Here are the changes needed:
+
+```html:bridge-demo-access-new.html
+// ... existing code ...
+<style>
+    // ... existing code ...
+    /* Remove dark theme related styles */
+    .logo-dark {
+        display: none;  /* Remove this class entirely */
+    }
+    .light-header .logo-dark {
+        display: none;  /* Remove this class entirely */
+    }
+    .light-header .logo-light {
+        display: none;  /* Remove this class entirely */
+    }
+
+    /* Keep only light mode logo always visible */
+    .header__logo img {
+        max-width: 100%;
+        display: block;  /* Always show light logo */
+    }
+    // ... existing code ...
+</style>
+
+// ... existing code ...
+
+<header class="header">
+    <div class="page-center">
+        <div class="row align-items-center justify-content-between">
+            <div class="col-auto">
+                <!-- Remove dark logo, keep only light logo -->
+                <a class="header__logo header__logo--main" href="index.html">
+                    <img src="./images/impel-logo.svg" alt="Impel logo">
+                </a>
+            </div>
+            // ... rest of header code ...
+        </div>
+    </div>
+</header>
+
+// ... existing code ...
+
+<footer class="footer site-footer">
+    // ... existing footer code ...
+    <div class="footer__logo">
+        <!-- Remove dark logo reference, keep only light logo
+
+---
+
+_**User**_
+
+can you check this index.html and make chnages
+
+---
+
+_**Assistant**_
+
+I notice you want me to check index.html, but I don't have access to its contents. Could you please share the contents of index.html so I can help make the dark mode related changes?
+
+From what I can see, you want to remove dark mode related code, but I'll need to see the actual index.html file to make the appropriate changes. Please share the contents of index.html and I'll help:
+
+1. Remove dark mode toggle functionality
+2. Remove dark theme related CSS
+3. Clean up any dark mode related HTML elements
+4. Keep only light mode styling
+
+Could you please share the contents of index.html?
+
+---
+
+_**User**_
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -1441,6 +1590,12 @@ body:not([data-theme="dark"]) {
 }
 </style>
 
+<!-- Add this right after the body tag -->
+<button class="theme-toggle" onclick="toggleTheme()">
+  <span class="theme-icon">🌙</span>
+  <span class="theme-text">Dark Mode</span>
+</button>
+
 <!-- Add this script before closing body tag -->
 <script>
 function toggleTheme() {
@@ -1448,6 +1603,20 @@ function toggleTheme() {
   const themeToggle = document.querySelector('.theme-toggle');
   const themeIcon = themeToggle.querySelector('.theme-icon');
   const themeText = themeToggle.querySelector('.theme-text');
+  
+  if (html.getAttribute('data-theme') === 'dark') {
+    html.removeAttribute('data-theme');
+    themeIcon.textContent = '🌙';
+    themeText.textContent = 'Dark Mode';
+    localStorage.setItem('theme', 'light');
+  } else {
+    html.setAttribute('data-theme', 'dark');
+    themeIcon.textContent = '☀️';
+    themeText.textContent = 'Light Mode';
+    localStorage.setItem('theme', 'dark');
+  }
+}
+
 // Check for saved theme preference
 document.addEventListener('DOMContentLoaded', () => {
   const savedTheme = localStorage.getItem('theme');
@@ -2622,5 +2791,126 @@ document.addEventListener('DOMContentLoaded', () => {
   });
  });
 </script>
+
+<!-- Add this script before closing </body> tag -->
+<script>
+function toggleTheme() {
+  const html = document.documentElement;
+  const themeToggle = document.querySelector('.theme-toggle');
+  const themeIcon = themeToggle.querySelector('.theme-icon');
+  const themeText = themeToggle.querySelector('.theme-text');
+  
+  if (html.getAttribute('data-theme') === 'dark') {
+    html.removeAttribute('data-theme');
+    themeIcon.textContent = '🌙';
+    themeText.textContent = 'Dark Mode';
+    localStorage.setItem('theme', 'light');
+  } else {
+    html.setAttribute('data-theme', 'dark');
+    themeIcon.textContent = '☀️';
+    themeText.textContent = 'Light Mode';
+    localStorage.setItem('theme', 'dark');
+  }
+}
+
+// Check for saved theme preference
+document.addEventListener('DOMContentLoaded', () => {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    document.querySelector('.theme-icon').textContent = '☀️';
+    document.querySelector('.theme-text').textContent = 'Light Mode';
+  }
+});
+</script>
 </body>
 </html>
+
+
+---
+
+_**Assistant**_
+
+I'll help you remove the dark mode related code from this file. Here are the necessary changes:
+
+```html:index.html
+// ... existing code ...
+<head>
+// ... existing code ...
+
+<!-- Remove these dark theme style blocks -->
+<style>
+/* Theme Variables */
+:root {
+  /* Light Theme (Default) */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5ff;
+  --text-primary: #3533cd;
+  --text-secondary: #3533cd;
+  --accent-color: #3533cd;
+  --accent-hover: #2826a4;
+  --card-bg: #ffffff;
+  --border-color: #e5e5e5;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --bg-primary: #1a1a2e;
+  --bg-secondary: #242444;
+  // ... remove rest of dark theme variables ...
+}
+
+// ... remove rest of dark theme styles ...
+</style>
+
+<!-- Remove theme toggle button -->
+<button class="theme-toggle" onclick="toggleTheme()">
+  <span class="theme-icon">🌙</span>
+  <span class="theme-text">Dark Mode</span>
+</button>
+
+// ... existing code ...
+
+<!-- Remove theme toggle script -->
+<script>
+function toggleTheme() {
+  // ... remove toggle function ...
+}
+
+// Remove theme check on load
+document.addEventListener('DOMContentLoaded', () => {
+  // ... remove theme check code ...
+});
+</script>
+
+// ... existing code ...
+</head>
+```
+
+The changes involve:
+
+1. Removing the theme variables and dark theme styles
+2. Removing the theme toggle button HTML
+3. Removing the JavaScript functions for theme toggling
+4. Removing the theme check on page load
+
+The rest of the file can remain unchanged since it uses standard styling. Let me know if you would like me to make any other changes!
+
+---
+
+_**User**_
+
+still toggle button not reoved
+
+---
+
+_**Assistant**_
+
+
+
+---
+
+
+
+---
+
