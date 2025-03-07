@@ -1,0 +1,70 @@
+.form-mod {
+    position: relative
+}
+
+.bg-form {
+    bottom: -90px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    width: 154px
+}
+
+.bg-form svg {
+    height: auto;
+    max-width: 100%
+}
+
+.form-entry {
+    position: relative
+}
+
+.form-mod .form-title {
+    font-size: 30px;
+    letter-spacing: -.05em;
+    line-height: 1.33;
+    margin: 0 0 20px
+}
+
+.form-mod form>fieldset:first-child>.hs-richtext {
+    margin-bottom: 50px
+}
+
+.form-mod .form-col-lp {
+    font-size: 16px;
+    letter-spacing: -.7px;
+    line-height: 26px
+}
+
+@media screen and (min-width: 992px) {
+    .form-mod .form-col-lp {
+        font-size:18px;
+        line-height: 30px
+    }
+
+    .bg-form {
+        bottom: -180px;
+        width: 352px
+    }
+
+    .form-mod .form-title {
+        font-size: 55px;
+        line-height: 1.18;
+        margin-bottom: 20px
+    }
+}
+
+@media (max-width: 767px) {
+    .form-mod .form-columns-2 .hs-form-field .hs-input,.form-mod .form-columns-3 .hs-form-field .hs-input {
+        width:100%!important
+    }
+}
+
+.form-mod .hs-input[type=checkbox] {
+    width: auto!important
+}
+
+.form-mod .hs-fieldtype-booleancheckbox.field.hs-form-field {
+    margin-bottom: 0;
+    margin-top: 0
+}

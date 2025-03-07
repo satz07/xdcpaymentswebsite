@@ -1,0 +1,310 @@
+.xdcValue-mod {
+    position: relative
+}
+
+.xdcValue-line {
+    width: 50%;
+    height: 100%;
+    max-width: 106%;
+    border: 2px solid #005df2;
+    border-right: 0;
+    left: -3px;
+    top: 0
+}
+
+.xdcValue-line,.xdcValue-line:after {
+    display: inline-block;
+    position: absolute
+}
+
+.xdcValue-line:after {
+    content: "";
+    width: 105%;
+    height: 0;
+    border-top: 2px solid #005df2;
+    top: -2px;
+    left: 99%
+}
+
+.xdcValue-dashedline {
+    display: inline-block;
+    width: 50%;
+    height: 2px;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 0 bottom;
+    position: absolute;
+    bottom: 0;
+    right: 156px;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='1466' height='537' viewBox='0 0 1466 537' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1139.52 536H1115.01H11C5.47715 536 1 531.523 1 526V11C1 5.47716 5.47715 1 11 1H1466C1471.52 1 1476 5.47715 1476 11V425' stroke='%23C1C1C1' stroke-width='2' stroke-linejoin='round' stroke-dasharray='4 4'/%3E%3C/svg%3E")
+}
+
+.xdcValue-pattern {
+    display: inline-block;
+    max-width: 154px;
+    position: absolute;
+    bottom: -106px;
+    right: 0
+}
+
+.xdcValue-pattern .desktop {
+    display: none
+}
+
+.xdcValue-mod .entry {
+    position: relative
+}
+
+.xdcValue-card {
+    max-width: 360px;
+    width: 100%;
+    margin-bottom: 40px
+}
+
+.coinmarketcap-currency-widget>div {
+    border: 1px solid #005df2!important;
+    background-color: #fff
+}
+
+.coinmarketcap-currency-widget>div>div:first-child {
+    padding: 12px 51px!important;
+    font-family: graphie,sans-serif;
+    font-weight: 400;
+    margin: 0 auto
+}
+
+.coinmarketcap-currency-widget>div>div:first-child>div:first-child {
+    width: 40px!important
+}
+
+.coinmarketcap-currency-widget>div>div:first-child>div:first-child img {
+    width: 40px!important;
+    height: auto!important
+}
+
+.coinmarketcap-currency-widget>div>div:first-child>div:last-child {
+    width: calc(100% - 29px)!important;
+    padding-left: 13px;
+    box-sizing: border-box
+}
+
+.coinmarketcap-currency-widget>div>div:first-child>div:last-child>span:first-child a {
+    font-size: 16px;
+    color: #002c72!important
+}
+
+.coinmarketcap-currency-widget>div>div:first-child>div:last-child>span:last-child>span:first-child {
+    font-size: 13px!important;
+    font-weight: 400!important;
+    color: #005df2
+}
+
+.coinmarketcap-currency-widget>div>div:first-child>div:last-child>span:last-child>span:nth-child(2) {
+    padding-left: 3px;
+    font-size: 10px!important;
+    font-weight: 400!important;
+    color: #005df2
+}
+
+.coinmarketcap-currency-widget>div>div:first-child>div:last-child>span:last-child>span:nth-child(3) {
+    font-size: 10px!important;
+    font-weight: 400!important;
+    color: #54cccc;
+    margin-left: 0!important
+}
+
+.coinmarketcap-currency-widget>div>div:nth-child(2)>div {
+    padding: 11px 0!important;
+    font-family: graphie,sans-serif;
+    font-weight: 400;
+    font-size: 8px!important;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    color: #002c72
+}
+
+.coinmarketcap-currency-widget>div>div:nth-child(2)>div>span {
+    display: block;
+    margin-top: 4px
+}
+
+.coinmarketcap-currency-widget>div>div:nth-child(2)>div span {
+    font-size: 11px!important;
+    line-height: 1.5;
+    color: #005df2;
+    letter-spacing: 0
+}
+
+.coinmarketcap-currency-widget>div>div:nth-child(2)>div br {
+    display: none
+}
+
+.coinmarketcap-currency-widget>div>div:nth-child(2)>div:first-child,.coinmarketcap-currency-widget>div>div:nth-child(2)>div:nth-child(2) {
+    border-right: 1px solid #005df2!important
+}
+
+.coinmarketcap-currency-widget>div>div:nth-child(2),.coinmarketcap-currency-widget>div>div:nth-child(3) {
+    border-top: 1px solid #005df2!important
+}
+
+.coinmarketcap-currency-widget>div>div:nth-child(3) {
+    padding: 10px!important;
+    font-family: noto-sans,sans-serif;
+    font-size: 9px!important;
+    font-weight: 300;
+    font-style: unset!important;
+    line-height: 1.67;
+    color: #005df2
+}
+
+.coinmarketcap-currency-widget>div>div:nth-child(3) a {
+    color: inherit!important
+}
+
+.xdc-content .h3 {
+    margin: 0 0 20px;
+    line-height: 1.38
+}
+
+.xdc-content .section-text p {
+    margin-bottom: 30px
+}
+
+.xdc-content .section-text :last-child {
+    margin-bottom: 0
+}
+
+.xdcValue-line:before {
+    content: url(https://21152810.fs1.hubspotusercontent-na1.net/hubfs/21152810/icons/Up%20arrow.svg);
+    position: absolute;
+    bottom: -17.77px;
+    right: -4px
+}
+
+@media only screen and (min-width: 768px) {
+    .xdcValue-line {
+        width:50%;
+        border-width: 3px
+    }
+
+    .xdcValue-dashedline {
+        right: 324px
+    }
+
+    .xdcValue-line:after {
+        border-width: 3px;
+        top: -3px
+    }
+
+    .xdcValue-pattern {
+        max-width: 324px;
+        bottom: -206px
+    }
+
+    .xdcValue-pattern .desktop {
+        display: inline
+    }
+
+    .xdcValue-pattern .mobile {
+        display: none
+    }
+
+    .xdcValue-card {
+        max-width: 945px;
+        margin: 0 auto 50px
+    }
+
+    .coinmarketcap-currency-widget>div {
+        border: 2px solid #005df2!important
+    }
+
+    .coinmarketcap-currency-widget>div>div:first-child {
+        max-width: 600px;
+        padding: 26px 70px!important
+    }
+
+    .coinmarketcap-currency-widget>div>div:first-child>div:first-child {
+        width: 87px!important
+    }
+
+    .coinmarketcap-currency-widget>div>div:first-child>div:first-child img {
+        width: 97px!important
+    }
+
+    .coinmarketcap-currency-widget>div>div:first-child>div:last-child {
+        width: calc(100% - 87px)!important;
+        padding-left: 36px
+    }
+
+    .coinmarketcap-currency-widget>div>div:first-child>div:last-child>span:first-child a {
+        display: inline-block;
+        font-size: 35px;
+        line-height: 1.29;
+        margin: 0 0 8px
+    }
+
+    .coinmarketcap-currency-widget>div>div:first-child>div:last-child>span:last-child>span:first-child {
+        font-size: 28px!important;
+        line-height: 1
+    }
+
+    .coinmarketcap-currency-widget>div>div:first-child>div:last-child>span:last-child>span:nth-child(2) {
+        padding-left: 6px;
+        font-size: 18px!important
+    }
+
+    .coinmarketcap-currency-widget>div>div:first-child>div:last-child>span:last-child>span:nth-child(3) {
+        font-size: 18px!important
+    }
+
+    .coinmarketcap-currency-widget>div>div:nth-child(2)>div {
+        padding: 28px 0 30px!important;
+        font-size: 16px!important
+    }
+
+    .coinmarketcap-currency-widget>div>div:nth-child(2)>div>span {
+        margin-top: 10px
+    }
+
+    .coinmarketcap-currency-widget>div>div:nth-child(2)>div span {
+        font-size: 22px!important;
+        line-height: 1.45
+    }
+
+    .coinmarketcap-currency-widget>div>div:nth-child(2)>div:first-child,.coinmarketcap-currency-widget>div>div:nth-child(2)>div:nth-child(2) {
+        border-right: 2px solid #005df2!important
+    }
+
+    .coinmarketcap-currency-widget>div>div:nth-child(2),.coinmarketcap-currency-widget>div>div:nth-child(3) {
+        border-top: 2px solid #005df2!important
+    }
+
+    .coinmarketcap-currency-widget>div>div:nth-child(3) {
+        padding: 22px!important;
+        font-size: 18px!important;
+        line-height: 1.56
+    }
+
+    .xdc-content .h3 {
+        font-size: 45px;
+        margin-bottom: 25px;
+        line-height: 1.22
+    }
+
+    .xdc-content .section-text {
+        text-align: center
+    }
+
+    .xdc-content .section-text p {
+        font-size: 18px
+    }
+}
+
+@media only screen and (min-width: 1320px) {
+    .xdcValue-line {
+        width:792px;
+        left: 50%;
+        transform: translateX(-76%);
+        border-radius: 10px 0 0 10px
+    }
+}
