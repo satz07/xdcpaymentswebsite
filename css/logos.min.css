@@ -1,0 +1,95 @@
+.logos-mod .logos-entry {
+    position: relative
+}
+
+.logos-mod .cat-title {
+    font-size: 30px;
+    line-height: 1.33;
+    margin: 0 0 30px;
+    text-align: center
+}
+
+.logos-mod .section-title {
+    font-size: 30px;
+    letter-spacing: -.05em;
+    line-height: 1.33;
+    margin: 0 0 20px
+}
+
+.logos {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -5px
+}
+
+.logo-wrap {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    margin-bottom: 5px;
+    max-width: 195px;
+    padding: 0 5px
+}
+
+.logos-entry-inner {
+    border: 3px solid #005df2;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 22px
+}
+
+@media screen and (min-width: 992px) {
+    .logos-mod .page-center {
+        max-width:1330px;
+        padding: 0
+    }
+
+    .logos-entry:after {
+        background-color: #005df2;
+        content: "";
+        display: inline-block;
+        height: auto;
+        position: absolute;
+        right: 0;
+        top: -50px;
+        width: 3px
+    }
+
+    .logos-mod .cat-title {
+        font-size: 55px;
+        line-height: 1.18;
+        margin-bottom: 24px
+    }
+
+    .logos-mod .section-title {
+        font-size: 55px;
+        line-height: 1.18;
+        margin-bottom: 50px
+    }
+
+    .logos {
+        margin: 0 -15px
+    }
+
+    .logo-wrap {
+        margin-bottom: 30px;
+        max-width: 300px;
+        padding: 0 25px
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .logos-entry-inner {
+        padding-bottom:15px
+    }
+}

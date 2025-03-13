@@ -1,0 +1,1482 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <title>Blockchain Intelligence Group</title>
+  <link rel="shortcut icon" href="./images/favicon-96x96.webp">
+  <meta name="description" content="">
+  <meta name="last-updated" data-type="date" content="2023-03-11">
+  <meta property="og:image" content="https://www.impel.global/hubfs/Screen%20Shot%202022-05-20%20at%205.45.58%20PM.png">
+  <link rel="stylesheet" href="./css/ykh0kif.css">
+  <link rel="stylesheet" href="./css/xyd8ejf.css">
+  <link rel="stylesheet" href="./css/zen8twi.css">
+  <meta property="og:description" content="">
+  <meta property="og:title" content="Blockchain Intelligence Group">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:title" content="Blockchain Intelligence Group">
+  <style>
+a.cta_button{-moz-box-sizing:content-box !important;-webkit-box-sizing:content-box !important;box-sizing:content-box !important;vertical-align:middle}.hs-breadcrumb-menu{list-style-type:none;margin:0px 0px 0px 0px;padding:0px 0px 0px 0px}.hs-breadcrumb-menu-item{float:left;padding:10px 0px 10px 10px}.hs-breadcrumb-menu-divider:before{content:'›';padding-left:10px}.hs-featured-image-link{border:0}.hs-featured-image{float:right;margin:0 0 20px 20px;max-width:50%}@media (max-width: 568px){.hs-featured-image{float:none;margin:0;width:100%;max-width:100%}}.hs-screen-reader-text{clip:rect(1px, 1px, 1px, 1px);height:1px;overflow:hidden;position:absolute !important;width:1px}
+</style>
+  <link rel="stylesheet" href="./css/main.min.css">
+  <style>
+      .header {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  padding:20px 0 20px;
+  z-index:99;
+}
+
+/* Logo */
+
+.header__logo {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  margin-right: auto;
+  max-width: 200px;
+  overflow: hidden;
+}
+
+.header__logo img {
+  max-width: 100%;
+}
+.logo-dark {
+  display:none;
+}
+.light-header .logo-dark {
+  display:block;
+}
+.light-header .logo-light {
+  display:none;
+}
+
+.header__logo .logo-company-name {
+  font-size: 28px;
+  margin-top: 7px;
+}
+
+/* Search bar */
+
+.header__search {
+  padding: 0 22px;
+  width: auto;
+}
+
+.header__search .hs-search-field__input {
+  background-color: #FFF;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4gICAgICAgIDx0aXRsZT5TZWFyY2g8L3RpdGxlPiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4gICAgPGRlZnM+ICAgICAgICA8cGF0aCBkPSJNOS4xMzg2MTUzNCwxNS44OTI1Njg1IEM1LjQxMzk1NzQyLDE1Ljg5MjU2ODUgMi4zODM4ODUyNywxMi44NjM0NDc1IDIuMzgzODg1MjcsOS4xMzkwMDM3NiBDMi4zODM4ODUyNyw1LjQxNDU2MDA1IDUuNDEzOTU3NDIsMi4zODM4ODUyNyA5LjEzODYxNTM0LDIuMzgzODg1MjcgQzEyLjg2MzI3MzMsMi4zODM4ODUyNyAxNS44OTI1Njg1LDUuNDE0NTYwMDUgMTUuODkyNTY4NSw5LjEzOTAwMzc2IEMxNS44OTI1Njg1LDEyLjg2MzQ0NzUgMTIuODYzMjczMywxNS44OTI1Njg1IDkuMTM4NjE1MzQsMTUuODkyNTY4NSBNOS4xMzg3NTI0NSwyLjQzMzYwODg3ZS0xMyBDMTQuMTc3OTk1NSwyLjQzMzYwODg3ZS0xMyAxOC4yNzY0NTM3LDQuMTAwMzI0NzEgMTguMjc2NDUzNyw5LjEzOTI3Nzk2IEMxOC4yNzY0NTM3LDExLjIyOTgyMTEgMTcuNTcxMDE2OSwxMy4xNTg0NDM0IDE2LjM4NTYzMTMsMTQuNjk5NjY5NiBMMjMuNjUwODg4MSwyMS45NjUyMjY2IEMyNC4xMTYzNzA2LDIyLjQzMDcwOTIgMjQuMTE2MzcwNiwyMy4xODU0MDU1IDIzLjY1MDg4ODEsMjMuNjUwODg4MSBDMjMuMTg1NDA1NSwyNC4xMTYzNzA2IDIyLjQzMDcwOTIsMjQuMTE2MzcwNiAyMS45NjUyMjY2LDIzLjY1MDg4ODEgTDE0LjY5OTgxMzMsMTYuMzg1NDcxMyBDMTMuMTU4NDQwNSwxNy41NzA5NTA5IDExLjIyOTU3MzgsMTguMjc2NDUzNyA5LjEzODc1MjQ1LDE4LjI3NjQ1MzcgQzQuMDk5NTA5MzgsMTguMjc2NDUzNyAtMy43MzAzNDkzNmUtMTQsMTQuMTc4MjMxMiAtMy43MzAzNDkzNmUtMTQsOS4xMzkyNzc5NiBDLTMuNzMwMzQ5MzZlLTE0LDQuMTAwMzI0NzEgNC4wOTk1MDkzOCwyLjQzMzYwODg3ZS0xMyA5LjEzODc1MjQ1LDIuNDMzNjA4ODdlLTEzIFoiIGlkPSJwYXRoLTEiPjwvcGF0aD4gICAgPC9kZWZzPiAgICA8ZyBpZD0iU2VhcmNoIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4gICAgICAgIDxtYXNrIGlkPSJtYXNrLTIiIGZpbGw9IndoaXRlIj4gICAgICAgICAgICA8dXNlIHhsaW5rOmhyZWY9IiNwYXRoLTEiPjwvdXNlPiAgICAgICAgPC9tYXNrPiAgICAgICAgPHVzZSBpZD0iSWNvbnMvQWN0aW9ucy9TZWFyY2giIGZpbGw9IiM0OTRBNTIiIHhsaW5rOmhyZWY9IiNwYXRoLTEiPjwvdXNlPiAgICA8L2c+PC9zdmc+);
+  background-position: center right 15px;
+  background-repeat: no-repeat;
+  border: 1.79px solid #D1D6DC;
+  border-radius: 6px;
+  color: #494A52;
+  font-family: Lato, serif;
+  font-size: 22px;
+  font-weight: 300;
+  height: 45px;
+  padding: 0 15px;
+}
+
+.header__search .hs-search-field--open .hs-search-field__input {
+  border: 1.79px solid #D1D6DC;
+  border-bottom: none;
+  border-radius: 6px 6px 0 0;
+  background-color: #FFF;
+}
+
+.header__search .hs-search-field__input::placeholder {
+  color: transparent;
+}
+
+.header__search .hs-search-field--open .hs-search-field__suggestions {
+  background-color: #FFF;
+  border: 1.79px solid #D1D6DC;
+  border-top: -2px solid #FFF;
+  border-radius: 0 0 6px 6px;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+
+.header__search .hs-search-field__suggestions li {
+  border-top: 1px solid #D1D6DC;
+  font-family: Lato, serif;
+  font-size: 22px;
+}
+
+.header__search .hs-search-field__suggestions li a {
+  color: #494A52;
+  padding: 3px 15px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.header__search .hs-search-field__suggestions #results-for {
+  display: none;
+}
+
+/* Language switcher */
+
+.header__language-switcher {
+  cursor: pointer;
+  padding-right: 35px;
+}
+
+.header__language-switcher .lang_switcher_class {
+  position: static;
+}
+
+.header__language-switcher .lang_list_class {
+  border: 2px solid #D1D6DC;
+  border-radius: 6px;
+  box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.2);
+  color: #494A52;
+  display: block;
+  font-family: Lato, serif;
+  font-size: 0.8rem;
+  left: calc(100% - 24px);
+  opacity: 0;
+  min-width: 100px;
+  padding-top: 0;
+  text-align: left;
+  top: 100%;
+  transition: opacity 0.3s;
+  visibility: hidden;
+}
+
+.header__language-switcher:hover .lang_list_class {
+  opacity: 1;
+  transition: opacity 0.3s;
+  visibility: visible;
+}
+
+.header__language-switcher .lang_list_class:before {
+  border-bottom-color: #D1D6DC;
+  left: 70%;
+  top: -25px;
+}
+
+.header__language-switcher .lang_list_class:after {
+  left: 70%;
+  top: -22px;
+}
+
+.header__language-switcher .lang_list_class.first-active::after {
+  border-bottom-color: #EBEFF3;
+  top: -22px;
+  transition: 0.3s;
+}
+
+.header__language-switcher .lang_list_class li {
+  border: none;
+  font-size: 18px;
+  padding: 10px 15px;
+}
+
+.header__language-switcher .lang_list_class li:first-child {
+  border-radius: 6px 6px 0 0;
+  border-top: none;
+}
+
+.header__language-switcher .lang_list_class li:last-child {
+  border-bottom: none;
+  border-radius: 0 0 6px 6px;
+}
+
+.header__language-switcher .lang_list_class li:hover {
+  background-color: #EBEFF3;
+  transition: background-color 0.3s;
+}
+
+.header__language-switcher .lang_list_class li a {
+  color: #494A52;
+  font-family: Lato, serif;
+}
+
+.header__language-switcher .lang_list_class li a:hover {
+  color: #494A52;
+}
+
+.header__language-switcher--label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.header__language-switcher--label-current {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 18px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+
+.header__language-switcher--label-current:after {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 6px solid #494A52;
+  content: "";
+  display: block;
+  height: 0px;
+  margin-left: 10px;
+  margin-top: 3px;
+  width: 0px;
+}
+
+/* Navigation */
+
+#nav-toggle {
+  display: none;
+}
+
+.header__menu--flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__navigation .cta_button {
+  margin:0 0 0 10px;
+}
+
+@media (max-width: 1300px) and (min-width: 767px) {
+  .header__logo{ max-width:120px; }
+}
+
+/* Tablet styles */
+
+@media (max-width: 1150px) and (min-width: 767px) {
+  .header__column {
+    width: 100%;
+  }
+}
+
+/* Mobile styles */
+
+@media (max-width: 767px) {
+  .header {
+    padding:30px 0 20px;
+  }
+  .header__container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+    padding: 20px 0 0;
+  }
+
+  .header__container form {
+    max-width: 100%;
+  }
+
+  .header__logo {
+    margin: 0 auto;
+    width: 100%;
+    max-width:148px;
+  }
+
+  .header__navigation,
+  .header__search,
+  .header__language-switcher {
+    display: none;
+    width: 100%;
+  }
+
+  .header__search.open,
+  .header__language-switcher.open {
+    background-color: #F8FAFC;
+    display: block;
+    height: calc(100vh - 115px);
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 75px;
+    z-index: 2;
+  }
+
+  .header__search--toggle,
+  .header__language-switcher--toggle,
+  .header__close--toggle {
+    cursor: pointer;
+    margin: 0 5vw;
+    position: relative;
+  }
+
+  .header__navigation--toggle.hide,
+  .header__search--toggle.hide,
+  .header__language-switcher--toggle.hide {
+    display: none;
+  }
+
+  .header__search--toggle.open,
+  .header__language-switcher--toggle.open {
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  .header__search--toggle.open:after,
+  .header__language-switcher--toggle.open:after {
+    display: block;
+    word-break: normal;
+  }
+
+  .header__search--toggle:after,
+  .header__language-switcher--toggle:after {
+    display: none;
+    font-size: 26px;
+    font-weight: 600;
+    position: absolute;
+    left: 40px;
+    text-transform: uppercase;
+    top: -10px;
+  }
+
+  .header__column {
+    position: relative;
+  }
+
+  .header__row-1 {
+    padding-top: 0;
+  }
+
+  .header__row-2 {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position:relative;
+  }
+
+  .header__navigation.open {
+    background:var(--c-lightblue);
+    display:block;
+    position:absolute;
+    top:calc(100% + 30px);
+    right:-30px;
+    width:100vw;
+    height:calc(100vh - 94px);
+  }
+
+  .header__navigation--toggle {
+    cursor: pointer;
+    height: 22px;
+    width: 30px;
+    position:relative;
+  }
+  .header__navigation--toggle span {
+    height:4px;
+    width:30px;
+    position:absolute;
+    border-radius:1.5px;
+    background:var(--c-blue);
+    transition:opacity 0.2s, transform 0.2s;
+  }
+  .on-dark-header .header__navigation--toggle span {
+    background:var(--c-white);
+  }
+  .header__navigation--toggle .line1 {
+    top:0;
+  }
+  .header__navigation--toggle .line2,
+  .header__navigation--toggle .line3 {
+    top:calc(50% - 2px);
+  }
+  .header__navigation--toggle .line4 {
+    top:calc(100% - 4px);
+  }
+
+
+  .header__navigation--toggle.open .line1,
+  .header__navigation--toggle.open .line4 {
+    opacity:0;
+  }
+  .header__navigation--toggle.open .line2 {
+    transform:rotate(45deg);
+  }
+  .header__navigation--toggle.open .line3 {
+    transform:rotate(-45deg);
+  }
+
+  .header__language-switcher--toggle {
+    background-image: url(//static.hsappstatic.net/cos-LanguageSwitcher/static-1.1/img/globe.png);
+    background-size: cover;
+    height: 25px;
+    width: 25px;
+  }
+
+  .header__language-switcher--toggle:after {
+    content: "Language";
+  }
+
+  .header__language-switcher {
+    border-top: 2px solid #CED4DB;
+    padding-left: 30px;
+    padding-right: 0;
+  }
+
+  .header__language-switcher .lang_list_class {
+    background-color: inherit;
+    border: none;
+    border-radius: 0;
+    box-shadow: unset;
+    display: block;
+    left: 30px;
+    opacity: 1;
+    padding: 0 30px;
+    top: 0;
+    visibility: visible;
+  }
+
+  .header__language-switcher .lang_list_class li {
+    background-color: inherit;
+    font-size: 22px;
+  }
+
+  .header__language-switcher--label-current {
+    display: none;
+  }
+
+  .header__language-switcher .globe_class {
+    background-image: none;
+  }
+
+  .header__language-switcher .lang_list_class li:hover {
+    background-color: inherit;
+  }
+
+  .header__language-switcher .lang_list_class:before,
+  .header__language-switcher .lang_list_class:after {
+    content: none;
+  }
+
+  .header__search--toggle {
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4gICAgICAgIDx0aXRsZT5TZWFyY2g8L3RpdGxlPiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4gICAgPGRlZnM+ICAgICAgICA8cGF0aCBkPSJNOS4xMzg2MTUzNCwxNS44OTI1Njg1IEM1LjQxMzk1NzQyLDE1Ljg5MjU2ODUgMi4zODM4ODUyNywxMi44NjM0NDc1IDIuMzgzODg1MjcsOS4xMzkwMDM3NiBDMi4zODM4ODUyNyw1LjQxNDU2MDA1IDUuNDEzOTU3NDIsMi4zODM4ODUyNyA5LjEzODYxNTM0LDIuMzgzODg1MjcgQzEyLjg2MzI3MzMsMi4zODM4ODUyNyAxNS44OTI1Njg1LDUuNDE0NTYwMDUgMTUuODkyNTY4NSw5LjEzOTAwMzc2IEMxNS44OTI1Njg1LDEyLjg2MzQ0NzUgMTIuODYzMjczMywxNS44OTI1Njg1IDkuMTM4NjE1MzQsMTUuODkyNTY4NSBNOS4xMzg3NTI0NSwyLjQzMzYwODg3ZS0xMyBDMTQuMTc3OTk1NSwyLjQzMzYwODg3ZS0xMyAxOC4yNzY0NTM3LDQuMTAwMzI0NzEgMTguMjc2NDUzNyw5LjEzOTI3Nzk2IEMxOC4yNzY0NTM3LDExLjIyOTgyMTEgMTcuNTcxMDE2OSwxMy4xNTg0NDM0IDE2LjM4NTYzMTMsMTQuNjk5NjY5NiBMMjMuNjUwODg4MSwyMS45NjUyMjY2IEMyNC4xMTYzNzA2LDIyLjQzMDcwOTIgMjQuMTE2MzcwNiwyMy4xODU0MDU1IDIzLjY1MDg4ODEsMjMuNjUwODg4MSBDMjMuMTg1NDA1NSwyNC4xMTYzNzA2IDIyLjQzMDcwOTIsMjQuMTE2MzcwNiAyMS45NjUyMjY2LDIzLjY1MDg4ODEgTDE0LjY5OTgxMzMsMTYuMzg1NDcxMyBDMTMuMTU4NDQwNSwxNy41NzA5NTA5IDExLjIyOTU3MzgsMTguMjc2NDUzNyA5LjEzODc1MjQ1LDE4LjI3NjQ1MzcgQzQuMDk5NTA5MzgsMTguMjc2NDUzNyAtMy43MzAzNDkzNmUtMTQsMTQuMTc4MjMxMiAtMy43MzAzNDkzNmUtMTQsOS4xMzkyNzc5NiBDLTMuNzMwMzQ5MzZlLTE0LDQuMTAwMzI0NzEgNC4wOTk1MDkzOCwyLjQzMzYwODg3ZS0xMyA5LjEzODc1MjQ1LDIuNDMzNjA4ODdlLTEzIFoiIGlkPSJwYXRoLTEiPjwvcGF0aD4gICAgPC9kZWZzPiAgICA8ZyBpZD0iU2VhcmNoIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4gICAgICAgIDxtYXNrIGlkPSJtYXNrLTIiIGZpbGw9IndoaXRlIj4gICAgICAgICAgICA8dXNlIHhsaW5rOmhyZWY9IiNwYXRoLTEiPjwvdXNlPiAgICAgICAgPC9tYXNrPiAgICAgICAgPHVzZSBpZD0iSWNvbnMvQWN0aW9ucy9TZWFyY2giIGZpbGw9IiM0OTRBNTIiIHhsaW5rOmhyZWY9IiNwYXRoLTEiPjwvdXNlPiAgICA8L2c+PC9zdmc+);
+    background-size: cover;
+    height: 25px;
+    width: 25px;
+  }
+
+  .header__search--toggle:after {
+    content: "Search";
+  }
+
+  .header__search {
+    border-top: 2px solid #CED4DB;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+    padding: 30px;
+  }
+
+  .header__search .hs-search-field__input {
+    padding-left: 15px;
+  }
+
+  .header__search .hs-search-field__suggestions li {
+    padding: 10px 0;
+  }
+
+  .header__close--toggle {
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjE5cHgiIHZpZXdCb3g9IjAgMCAyNCAxOSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4gICAgICAgIDx0aXRsZT5jbG9zZTwvdGl0bGU+ICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPiAgICA8ZyBpZD0iY2xvc2UiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPiAgICAgICAgPGcgaWQ9Ikdyb3VwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyLjAwMDAwMCwgLTEuMDAwMDAwKSIgc3Ryb2tlPSIjNDk0QTUyIiBzdHJva2Utd2lkdGg9IjMiPiAgICAgICAgICAgIDxyZWN0IGlkPSJSZWN0YW5nbGUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEwLjAwMDAwMCwgMTAuNTAwMDAwKSByb3RhdGUoLTQ1LjAwMDAwMCkgdHJhbnNsYXRlKC0xMC4wMDAwMDAsIC0xMC41MDAwMDApICIgeD0iLTAuNSIgeT0iMTAuNSIgd2lkdGg9IjIxIiBoZWlnaHQ9IjEiIHJ4PSIwLjUiPjwvcmVjdD4gICAgICAgICAgICA8cmVjdCBpZD0iUmVjdGFuZ2xlLUNvcHktNSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTAuMDAwMDAwLCAxMC41MDAwMDApIHJvdGF0ZSg0NS4wMDAwMDApIHRyYW5zbGF0ZSgtMTAuMDAwMDAwLCAtMTAuNTAwMDAwKSAiIHg9Ii0wLjUiIHk9IjEwLjUiIHdpZHRoPSIyMSIgaGVpZ2h0PSIxIiByeD0iMC41Ij48L3JlY3Q+ICAgICAgICA8L2c+ICAgIDwvZz48L3N2Zz4=);
+    background-repeat: no-repeat;
+    background-size: 110%;
+    display: none;
+    height: 25px;
+    margin-right: 0;
+    width: 25px;
+  }
+
+  .header__close--toggle.show {
+    display: block;
+  }
+
+  .header__navigation .cta_button {
+    margin:20px 30px 0;
+    display:block;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .submenu.level-1 > li {
+    padding: 22px 5px;
+  }
+  .navigation-primary a {
+    font-size: 14px;
+  }
+  .submenu.level-1 > li:last-child {
+    padding-right: 5px;
+  }
+  .header__navigation #hs_cos_wrapper_nav_cta a {
+    padding: 15px 14px;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  body {
+    margin-top: 84px !important;
+  }
+}
+    </style>
+  <link rel="stylesheet" href="./css/menu-mega-impel.min.css">
+  <link rel="stylesheet" href="./css/slick.min.css">
+  <style>
+  #hs_cos_wrapper_widget_1654438820567 strong { font-weight:400; }
+
+#hs_cos_wrapper_widget_1654438820567 p:last-child { margin-bottom:0; }
+
+#hs_cos_wrapper_widget_1654438820567 .xdc-tabbed-slider {
+  padding-top:150px;
+  padding-bottom:100px;
+  position:relative;
+}
+
+#hs_cos_wrapper_widget_1654438820567 .xdc-tabbed-slider__heading h2 { color:var(--c-navy); }
+
+#hs_cos_wrapper_widget_1654438820567 .xdc-tabbed-slider__text {
+  color:var(--c-navy);
+  max-width:800px;
+}
+
+#hs_cos_wrapper_widget_1654438820567 .xdc-tabbed-slider__img {
+  height:auto;
+  width:100% !important;
+  display:block !important;
+}
+
+#hs_cos_wrapper_widget_1654438820567 .xdc-tabbed-slider__img--item {
+  line-height:0;
+  width:100%;
+  margin:0 0 20px;
+  text-align:center;
+  cursor:pointer;
+}
+
+#hs_cos_wrapper_widget_1654438820567 .xdc-tabbed-slider__img--item:last-of-type { margin:0; }
+
+#hs_cos_wrapper_widget_1654438820567 .xdc-tabbed-slider__img-inner {
+  width:100%;
+  max-width:220px;
+  border:1px solid var(--c-blue);
+  border-radius:5px;
+  line-height:0;
+  padding:23px 15px;
+  margin-left:40px;
+}
+
+#hs_cos_wrapper_widget_1654438820567 .xdc-tabbed-slider__wrap {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  height:100%;
+}
+
+#hs_cos_wrapper_widget_1654438820567 .xdc-tabbed-slider__item--title {
+  font-size:28px;
+  line-height:1.357;
+}
+
+#hs_cos_wrapper_widget_1654438820567 .xdc-tabbed-slider__item--desc .cta_button {
+  color:#005DF2 !important;
+  border-bottom:2px solid #54CCCC;
+}
+
+#hs_cos_wrapper_widget_1654438820567 .xdc-tabbed-slider__item--desc .cta_button:hover { color:#54CCCC !important; }
+
+#hs_cos_wrapper_widget_1654438820567 .xdc-tabbed-slider__item.is-active { display:block; }
+
+@media (min-width:768px) {
+  #hs_cos_wrapper_widget_1654438820567 .xdc-tabbed-slider__text,
+  #hs_cos_wrapper_widget_1654438820567 .xdc-tabbed-slider__item { font-size:18px; }
+
+  #hs_cos_wrapper_widget_1654438820567 .xdc-tabbed-slider__heading h2 { font-size:55px; }
+}
+
+@media (min-width:991px) {
+  #hs_cos_wrapper_widget_1654438820567 .xdc-tabbed-slider__img {
+    height:100%;
+    border-right:2px dashed var(--c-grey);
+  }
+
+  #hs_cos_wrapper_widget_1654438820567 .xdc-tabbed-slider__img--item {
+    position:relative;
+    opacity:1 !important;
+  }
+
+  #hs_cos_wrapper_widget_1654438820567 .xdc-tabbed-slider__img--item.is-active .xdc-tabbed-slider__img-inner,
+  #hs_cos_wrapper_widget_1654438820567 .xdc-tabbed-slider__img--item:hover .xdc-tabbed-slider__img-inner {
+    box-shadow:0px 0px 15px #005DF2;
+    padding:23px 40px;
+    max-width:262px;
+    margin-left:0;
+  }
+
+  #hs_cos_wrapper_widget_1654438820567 .xdc-tabbed-slider__img--item.is-active .xdc-tabbed-slider__img-inner img,
+  #hs_cos_wrapper_widget_1654438820567 .xdc-tabbed-slider__img--item:hover .xdc-tabbed-slider__img-inner img { transform:scale(1.2); }
+
+  #hs_cos_wrapper_widget_1654438820567 .xdc-tabbed-slider__img--item.is-active::after {
+    content:"";
+    width:3px;
+    height:100%;
+    background-color:var(--c-blue);
+    position:absolute;
+    top:0;
+    right:-2px;
+  }
+
+  #hs_cos_wrapper_widget_1654438820567 .xdc-tabbed-slider__item { display:none; }
+
+  #hs_cos_wrapper_widget_1654438820567 .xdc-tabbed-slider__item.is-active { opacity:1 !important; }
+}
+
+@media (max-width:991px) {
+  #hs_cos_wrapper_widget_1654438820567 .xdc-tabbed-slider {
+    padding-top:150px;
+    padding-bottom:100px;
+  }
+
+  #hs_cos_wrapper_widget_1654438820567 .xdc-tabbed-slider__img {
+    position:relative;
+    padding-bottom:50px;
+  }
+
+  #hs_cos_wrapper_widget_1654438820567 .slick-arrow {
+    position:absolute;
+    bottom:-50px;
+    cursor:pointer;
+  }
+
+  #hs_cos_wrapper_widget_1654438820567 .slick-arrow:hover { opacity:.6; }
+
+  #hs_cos_wrapper_widget_1654438820567 .slick-next { margin-left:40px; }
+
+  #hs_cos_wrapper_widget_1654438820567 .xdc-tabbed-slider__item { color:var(--c-blue); }
+
+  #hs_cos_wrapper_widget_1654438820567 .xdc-tabbed-slider__img--item {
+    width:100%;
+    display:block !important;
+    max-width:320px;
+    margin:0 auto;
+    box-shadow:0px 0px 15px #005df2;
+    padding:23px 40px;
+    border:1px solid var(--c-blue);
+    margin:20px auto;
+    border-radius:5px;
+  }
+
+  #hs_cos_wrapper_widget_1654438820567 .xdc-tabbed-slider__img--item img { width:100% !important; }
+
+  #hs_cos_wrapper_widget_1654438820567 .xdc-tabbed-slider__item--title,
+  #hs_cos_wrapper_widget_1654438820567 .xdc-tabbed-slider__item--desc,
+  #hs_cos_wrapper_widget_1654438820567 .xdc-tabbed-slider__item--desc p { color:#002C72 !important; }
+}
+
+@media (max-width:767px) {
+  #hs_cos_wrapper_widget_1654438820567 .xdc-tabbed-slider__img--item { max-width:calc(100% - 18px); }
+
+  #hs_cos_wrapper_widget_1654438820567 .xdc-tabbed-slider__img--item img {
+    max-width:181px;
+    margin:0 auto;
+  }
+
+  #hs_cos_wrapper_widget_1654438820567 .xdc-tabbed-slider__item--title {
+    font-size:20px;
+    line-height:1.5;
+    margin:0 0 20px !important;
+  }
+
+  #hs_cos_wrapper_widget_1654438820567 .xdc-tabbed-slider__item--desc,
+  #hs_cos_wrapper_widget_1654438820567 .xdc-tabbed-slider__item--desc p {
+    font-size:16px;
+    line-height:1.62;
+    margin:0 0 20px;
+  }
+
+  #hs_cos_wrapper_widget_1654438820567 .slick-arrow { bottom:-30px; }
+}
+
+</style>
+  <style>
+  #hs_cos_wrapper_module_16526748730613 .lightbox-form-cta { margin-bottom:30px; }
+
+#hs_cos_wrapper_module_16526748730613 .lightbox-cta {
+  display:inline-block;
+  width:auto;
+  height:auto;
+  padding:15px 25px;
+  text-align:center;
+  border:3px solid #005DF2;
+  color:#FFFFFF;
+  border-radius:0;
+  font-family:graphie,sans-serif;
+  font-size:16px;
+  font-weight:400;
+  letter-spacing:0.04em;
+  line-height:1.125;
+  background:rgb(0,93,242);
+  transition:0.4s ease all;
+  -webkit-transition:0.4s ease all;
+  text-decoration:none;
+}
+
+#hs_cos_wrapper_module_16526748730613 .lightbox-cta:hover {
+  text-decoration:none;
+  background:rgba(0,93,242,0);
+  color:rgb(0,93,242);
+}
+
+#hs_cos_wrapper_module_16526748730613 .lightbox-form-container {
+  display:none;
+  position:fixed;
+  top:0px;
+  left:0px;
+  height:100%;
+  width:100%;
+  background:rgba(255,255,255,0.9);
+  z-index:999;
+}
+
+#hs_cos_wrapper_module_16526748730613 .lightboxform-container-inner {
+  background:#FFF;
+  max-width:750px;
+  width:100%;
+  min-height:30vh;
+  max-height:calc(95vh - 60px);
+  overflow-y:auto;
+  margin:10px auto 30px;
+  padding:50px 40px;
+  border:3px solid #005df2;
+  border-radius:5px;
+}
+
+#hs_cos_wrapper_module_16526748730613 .lightboxform-container-inner::-webkit-scrollbar { width:4px; }
+
+#hs_cos_wrapper_module_16526748730613 .lightboxform-container-inner::-webkit-scrollbar-track { -webkit-box-shadow:inset 0 0 6px #fff; }
+
+#hs_cos_wrapper_module_16526748730613 .lightboxform-container-inner::-webkit-scrollbar-thumb {
+  background-color:#ccc;
+  outline:1px solid #ddd;
+}
+
+#hs_cos_wrapper_module_16526748730613 .submitted-message {
+  font-size:20px;
+  text-align:center;
+}
+
+#hs_cos_wrapper_module_16526748730613 .lightbox-form-container h3 { margin-top:0; }
+
+@media (max-width:767px) {
+  #hs_cos_wrapper_module_16526748730613 .lightbox-form-container { background:rgba(255,255,255,1); }
+
+  #hs_cos_wrapper_module_16526748730613 .lightboxform-container-inner {
+    padding:10px 30px 30px;
+    margin:0px auto;
+  }
+}
+
+#hs_cos_wrapper_module_16526748730613 .top-section {
+  position:relative;
+  max-width:750px;
+  margin:0px auto;
+  height:60px;
+}
+
+#hs_cos_wrapper_module_16526748730613 .close-lightbox {
+  position:absolute;
+  right:0;
+  top:20px;
+  height:40px;
+  width:40px;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 50 50' width='50px' height='50px'%3E%3Cpath d='M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z'/%3E%3C/svg%3E");
+}
+
+#hs_cos_wrapper_module_16526748730613 .hs_cos_wrapper.form-title { display:none !important; }
+
+</style>
+  <link rel="stylesheet" href="./css/social-follow.min.css">
+  <link rel="canonical" href="blockchain-intelligence-group.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WZNCNMP');</script>
+  <!-- End Google Tag Manager -->
+  <meta property="og:image" content="https://www.impel.global/hubfs/Screen%20Shot%202022-05-20%20at%205.45.58%20PM.png#keepProtocol">
+  <meta property="og:image:width" content="126">
+  <meta property="og:image:height" content="126">
+  <meta name="twitter:image" content="https://www.impel.global/hubfs/Screen%20Shot%202022-05-20%20at%205.45.58%20PM.png#keepProtocol">
+  <meta property="og:url" content="https://www.impel.global/blockchain-intelligence-group">
+  <script>var hsVars = { app_hs_base_url: 'https://app.hubspot.com' };</script>
+  <meta name="twitter:card" content="summary">
+  <meta http-equiv="content-language" content="en">
+  <meta name="generator" content="HubSpot">
+ </head>
+ <body>
+  <div class="body-wrapper   hs-content-id-75417985336 hs-site-page page ">
+   <div data-global-resource-path="impel2020/templates/partials/header-w-mega.html">
+    <header class="header">
+     <div class="page-center">
+      <div class="row align-items-center justify-content-between">
+       <div class="col-auto">
+        <a class="header__logo header__logo--main" href="index.html"> <img class="logo-light" alt="Impel logo" src="./images/impel-logo.svg"> <img class="logo-dark" alt="Impel logo" src="./images/impel-logo.svg"> </a>
+       </div>
+       <div class="col-auto col-mega">
+        <div class="header__row-2">
+         <span class="header-menu-icon"> <span></span> <span></span> <span></span> </span>
+         <div class="header__navigation header--element">
+          <nav aria-label="Main menu" class="navigation-primary mega-menu-s2">
+           <ul class="submenu level-1" arai-hidden="false">
+            <li class="has-submenu menu-item submenu-wide-container-parent "> <a data-mm-item="1" class="menu-link"> Our Offerings <span class="arrow"></span> </a> <span class="arrow arrow-dropdown"></span>
+             <ul class="submenu level-2 layout-default " aria-hidden="true">
+              <ul class="submenu-wide-container-links">
+               <li class=" submenu-wide-container-link active" data-target="1"> <span class="menu-item-icon"> <img src="./images/ISO.svg" alt="ISO" loading="lazy" width="78" height="60"> </span> <span class="sub-menu-text">ISO 20022 API</span> </li>
+               <li class=" submenu-wide-container-link " data-target="2"> <span class="menu-item-icon"> <img src="./images/R3.svg" alt="R3" loading="lazy" width="78" height="60"> </span> <span class="sub-menu-text">R3 Corda Bridge</span> </li>
+              </ul>
+              <ul class="has-active
+                   submenu-wide-container  ">
+               <li class="submenu-wide-container-item active" data-index="1" data-items="2">
+                <div class="submenu-wide-container-desc">
+                 <a href="iso-20022.html?hsLang=en">
+                  <div class="menu-item-main_icon">
+                   <img src="./images/ISO20022.svg" alt="ISO20022" loading="lazy" width="44" height="34">
+                  </div> <span class="menu-item-icon mobile-icon"> <img src="./images/ISO.svg" alt="ISO" loading="lazy" width="78" height="60"> </span> <span class="sub-menu-text">ISO 20022 API</span> <span class="sub-menu-desc">Impel offers an ISO 20022 compliant API for cross-border and domestic payments with optional instant settlement capability.</span> <span class="sub-menu-morelink"> Learn more <span class="arrow">
+                    <svg width="8" height="10" viewbox="0 0 8 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M7.06434 5.38862L1.93093 9.83902C1.68335 10.0537 1.28196 10.0537 1.03441 9.83902L0.435678 9.31995C0.188522 9.10568 0.188046 8.75841 0.434622 8.54363L4.50294 4.99999L0.434622 1.45637C0.188046 1.24159 0.188522 0.89432 0.435678 0.680047L1.03441 0.160979C1.28198 -0.0536598 1.68337 -0.0536598 1.93093 0.160979L7.06431 4.61138C7.31189 4.826 7.31189 5.17398 7.06434 5.38862Z" fill="currentColor" />
+                    </svg> </span> </span> </a>
+                </div>
+                <div class="submenu-wide-container-child">
+                 <ul class="submenu-wide-container-child-ul hide-child-icon">
+                  <li class="submenu-wide-container-child-ul-item " data-index="1"> <a href="iso-20022-demo-access-new.html"> <span class="menu-item-icon"> <img src="./images/play_circle-dark.svg" alt="play_circle-dark" loading="lazy" width="25" height="24"> </span> <span class="sub-menu-text">Self-paced ISO 20022 Demo</span> </a> </li>
+                  <li class="submenu-wide-container-child-ul-item no-hover" data-index="2"> <a> <span class="menu-item-icon"> <img src="./images/settings.svg" alt="settings" loading="lazy" width="21" height="20"> </span> <span class="sub-menu-text">Developer Resources:</span> </a>
+                   <ul class="submenu-wide-container-child-ul-item-child-ul" data-child="2">
+                    <li class="submenu-wide-container-child-ul-item-child-ul-item"> <a href="https://docs.impel.global/welcome/solution-offerings/iso-20022-api/overview" target="_blank" rel="noopener"> <span class="sub-menu-text">GitBook</span> </a> </li>
+                    <li class="submenu-wide-container-child-ul-item-child-ul-item"> <a href="https://gitlab.com/Impel-official" target="_blank" rel="noopener"> <span class="sub-menu-text">GitLab</span> </a> </li>
+                   </ul> </li>
+                 </ul>
+                </div> </li>
+               <li class="submenu-wide-container-item " data-index="2" data-items="3">
+                <div class="submenu-wide-container-desc">
+                 <a href="r3-corda-bridge.html?hsLang=en">
+                  <div class="menu-item-main_icon">
+                   <img src="./images/R3-main.svg" alt="R3-main" loading="lazy" width="78" height="60">
+                  </div> <span class="menu-item-icon mobile-icon"> <img src="./images/R3.svg" alt="R3" loading="lazy" width="78" height="60"> </span> <span class="sub-menu-text">R3 Corda Bridge</span> <span class="sub-menu-desc">Impel offers a bridge from the public XDC Network's blockchain DLT to R3 Corda's CordApps.</span> <span class="sub-menu-morelink"> Learn more <span class="arrow">
+                    <svg width="8" height="10" viewbox="0 0 8 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M7.06434 5.38862L1.93093 9.83902C1.68335 10.0537 1.28196 10.0537 1.03441 9.83902L0.435678 9.31995C0.188522 9.10568 0.188046 8.75841 0.434622 8.54363L4.50294 4.99999L0.434622 1.45637C0.188046 1.24159 0.188522 0.89432 0.435678 0.680047L1.03441 0.160979C1.28198 -0.0536598 1.68337 -0.0536598 1.93093 0.160979L7.06431 4.61138C7.31189 4.826 7.31189 5.17398 7.06434 5.38862Z" fill="currentColor" />
+                    </svg> </span> </span> </a>
+                </div>
+                <div class="submenu-wide-container-child">
+                 <ul class="submenu-wide-container-child-ul hide-child-icon">
+                  <li class="submenu-wide-container-child-ul-item " data-index="1"> <a href="https://youtu.be/XwpJcA7-T9A" target="_blank" rel="noopener"> <span class="menu-item-icon"> <img src="./images/play_circle-dark.svg" alt="play_circle-dark" loading="lazy" width="25" height="24" style="max-width: 100%; height: auto;"> </span> <span class="sub-menu-text">Watch demo video</span> </a> </li>
+                  <li class="submenu-wide-container-child-ul-item " data-index="2"> <a href="bridge-demo-access-new.html" rel="noopener"> <span class="menu-item-icon"> <img src="./images/impel%20logo.svg" alt="impel logo" loading="lazy" width="21" height="20"> </span> <span class="sub-menu-text">Access R3 Corda Bridge</span> </a> </li>
+                  <li class="submenu-wide-container-child-ul-item no-hover" data-index="3"> <a> <span class="menu-item-icon"> <img src="./images/settings.svg" alt="settings" loading="lazy" width="21" height="20" style="max-width: 100%; height: auto;"> </span> <span class="sub-menu-text">Developer Resources:</span> </a>
+                   <ul class="submenu-wide-container-child-ul-item-child-ul" data-child="1">
+                    <li class="submenu-wide-container-child-ul-item-child-ul-item"> <a href="https://docs.impel.global/welcome/solution-offerings/r3-corda-bridge/overview" target="_blank" rel="noopener"> <span class="sub-menu-text">GitBook</span> </a> </li>
+                   </ul> </li>
+                 </ul>
+                </div> </li>
+              </ul>
+             </ul> </li>
+            <li class="has-submenu menu-item submenu-wide-container-parent layout-fixed"> <a data-mm-item="2" class="menu-link"> Resources <span class="arrow"></span> </a> <span class="arrow arrow-dropdown"></span>
+             <ul class="submenu level-2 layout-medium layout-pops" aria-hidden="true">
+              <ul class="submenu-wide-container-links">
+               <li class="flex-anchor submenu-wide-container-link " data-target="1"> <a href="blog.html?hsLang=en"> <span class="menu-item-icon"> <img src="./images/news-insights.svg" alt="news-insights" loading="lazy" width="21" height="21"> </span> <span class="sub-menu-text">News + Insights</span> </a> </li>
+               <li class="flex-anchor submenu-wide-container-link " data-target="2"> <a href="faqs.html?hsLang=en"> <span class="menu-item-icon"> <img src="./images/Frame%20461.svg" alt="Frame 461" loading="lazy" width="21" height="22"> </span> <span class="sub-menu-text">FAQs</span> </a> </li>
+               <li class="flex-anchor submenu-wide-container-link " data-target="3"> <a href="roadmap-milestones.html?hsLang=en"> <span class="menu-item-icon"> <img src="./images/explore.svg" alt="explore" loading="lazy" width="20" height="20"> </span> <span class="sub-menu-text">Roadmap &amp; Milestones</span> </a> </li>
+               <li class=" submenu-wide-container-link " data-target="4"> <span class="menu-item-icon"> <img src="./images/campaign.svg" alt="campaign" loading="lazy" width="21" height="19"> </span> <span class="sub-menu-text">Social Media</span> </li>
+               <li class="flex-anchor submenu-wide-container-link " data-target="5"> <a href="press.html?hsLang=en"> <span class="menu-item-icon"> <img src="./images/Frame%20463.svg" alt="Frame 463" loading="lazy" width="21" height="21"> </span> <span class="sub-menu-text">Press Kit</span> </a> </li>
+              </ul>
+              <ul class="
+                   submenu-wide-container no-desc ">
+               <li class="submenu-wide-container-item " data-index="1" data-items="0">
+                <div class="submenu-wide-container-desc">
+                 <a href="blog.html?hsLang=en"> <span class="menu-item-icon mobile-icon"> <img src="./images/news-insights.svg" alt="news-insights" loading="lazy" width="21" height="21"> </span> <span class="sub-menu-text">News + Insights</span> <span class="sub-menu-desc">Lorem ipsum dolor sit amet, consectetur adipiscing et do adipiscing elit, sed do eiusmod. </span> </a>
+                </div> </li>
+               <li class="submenu-wide-container-item " data-index="2" data-items="0">
+                <div class="submenu-wide-container-desc">
+                 <a href="faqs.html?hsLang=en"> <span class="menu-item-icon mobile-icon"> <img src="./images/Frame%20461.svg" alt="Frame 461" loading="lazy" width="21" height="22"> </span> <span class="sub-menu-text">FAQs</span> <span class="sub-menu-desc">Lorem ipsum dolor sit amet, consectetur adipiscing et do adipiscing elit, sed do eiusmod. </span> </a>
+                </div> </li>
+               <li class="submenu-wide-container-item " data-index="3" data-items="0">
+                <div class="submenu-wide-container-desc">
+                 <a href="roadmap-milestones.html?hsLang=en"> <span class="menu-item-icon mobile-icon"> <img src="./images/explore.svg" alt="explore" loading="lazy" width="20" height="20"> </span> <span class="sub-menu-text">Roadmap &amp; Milestones</span> <span class="sub-menu-desc">Lorem ipsum dolor sit amet, consectetur adipiscing et do adipiscing elit, sed do eiusmod. </span> </a>
+                </div> </li>
+               <li class="submenu-wide-container-item " data-index="4" data-items="5">
+                <div class="submenu-wide-container-desc">
+                 <a> <span class="menu-item-icon mobile-icon"> <img src="./images/campaign.svg" alt="campaign" loading="lazy" width="21" height="19"> </span> <span class="sub-menu-text">Social Media</span> <span class="sub-menu-desc">Lorem ipsum dolor sit amet, consectetur adipiscing et do adipiscing elit, sed do eiusmod. </span> </a>
+                </div>
+                <div class="submenu-wide-container-child">
+                 <ul class="submenu-wide-container-child-ul ">
+                  <li class="submenu-wide-container-child-ul-item " data-index="1"> <a href="https://www.linkedin.com/company/impel-official/" target="_blank" rel="noopener"> <span class="menu-item-icon"> <img src="./images/linkedin.svg" alt="linkedin" loading="lazy" width="16" height="16"> </span> <span class="sub-menu-text">Linkedin</span> </a> </li>
+                  <li class="submenu-wide-container-child-ul-item " data-index="2"> <a href="https://twitter.com/Impel_official" target="_blank" rel="noopener"> <span class="menu-item-icon"> <img src="./images/twitter%20white.svg" alt="twitter white" loading="lazy" width="16" height="16"> </span> <span class="sub-menu-text">Twitter</span> </a> </li>
+                  <li class="submenu-wide-container-child-ul-item " data-index="3"> <a href="https://t.me/impel_official" target="_blank" rel="noopener"> <span class="menu-item-icon"> <img src="./images/Telegram%20-%20Negative.svg" alt="Telegram - Negative" loading="lazy" width="16" height="16"> </span> <span class="sub-menu-text">Telegram</span> </a> </li>
+                  <li class="submenu-wide-container-child-ul-item " data-index="4"> <a href="https://www.youtube.com/c/Impel_official" target="_blank" rel="noopener"> <span class="menu-item-icon"> <img src="./images/youtube%20white.svg" alt="youtube white" loading="lazy" width="16" height="16"> </span> <span class="sub-menu-text">Youtube</span> </a> </li>
+                  <li class="submenu-wide-container-child-ul-item " data-index="5"> <a href="https://www.instagram.com/impel.official/" target="_blank" rel="noopener"> <span class="menu-item-icon"> <img src="./images/icon-instagram.svg" alt="icon-instagram" loading="lazy" width="20" height="20"> </span> <span class="sub-menu-text">Instagram</span> </a>
+                   <ul class="submenu-wide-container-child-ul-item-child-ul" data-child="1">
+                    <li class="submenu-wide-container-child-ul-item-child-ul-item"> <a href="https://www.instagram.com/impel.official/"> <span class="sub-menu-text"></span> </a> </li>
+                   </ul> </li>
+                 </ul>
+                </div> </li>
+               <li class="submenu-wide-container-item " data-index="5" data-items="0">
+                <div class="submenu-wide-container-desc">
+                 <a href="press.html?hsLang=en"> <span class="menu-item-icon mobile-icon"> <img src="./images/Frame%20463.svg" alt="Frame 463" loading="lazy" width="21" height="21"> </span> <span class="sub-menu-text">Press Kit</span> <span class="sub-menu-desc">Lorem ipsum dolor sit amet, consectetur adipiscing et do adipiscing elit, sed do eiusmod. </span> </a>
+                </div> </li>
+              </ul>
+             </ul> </li>
+            <li class="has-submenu menu-item submenu-wide-container-parent "> <a data-mm-item="3" class="menu-link"> XDC Network <span class="arrow"></span> </a> <span class="arrow arrow-dropdown"></span>
+             <ul class="submenu level-2 layout-narrow " aria-hidden="true">
+              <ul class="has-active
+                   submenu-wide-container  hide-parent-mobile">
+               <li class="submenu-wide-container-item active" data-index="1" data-items="2">
+                <div class="submenu-wide-container-desc">
+                 <a href="the-xdc-network.html?hsLang=en">
+                  <div class="menu-item-main_icon">
+                   <img src="./images/XDC.svg" alt="XDC" loading="lazy" width="50" height="50">
+                  </div> <span class="sub-menu-text">XDC Network</span> <span class="sub-menu-desc">The XDC Network is an enterprise-grade, EVM-compatible Layer 1 blockchain DLT network equipped with interoperable smart contracts.</span> <span class="sub-menu-morelink"> Learn more <span class="arrow">
+                    <svg width="8" height="10" viewbox="0 0 8 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M7.06434 5.38862L1.93093 9.83902C1.68335 10.0537 1.28196 10.0537 1.03441 9.83902L0.435678 9.31995C0.188522 9.10568 0.188046 8.75841 0.434622 8.54363L4.50294 4.99999L0.434622 1.45637C0.188046 1.24159 0.188522 0.89432 0.435678 0.680047L1.03441 0.160979C1.28198 -0.0536598 1.68337 -0.0536598 1.93093 0.160979L7.06431 4.61138C7.31189 4.826 7.31189 5.17398 7.06434 5.38862Z" fill="currentColor" />
+                    </svg> </span> </span> </a>
+                </div>
+                <div class="submenu-wide-container-child">
+                 <ul class="submenu-wide-container-child-ul hide-child-icon">
+                  <li class="submenu-wide-container-child-ul-item no-hover" data-index="1"> <a> <span class="menu-item-icon"> <img src="./images/explore.svg" alt="explore" loading="lazy" width="20" height="20"> </span> <span class="sub-menu-text">Ecosystem Resources:</span> </a>
+                   <ul class="submenu-wide-container-child-ul-item-child-ul" data-child="5">
+                    <li class="submenu-wide-container-child-ul-item-child-ul-item"> <a href="https://xdc.blocksscan.io/" target="_blank" rel="noopener"> <span class="sub-menu-text">Block Explorer</span> </a> </li>
+                    <li class="submenu-wide-container-child-ul-item-child-ul-item"> <a href="https://xinfin.network/#stats" target="_blank" rel="noopener"> <span class="sub-menu-text">XDC Network Stats</span> </a> </li>
+                    <li class="submenu-wide-container-child-ul-item-child-ul-item"> <a href="https://www.xdc.community/" target="_blank" rel="noopener"> <span class="sub-menu-text">XDC Community</span> </a> </li>
+                    <li class="submenu-wide-container-child-ul-item-child-ul-item"> <a href="https://www.xdc.org/" target="_blank" rel="noopener"> <span class="sub-menu-text">XDC Foundation</span> </a> </li>
+                    <li class="submenu-wide-container-child-ul-item-child-ul-item"> <a href="https://xinfin.org/" target="_blank" rel="noopener"> <span class="sub-menu-text">XinFin</span> </a> </li>
+                   </ul> </li>
+                  <li class="submenu-wide-container-child-ul-item no-hover" data-index="2"> <a> <span class="menu-item-icon"> <img src="./images/settings.svg" alt="settings" loading="lazy" width="21" height="20"> </span> <span class="sub-menu-text">Developer Resources:</span> </a>
+                   <ul class="submenu-wide-container-child-ul-item-child-ul" data-child="2">
+                    <li class="submenu-wide-container-child-ul-item-child-ul-item"> <a href="https://www.xdc.dev/" target="_blank" rel="noopener"> <span class="sub-menu-text">XDC &lt;.dev&gt;</span> </a> </li>
+                    <li class="submenu-wide-container-child-ul-item-child-ul-item"> <a href="https://docs.xdc.community/" target="_blank" rel="noopener"> <span class="sub-menu-text">XDC Community GitBook</span> </a> </li>
+                   </ul> </li>
+                 </ul>
+                </div> </li>
+              </ul>
+             </ul> </li>
+           </ul>
+          </nav>
+          <span id="hs_cos_wrapper_nav_cta" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_cta" style="" data-hs-cos-general-type="widget" data-hs-cos-type="cta">
+           <!--HubSpot Call-to-Action Code --><span class="hs-cta-wrapper" id="hs-cta-wrapper-9ba44e3d-443a-4ab0-b79f-78ea20fbaab7"><span class="hs-cta-node hs-cta-9ba44e3d-443a-4ab0-b79f-78ea20fbaab7" id="hs-cta-9ba44e3d-443a-4ab0-b79f-78ea20fbaab7">
+             <!--[if lte IE 8]><div id="hs-cta-ie-element"></div><![endif]--><a href="contact-us.html"><img class="hs-cta-img" id="hs-cta-img-9ba44e3d-443a-4ab0-b79f-78ea20fbaab7" style="border-width:0px;" src="https://no-cache.hubspot.com/cta/default/21152810/9ba44e3d-443a-4ab0-b79f-78ea20fbaab7.png" alt="Connect with Impel"></a></span><script charset="utf-8" src="/hs/cta/cta/current.js"></script><script type="text/javascript"> hbspt.cta._relativeUrls=true;hbspt.cta.load(21152810, '9ba44e3d-443a-4ab0-b79f-78ea20fbaab7', {"useNewLoader":"true","region":"na1"}); </script></span>
+           <!-- end HubSpot Call-to-Action Code --></span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+   </div>
+   <main class="body-container-wrapper">
+    <span id="hs_cos_wrapper_page_content" class="hs_cos_wrapper hs_cos_wrapper_widget_container hs_cos_wrapper_type_widget_container" style="" data-hs-cos-general-type="widget_container" data-hs-cos-type="widget_container">
+     <div id="hs_cos_wrapper_widget_1654438820567" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+      <div class="xdc-tabbed-slider">
+       <div class="container">
+        <div class="xdc-tabbed-slider__heading mb-4 mb-lg-5">
+         <h2 class="mt-0 mb-4">XDC Network security is best-in-class</h2>
+         <div class="xdc-tabbed-slider__text pr-lg-5">
+          <p><span>In the blockchain and cryptocurrency-centric future, compliance and intelligence are requisite capabilities. Banks, crypto companies, law enforcement and governments trust us to monitor complex risk and power investigations. </span></p>
+          <p><span>Our blockchain intelligence ecosystem delivers best-in-class crypto tracking, analytics, risk monitoring, compliance, attribution, visualization and tracking.</span></p>
+         </div>
+        </div>
+        <div class="row mt-4 mg-lg-0">
+         <div class="col-lg-4 d-none d-lg-block">
+          <div class="xdc-tabbed-slider__img d-flex align-items-center justify-content-center">
+           <div data-id="item-slide1" class="xdc-tabbed-slider__img--item xdc-tabbed-slider__img--item-1 align-items-center justify-content-center is-active">
+            <div class="xdc-tabbed-slider__img-inner">
+             <img src="./images/logo.svg" alt="logo" loading="lazy" width="151" height="116">
+            </div>
+           </div>
+           <div data-id="item-slide2" class="xdc-tabbed-slider__img--item xdc-tabbed-slider__img--item-2 align-items-center justify-content-center ">
+            <div class="xdc-tabbed-slider__img-inner">
+             <img src="./images/bit-rank-icon.svg" alt="logo (1)" loading="lazy" width="134" height="103">
+            </div>
+           </div>
+           <div data-id="item-slide3" class="xdc-tabbed-slider__img--item xdc-tabbed-slider__img--item-3 align-items-center justify-content-center ">
+            <div class="xdc-tabbed-slider__img-inner">
+             <img src="./images/qlue-icon.svg" alt="logo (2)" loading="lazy" width="134" height="103">
+            </div>
+           </div>
+           <div data-id="item-slide4" class="xdc-tabbed-slider__img--item xdc-tabbed-slider__img--item-4 align-items-center justify-content-center ">
+            <div class="xdc-tabbed-slider__img-inner">
+             <img src="./images/Group%20493.png" alt="Group 493" loading="lazy" width="150" height="54" srcset="./images/Group%20493.png 75w, ./images/Group%20493.png 150w, ./images/Group%20493.png 225w, ./images/Group%20493.png 300w, ./images/Group%20493.png 375w, ./images/Group%20493.png 450w" sizes="(max-width: 150px) 100vw, 150px">
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="col-lg-8">
+          <div class="xdc-tabbed-slider__wrap ">
+           <div class="xdc-tabbed-slider__item is-active mb-lg-5" id="item-slide1">
+            <div class="xdc-tabbed-slider__img--item d-flex d-lg-none mb-4">
+             <img src="./images/logo.svg" alt="logo" loading="lazy" width="151" height="116">
+            </div>
+            <strong class="xdc-tabbed-slider__item--title d-block mb-4">Blockchain Intelligence Group | Blockchain Analysis</strong>
+            <div class="xdc-tabbed-slider__item--desc">
+             <p>Security and accountability is highly important to the community who uses and operates on the XDC Network, so the Blockchain Intelligence Group was chosen to provide best-in-class crypto tracking, analytics, risk monitoring , compliance, attribution, visualization and tracking.</p>
+             <!--HubSpot Call-to-Action Code -->
+             <span class="hs-cta-wrapper" id="hs-cta-wrapper-ff49ef5f-025f-4743-9610-099800812bd3"><span class="hs-cta-node hs-cta-ff49ef5f-025f-4743-9610-099800812bd3" id="hs-cta-ff49ef5f-025f-4743-9610-099800812bd3">
+               <!--[if lte IE 8]><div id="hs-cta-ie-element"></div><![endif]--><a href="https://blockchaingroup.io/" target="_blank" rel="noopener"><img class="hs-cta-img" id="hs-cta-img-ff49ef5f-025f-4743-9610-099800812bd3" style="border-width:0px;" src="https://no-cache.hubspot.com/cta/default/21152810/ff49ef5f-025f-4743-9610-099800812bd3.png" alt="Learn more at blockchaingroup.io"></a></span><script charset="utf-8" src="/hs/cta/cta/current.js"></script><script type="text/javascript"> hbspt.cta._relativeUrls=true;hbspt.cta.load(21152810, 'ff49ef5f-025f-4743-9610-099800812bd3', {"useNewLoader":"true","region":"na1"}); </script></span>
+             <!-- end HubSpot Call-to-Action Code -->
+            </div>
+           </div>
+           <div class="xdc-tabbed-slider__item  mb-lg-5" id="item-slide2">
+            <div class="xdc-tabbed-slider__img--item d-flex d-lg-none mb-4">
+             <img src="./images/bit-rank-icon.svg" alt="logo (1)" loading="lazy" width="134" height="103">
+            </div>
+            <strong class="xdc-tabbed-slider__item--title d-block mb-4">BitRank Verified®</strong>
+            <div class="xdc-tabbed-slider__item--desc">
+              BitRank Verified® makes cryptocurrency compliance simple. Banks, crypto companies, custodians, exchanges, OTC desks, crypto ATMs, fintechs, and regtechs rely on BitRank Verified® to protect their businesses, stay compliant, and avoid invasive, costly audits. Quickly clear low-risk transactions and investigate high-risk ones.
+            </div>
+           </div>
+           <div class="xdc-tabbed-slider__item  mb-lg-5" id="item-slide3">
+            <div class="xdc-tabbed-slider__img--item d-flex d-lg-none mb-4">
+             <img src="./images/qlue-icon.svg" alt="logo (2)" loading="lazy" width="134" height="103">
+            </div>
+            <strong class="xdc-tabbed-slider__item--title d-block mb-4">QLUE™</strong>
+            <div class="xdc-tabbed-slider__item--desc">
+              QLUE™ helps solve more cryptocurrency investigations. Banks, law enforcement, lawyers, forensic accountants, and management consultants trust QLUE™ to identify and track nefarious actors. QLUE™ is best-in-class cryptocurrency mapping technology that traces the flow of crypto. QLUE™ is scalable and used by solo investigators to a sprawling government agency.
+            </div>
+           </div>
+           <div class="xdc-tabbed-slider__item  " id="item-slide4">
+            <div class="xdc-tabbed-slider__img--item d-flex d-lg-none mb-4">
+             <img src="./images/Group%20493.png" alt="Group 493" loading="lazy" width="150" height="54" srcset="./images/Group%20493.png 75w, ./images/Group%20493.png 150w, ./images/Group%20493.png 225w, ./images/Group%20493.png 300w, ./images/Group%20493.png 375w, ./images/Group%20493.png 450w" sizes="(max-width: 150px) 100vw, 150px">
+            </div>
+            <strong class="xdc-tabbed-slider__item--title d-block mb-4">The Certified Cryptocurrency Investigator™</strong>
+            <div class="xdc-tabbed-slider__item--desc">
+              The Certified Cryptocurrency Investigator™ (CCI) course was developed by a groundbreaking crypto government investigator and a seasoned financial compliance expert. The training course covers the fundamentals on cryptocurrency, obfuscation, dark web, criminal tactics and more.
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div></span>
+   </main>
+   <div data-global-resource-path="impel2020/templates/partials/footer-with-menu.html">
+    <footer class="footer site-footer">
+     <div class="footer__container content-wrapper">
+      <div class="page-center">
+       <div class="row justify-content-between">
+        <div class="col-12 col-md-auto">
+         <div class="footer__company-info">
+          <div class="footer__logo">
+           <img class="logo-light" alt="Impel logo" src="./images/xdcp1.png">
+          </div>
+          <span id="hs_cos_wrapper_footer_company_descrip" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"></span>
+         </div>
+         <div class="footer-menu-wrap">
+          <span id="hs_cos_wrapper_footer_menu" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_simple_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="simple_menu">
+           <div id="hs_menu_wrapper_footer_menu" class="hs-menu-wrapper active-branch flyouts hs-menu-flow-vertical" role="navigation" data-sitemap-name="" data-menu-id="" aria-label="Navigation Menu">
+            <ul role="menu">
+             <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="iso-20022.html" role="menuitem" target="_self">ISO 20022 API</a></li>
+             <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="r3-corda-bridge.html" role="menuitem" target="_self">R3 Corda Bridge</a></li>
+             <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="blog.html" role="menuitem" target="_self">News + Insights</a></li>
+             <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="the-xdc-network.html" role="menuitem" target="_self">XDC Network</a></li>
+             <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="contact-us.html" role="menuitem" target="_self">Connect with our team</a></li>
+            </ul>
+           </div></span>
+         </div>
+        </div>
+        <div class="col-12 col-md-7">
+         <div class="single-line-form">
+          <span id="hs_cos_wrapper_footer_form" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_form" style="" data-hs-cos-general-type="widget" data-hs-cos-type="form"><h3 id="hs_cos_wrapper_footer_form_title" class="hs_cos_wrapper form-title" data-hs-cos-general-type="widget_field" data-hs-cos-type="text">Subscribe to our newsletter</h3>
+           <div id="hs_form_target_footer_form"></div> </span>
+         </div>
+         <div class="footer__company-contact">
+          <span id="hs_cos_wrapper_footer_company_contact" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"></span>
+          <div class="cta-social-wrap">
+           <div class="footer-lightbox-cta-container">
+            <div id="hs_cos_wrapper_module_16526748730613" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+             <div class="lightbox-form-cta module_16526748730613">
+              <a href="index.html" class="lightbox-cta"> Submit Technical Support Ticket </a>
+              <div class="lightbox-form-container">
+               <div class="top-section">
+                <span class="close-lightbox"></span>
+               </div>
+               <div class="lightboxform-container-inner">
+                <div class="form-container">
+                 <span id="hs_cos_wrapper_module_16526748730613_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_form" style="" data-hs-cos-general-type="widget" data-hs-cos-type="form"><h3 id="hs_cos_wrapper_form_615200091_title" class="hs_cos_wrapper form-title" data-hs-cos-general-type="widget_field" data-hs-cos-type="text"></h3>
+                  <div id="hs_form_target_form_615200091"></div> </span>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="footer__social-links">
+            <div id="hs_cos_wrapper_footer_social" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+             <style>
+
+</style>
+             <div class="social-links">
+              <a class="social-links__link" href="https://www.linkedin.com/company/impel-xdc-network" rel="noopener" target="_blank"> <span id="hs_cos_wrapper_footer_social_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon social-links__icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon">
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" aria-labelledby="linkedin1" role="img">
+                 <title id="linkedin1">Follow us on LinkedIn</title>
+                 <g id="linkedin1_layer">
+                  <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                 </g>
+                </svg></span> </a>
+              <a class="social-links__link" href="https://twitter.com/Impel_official" rel="noopener" target="_blank"> <span id="hs_cos_wrapper_footer_social__2" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon social-links__icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon">
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512" aria-labelledby="twitter2" role="img">
+                 <title id="twitter2">Follow us on Twitter</title>
+                 <g id="twitter2_layer">
+                  <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" />
+                 </g>
+                </svg></span> </a>
+              <a class="social-links__link" href="https://t.me/impel_official" rel="noopener" target="_blank"> <span class="social-links__icon">
+                <svg width="1000px" height="1000px" viewbox="0 0 1000 1000" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                 <circle id="Oval" fill="#002C72" cx="500" cy="500" r="500"></circle>
+                 <path d="M226.328419,494.722069 C372.088573,431.216685 469.284839,389.350049 517.917216,369.122161 C656.772535,311.36743 685.625481,301.334815 704.431427,301 C708.567621,300.93067 717.815839,301.955743 723.806446,306.816707 C728.864797,310.92121 730.256552,316.46581 730.922551,320.357329 C731.588551,324.248848 732.417879,333.113828 731.758626,340.040666 C724.234007,419.102486 691.675104,610.964674 675.110982,699.515267 C668.10208,736.984342 654.301336,749.547532 640.940618,750.777006 C611.904684,753.448938 589.856115,731.588035 561.733393,713.153237 C517.726886,684.306416 492.866009,666.349181 450.150074,638.200013 C400.78442,605.66878 432.786119,587.789048 460.919462,558.568563 C468.282091,550.921423 596.21508,434.556479 598.691227,424.000355 C599.00091,422.680135 599.288312,417.758981 596.36474,415.160431 C593.441168,412.561881 589.126229,413.450484 586.012448,414.157198 C581.598758,415.158943 511.297793,461.625274 375.109553,553.556189 C355.154858,567.258623 337.080515,573.934908 320.886524,573.585046 C303.033948,573.199351 268.692754,563.490928 243.163606,555.192408 C211.851067,545.013936 186.964484,539.632504 189.131547,522.346309 C190.260287,513.342589 202.659244,504.134509 226.328419,494.722069 Z" fill="#d9ecff"></path>
+                </svg> </span> </a>
+              <a class="social-links__link" href="https://www.instagram.com/impel.official/" rel="noopener" target="_blank"> <span id="hs_cos_wrapper_footer_social__4" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon social-links__icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon">
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" aria-labelledby="instagram3" role="img">
+                 <title id="instagram3">Follow us on Facebook</title>
+                 <g id="instagram3_layer">
+                  <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                 </g>
+                </svg></span> </a>
+              <a class="social-links__link" href="https://www.youtube.com/c/Impel_official" rel="noopener" target="_blank"> <span id="hs_cos_wrapper_footer_social__5" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon social-links__icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon">
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 576 512" aria-labelledby="youtube4" role="img">
+                 <title id="youtube4">Follow us on Youtube</title>
+                 <g id="youtube4_layer">
+                  <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" />
+                 </g>
+                </svg></span> </a>
+              <a class="social-links__link" href="https://gitlab.com/Impel-official" rel="noopener" target="_blank"> <span class="social-links__icon">
+                <svg width="26" height="24" viewbox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                 <path d="M24.9197 9.50067L24.8846 9.41113L21.4925 0.558358C21.4235 0.384848 21.3013 0.237659 21.1434 0.13791C20.9855 0.0398554 20.8012 -0.00737091 20.6156 0.00260769C20.4299 0.0125863 20.2518 0.0792893 20.1053 0.19371C19.9604 0.311417 19.8553 0.470913 19.8042 0.650493L17.5138 7.65797H8.23929L5.94889 0.650493C5.89922 0.469934 5.79387 0.309639 5.64783 0.192412C5.50129 0.0779913 5.32318 0.0112883 5.13753 0.00130973C4.95188 -0.00866887 4.76764 0.0385575 4.60968 0.136612C4.45218 0.236764 4.33008 0.383824 4.26061 0.55706L0.861984 9.40594L0.828245 9.49548C0.339931 10.7714 0.279657 12.1714 0.656509 13.4846C1.03336 14.7977 1.82691 15.9527 2.91751 16.7755L2.92919 16.7846L2.96033 16.8066L8.12769 20.6763L10.6841 22.6111L12.2413 23.7868C12.4235 23.9251 12.6459 24 12.8746 24C13.1033 24 13.3257 23.9251 13.5079 23.7868L15.0651 22.6111L17.6215 20.6763L22.82 16.7833L22.833 16.7729C23.9212 15.95 24.7129 14.7961 25.0891 13.4848C25.4654 12.1734 25.406 10.7753 24.9197 9.50067V9.50067Z" fill="#002C72" />
+                </svg> </span> </a>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="footer__middle-row row">
+        <div class="col-auto col-md-auto">
+         <div class="footer__copyright">
+           Impel © 2024
+         </div>
+        </div>
+        <div class="col-auto col-md-auto">
+         <div class="footer__tos-links">
+          <span id="hs_cos_wrapper_tos_links" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_simple_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="simple_menu">
+           <div id="hs_menu_wrapper_tos_links" class="hs-menu-wrapper active-branch flyouts hs-menu-flow-horizontal" role="navigation" data-sitemap-name="" data-menu-id="" aria-label="Navigation Menu">
+            <ul role="menu">
+             <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="privacy-policy.html" role="menuitem" target="_self">Privacy Policy</a></li>
+             <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="terms-conditions.html" role="menuitem" target="_self">Terms of Service</a></li>
+            </ul>
+           </div></span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script src="./js/jquery-3.7.1.min.js"></script>
+  <script>hsjQuery = window['jQuery'];</script>
+  <script src="./js/main.min.js"></script>
+  <script src="./js/lottie.min.js"></script>
+  <script>
+var hsVars = hsVars || {}; hsVars['language'] = 'en';
+</script>
+  <script src="/hs/hsstatic/cos-i18n/static-1.53/bundles/project.js"></script>
+  <script src="./js/menu-mega-impel.min.js"></script>
+  <script src="./js/slick.min.js"></script>
+  <script>
+  $(function() {
+    $('.xdc-tabbed-slider__wrap').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      mobileFirst: true,
+      fade: true,
+      prevArrow: '<div class="slick-arrow slick-prev"><svg width="26" height="10" viewBox="0 0 26 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.88805 0.538752L5.88807 0.538771L6.4868 1.05784C6.49191 1.06227 6.49525 1.06596 6.49736 1.06867C6.49527 1.07134 6.49199 1.07498 6.48697 1.07934L2.41865 4.62298L1.9858 5.00001L2.41866 5.37704L6.48697 8.92066C6.48697 8.92066 6.48697 8.92066 6.48698 8.92066C6.49199 8.92502 6.49527 8.92866 6.49736 8.93133C6.49525 8.93404 6.49191 8.93773 6.4868 8.94216L5.88807 9.46123C5.82843 9.51293 5.70621 9.51291 5.64662 9.46125L5.6466 9.46123L0.513215 5.01083L0.513195 5.01081C0.508083 5.00638 0.504749 5.00269 0.502634 4.99999C0.504747 4.99729 0.508079 4.9936 0.513187 4.98917C0.513194 4.98917 0.513201 4.98916 0.513208 4.98915L5.6466 0.538772L5.31908 0.160979L5.6466 0.53877C5.70624 0.487067 5.82846 0.48709 5.88805 0.538752Z" fill="#005DF2" stroke="#005DF2"/><path d="M3 5H25" stroke="#005DF2" stroke-width="2" stroke-linecap="round"/></svg></div>',
+      nextArrow: '<div class="slick-arrow slick-next"><svg width="26" height="10" viewBox="0 0 26 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.112 9.46125L20.1119 9.46123L19.5132 8.94216C19.5081 8.93773 19.5048 8.93404 19.5026 8.93133C19.5047 8.92866 19.508 8.92502 19.513 8.92066L23.5813 5.37702L24.0142 4.99999L23.5813 4.62296L19.513 1.07934C19.513 1.07934 19.513 1.07934 19.513 1.07934C19.508 1.07498 19.5047 1.07134 19.5026 1.06867C19.5048 1.06596 19.5081 1.06227 19.5132 1.05784L20.1119 0.538771C20.1716 0.487068 20.2938 0.487091 20.3534 0.538754L20.3534 0.538771L25.4868 4.98917L25.4868 4.98919C25.4919 4.99362 25.4953 4.99731 25.4974 5.00001C25.4953 5.00271 25.4919 5.0064 25.4868 5.01083C25.4868 5.01083 25.4868 5.01084 25.4868 5.01085L20.3534 9.46123L20.6809 9.83902L20.3534 9.46123C20.2938 9.51293 20.1715 9.51291 20.112 9.46125Z" fill="#005DF2" stroke="#005DF2"/><path d="M23 5L1 5" stroke="#005DF2" stroke-width="2" stroke-linecap="round"/></svg></div>',
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: 'unslick'
+        }
+      ]
+    });
+
+    function tabbed_slide(){
+      if ($(this).width() > 991) {
+        $('.xdc-tabbed-slider__img--item').on('click', function(){
+          var id = $(this).data('id');
+
+          $(this).addClass('is-active').siblings().removeClass('is-active');
+          $('#'+id).addClass('is-active').siblings().removeClass('is-active');
+        });
+      }
+    }
+
+    $(window).on('resize', function() {
+      $('.xdc-tabbed-slider__wrap').slick('resize');
+      tabbed_slide();
+    });
+    tabbed_slide();
+
+    // auto select the item when it reaches near the top of window
+    let xdc_item1_slide = $('.xdc-tabbed-slider__img--item-1');
+    let xdc_item2_slide = $('.xdc-tabbed-slider__img--item-2');
+    let xdc_item3_slide = $('.xdc-tabbed-slider__img--item-3');
+    let xdc_item4_slide = $('.xdc-tabbed-slider__img--item-4');
+    let xdc_item2_top_slide = $(xdc_item2_slide).offset().top - 400;
+    let xdc_item3_top_slide = $(xdc_item3_slide).offset().top - 400;
+    let xdc_item4_top_slide = $(xdc_item4_slide).offset().top - 400;
+
+    var xdc_item_is_active_slide = function() {
+					var scrollTop = $(window).scrollTop();
+
+					if( scrollTop >= xdc_item2_top_slide && scrollTop < xdc_item3_top_slide ) {
+            $(xdc_item2_slide).addClass('is-active').siblings().removeClass('is-active');
+            $('#item-slide2').addClass('is-active').siblings().removeClass('is-active');
+					} else if( scrollTop >= xdc_item3_top_slide && scrollTop < xdc_item4_top_slide ) {
+            $(xdc_item3_slide).addClass('is-active').siblings().removeClass('is-active');;
+            $('#item-slide3').addClass('is-active').siblings().removeClass('is-active');
+					}else if( scrollTop >= xdc_item4_top_slide ) {
+            $(xdc_item4_slide).addClass('is-active').siblings().removeClass('is-active');;
+            $('#item-slide4').addClass('is-active').siblings().removeClass('is-active');
+					}else{
+            $(xdc_item1_slide).addClass('is-active').siblings().removeClass('is-active');;
+            $('#item-slide1').addClass('is-active').siblings().removeClass('is-active');
+          }
+			}
+
+    $(window).scroll(function(e) {
+      xdc_item_is_active_slide();
+    });
+  });
+</script>
+  <!--[if lte IE 8]>
+    <script charset="utf-8" src="https://js.hsforms.net/forms/v2-legacy.js"></script>
+    <![endif]-->
+  <script data-hs-allowed="true" src="./js/v2.js"></script>
+  <script data-hs-allowed="true">
+        var options = {
+            portalId: '21152810',
+            formId: '8d6a6a50-7b7c-44f2-829c-f0f7292abd3d',
+            formInstanceId: '8712',
+            pageId: '75417985336',
+            region: 'na1',
+
+
+
+
+            pageName: "Blockchain Intelligence Group",
+
+
+
+            inlineMessage: "Thanks for signing up!",
+
+
+            rawInlineMessage: "Thanks for signing up!",
+
+
+            hsFormKey: "168c1cd94d6b70f22d56b110f42421ce",
+
+
+            deactivateSmartForm: true,
+
+            css: '',
+            target: '#hs_form_target_footer_form',
+
+
+
+
+
+            contentType: "standard-page",
+
+
+
+
+            useDraft: "true",
+
+
+            formData: {
+                cssClass: 'hs-form stacked hs-custom-form'
+            }
+        };
+
+        options.getExtraMetaDataBeforeSubmit = function() {
+            var metadata = {};
+
+
+            if (hbspt.targetedContentMetadata) {
+                var count = hbspt.targetedContentMetadata.length;
+                var targetedContentData = [];
+                for (var i = 0; i < count; i++) {
+                    var tc = hbspt.targetedContentMetadata[i];
+                     if ( tc.length !== 3) {
+                        continue;
+                     }
+                     targetedContentData.push({
+                        definitionId: tc[0],
+                        criterionId: tc[1],
+                        smartTypeId: tc[2]
+                     });
+                }
+                metadata["targetedContentMetadata"] = JSON.stringify(targetedContentData);
+            }
+
+            return metadata;
+        };
+
+        hbspt.forms.create(options);
+    </script>
+  <script data-hs-allowed="true">
+        var options = {
+            portalId: '21152810',
+            formId: '1e807dd4-4051-43d7-927c-11ec600da230',
+            formInstanceId: '8831',
+            pageId: '75417985336',
+            region: 'na1',
+
+
+
+
+            pageName: "Blockchain Intelligence Group",
+
+
+
+            inlineMessage: "Thanks for submitting the form.",
+
+
+            rawInlineMessage: "Thanks for submitting the form.",
+
+
+            hsFormKey: "2d8336f3af249445b96715c0086c0c52",
+
+
+            deactivateSmartForm: true,
+
+            css: '',
+            target: '#hs_form_target_form_615200091',
+
+
+
+
+
+            contentType: "standard-page",
+
+
+
+
+            useDraft: "true",
+
+
+            formData: {
+                cssClass: 'hs-form stacked hs-custom-form'
+            }
+        };
+
+        options.getExtraMetaDataBeforeSubmit = function() {
+            var metadata = {};
+
+
+            if (hbspt.targetedContentMetadata) {
+                var count = hbspt.targetedContentMetadata.length;
+                var targetedContentData = [];
+                for (var i = 0; i < count; i++) {
+                    var tc = hbspt.targetedContentMetadata[i];
+                     if ( tc.length !== 3) {
+                        continue;
+                     }
+                     targetedContentData.push({
+                        definitionId: tc[0],
+                        criterionId: tc[1],
+                        smartTypeId: tc[2]
+                     });
+                }
+                metadata["targetedContentMetadata"] = JSON.stringify(targetedContentData);
+            }
+
+            return metadata;
+        };
+
+        hbspt.forms.create(options);
+    </script>
+  <script>
+
+  $('.footer-lightbox-cta')
+    .on('click',function(){
+    console.log("call-lightbox");
+    $('.module_16526748730613 .lightbox-form-container').
+      fadeIn();
+  });
+
+
+  $('.module_16526748730613 .lightbox-cta')
+    .click(function(){
+    console.log("call-lightbox");
+    $('.module_16526748730613 .lightbox-form-container').
+      fadeIn();
+  });
+  $('.module_16526748730613 .close-lightbox')
+    .click(function(){
+    $('.module_16526748730613 .lightbox-form-container').
+      fadeOut();
+  });
+</script>
+  <!-- Start of HubSpot Analytics Code Not Loaded -->
+  <script>
+(function(){
+  const timeoutEvent = document.createEvent('CustomEvent');
+  timeoutEvent.initCustomEvent("content-analytics-code-not-loaded", true, true, { detail: "Not loaded in preview mode" });
+  window.dispatchEvent(timeoutEvent);
+})();
+</script>
+  <!-- End of HubSpot Analytics Code Not Loaded -->
+  <script type="text/javascript">
+var hsVars = {
+    render_id: "074c5adf-5d3c-4ace-a27f-a42d2ca4ae32",
+    ticks: 1706508516646,
+    page_id: 75417985336,
+
+    content_group_id: 0,
+    portal_id: 21152810,
+    app_hs_base_url: "https://app.hubspot.com",
+    cp_hs_base_url: "https://cp.hubspot.com",
+    language: "en",
+    analytics_page_type: "standard-page",
+    analytics_page_id: "75417985336",
+    category_id: 1,
+    folder_id: 0,
+    is_hubspot_user: null
+}
+</script>
+  <script defer src="/hs/hsstatic/HubspotToolsMenu/static-1.191/js/index.js"></script>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WZNCNMP" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <script>
+      $(window).load(function(){
+        $('.footer-lightbox-cta').on('click',function(){
+          $('.lightbox-form-container').fadeIn();
+        });
+      });
+    </script>
+ </body>
+</html>

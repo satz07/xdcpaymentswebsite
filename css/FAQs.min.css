@@ -1,0 +1,131 @@
+.faqs-entry {
+    position: relative
+}
+
+.faqs-mod .section-title {
+    font-size: 30px;
+    line-height: 1.33;
+    margin: 0 0 30px;
+    letter-spacing: -0.05em
+}
+
+.faqs-items ul {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+.faqs-items ul+ul {
+    margin-top: -1px
+}
+
+.faqs-items li {
+    padding: 20px 0;
+    border-bottom: 1px solid #005df2;
+    box-sizing: border-box
+}
+
+.faqs-items li:first-child {
+    border-top: 1px solid #005df2
+}
+
+.question {
+    font-size: 18px;
+    line-height: 1.55;
+    margin: 0;
+    padding-right: 30px;
+    position: relative;
+    cursor: pointer
+}
+
+.question .plusMinus {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer
+}
+
+.question:not(.active) .plusMinus {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.2721 0.693481C11.4437 0.693481 10.7721 1.36505 10.7721 2.19348V10.7532H10.7561V10.7713H2.19434C1.36591 10.7713 0.694336 11.4428 0.694336 12.2713V12.7435C0.694336 13.5719 1.36591 14.2435 2.19434 14.2435H10.7561V22.8046C10.7561 23.633 11.4277 24.3046 12.2561 24.3046H12.7284C13.5568 24.3046 14.2284 23.633 14.2284 22.8046V14.2435H14.2457V14.2275H22.8061C23.6346 14.2275 24.3061 13.5559 24.3061 12.7275V12.2545C24.3061 11.4261 23.6346 10.7545 22.8062 10.7545L14.245 10.7539L14.2444 2.19338C14.2444 1.36499 13.5728 0.693481 12.7444 0.693481H12.2721Z' fill='%23002C72'/%3E%3C/svg%3E")
+}
+
+.question.active .plusMinus {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M24.3054 11.9167C24.3054 11.0878 23.6333 10.4161 22.8044 10.4167L2.19332 10.4306C1.36529 10.4312 0.694336 11.1026 0.694336 11.9306V12.4035C0.694336 13.2323 1.36655 13.9041 2.19539 13.9035L22.8065 13.8889C23.6345 13.8883 24.3054 13.2169 24.3054 12.3889V11.9167Z' fill='%23002C72'/%3E%3C/svg%3E")
+}
+
+.answer {
+    display: none;
+    padding-right: 36px;
+    line-height: 1.625;
+    padding-top: 10px
+}
+
+.answer *:last-child {
+    margin-bottom: 0
+}
+
+@media screen and (min-width: 992px) {
+    .faqs-mod .page-center {
+        max-width:1330px;
+        padding: 0
+    }
+
+    .faqs-entry:after {
+        content: "";
+        display: inline-block;
+        width: 3px;
+        height: calc(100% + 100px);
+        background-color: #005df2;
+        position: absolute;
+        top: -50px;
+        right: 0
+    }
+
+    .faqs-mod .section-title {
+        font-size: 55px;
+        line-height: 1.18;
+        margin-bottom: 25px
+    }
+
+    .faqs-items {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 32px;
+        align-items: self-start
+    }
+
+    .faqs-items ul {
+        width: calc(50% - 16px)
+    }
+
+    .faqs-items ul+ul {
+        margin-top: 0
+    }
+
+    .faqs-items li {
+        padding: 20px
+    }
+
+    .question {
+        font-size: 22px;
+        line-height: 1.45
+    }
+
+    .question .plusMinus {
+        width: 25px;
+        height: 25px
+    }
+
+    .answer {
+        font-size: 18px;
+        line-height: 1.66;
+        padding-top: 19px
+    }
+}

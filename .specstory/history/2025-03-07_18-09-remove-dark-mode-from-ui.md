@@ -1,0 +1,6994 @@
+## SpecStory
+
+## Remove Dark Mode from UI (3/7/2025, 6:09:38 PM)
+
+_**User**_
+
+have only light mode, remove dark mode related code and the option to toggle also from UI
+
+---
+
+_**Assistant**_
+
+I'll help remove the dark mode related code. Since this appears to be a UI change, we'll need to modify the HTML file to remove the dark mode toggle and any related styling.
+
+Here are the suggested changes:
+
+```html:bridge-demo-access-new.html
+// ... existing code ...
+<header>
+    <div class="header-content">
+        <div class="logo">
+            <img src="assets/bridge-logo.svg" alt="Bridge Logo">
+        </div>
+        <!-- Remove dark mode toggle button -->
+    </div>
+</header>
+// ... existing code ...
+
+<style>
+    // ... existing code ...
+    
+    /* Remove any dark theme related CSS variables and styles */
+    :root {
+        --bg-color: #ffffff;
+        --text-color: #333333;
+        --border-color: #e0e0e0;
+        --hover-color: #f5f5f5;
+    }
+
+    /* Remove any .dark-theme related styles if they exist */
+    
+    body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+    }
+    // ... existing code ...
+</style>
+
+<script>
+    // ... existing code ...
+    // Remove any dark mode toggle related JavaScript functions
+    // Remove any theme switching logic
+    // ... existing code ...
+</script>
+```
+
+This edit will:
+1. Remove the dark mode toggle button from the header
+2. Simplify the CSS variables to only include light mode colors
+3. Remove any `.dark-theme` related CSS classes and styles
+4. Remove any JavaScript functions related to theme switching
+
+Please note that without seeing the full content of your HTML file, I've provided a general structure for the changes. You may need to remove additional dark mode related code depending on your specific implementation. Let me know if you need more specific guidance once you share the full file content.
+
+---
+
+_**User**_
+
+can you check this index.html and make chnages
+
+---
+
+_**Assistant**_
+
+I notice this is actually `bridge-demo-access-new.html` rather than `index.html`. I'll help remove the dark mode related code from this file.
+
+Here are the changes needed:
+
+```html:bridge-demo-access-new.html
+// ... existing code ...
+<style>
+    // ... existing code ...
+    /* Remove dark theme related styles */
+    .logo-dark {
+        display: none;  /* Remove this class entirely */
+    }
+    .light-header .logo-dark {
+        display: none;  /* Remove this class entirely */
+    }
+    .light-header .logo-light {
+        display: none;  /* Remove this class entirely */
+    }
+
+    /* Keep only light mode logo always visible */
+    .header__logo img {
+        max-width: 100%;
+        display: block;  /* Always show light logo */
+    }
+    // ... existing code ...
+</style>
+
+// ... existing code ...
+
+<header class="header">
+    <div class="page-center">
+        <div class="row align-items-center justify-content-between">
+            <div class="col-auto">
+                <!-- Remove dark logo, keep only light logo -->
+                <a class="header__logo header__logo--main" href="index.html">
+                    <img src="./images/impel-logo.svg" alt="Impel logo">
+                </a>
+            </div>
+            // ... rest of header code ...
+        </div>
+    </div>
+</header>
+
+// ... existing code ...
+
+<footer class="footer site-footer">
+    // ... existing footer code ...
+    <div class="footer__logo">
+        <!-- Remove dark logo reference, keep only light logo
+
+---
+
+_**User**_
+
+can you check this index.html and make chnages
+
+---
+
+_**Assistant**_
+
+I notice you want me to check index.html, but I don't have access to its contents. Could you please share the contents of index.html so I can help make the dark mode related changes?
+
+From what I can see, you want to remove dark mode related code, but I'll need to see the actual index.html file to make the appropriate changes. Please share the contents of index.html and I'll help:
+
+1. Remove dark mode toggle functionality
+2. Remove dark theme related CSS
+3. Clean up any dark mode related HTML elements
+4. Keep only light mode styling
+
+Could you please share the contents of index.html?
+
+---
+
+_**User**_
+
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <title>ISO 20022 Financial Messaging API and the R3 Corda Bridge | XDC Payments</title>
+ <link rel="shortcut icon" href="./images/favicon-96x96.webp">
+ <meta name="description" content="XDC Payments is a fintech innovator with Layer 2 solution offerings built on top of the XDC Network's blockchain DLT for forward-facing banks, FIs, and corporates.">
+ <meta name="last-updated" data-type="date" content="2023-05-26">
+ <meta property="og:image" content="./images/IMP_SocialShareImage_sc_1b-01.webp">
+ <link rel="stylesheet" href="./css/ykh0kif.css">
+ <link rel="stylesheet" href="./css/xyd8ejf.css">
+ <link rel="stylesheet" href="./css/zen8twi.css">
+ <meta property="og:description" content="XDC Payments is a fintech innovator with Layer 2 solution offerings built on top of the XDC Network's blockchain DLT for forward-facing banks, FIs, and corporates.">
+ <meta property="og:title" content="ISO 20022 Financial Messaging API and the R3 Corda Bridge | XDC Payments">
+ <meta name="twitter:description" content="XDC Payments is a fintech innovator with Layer 2 solution offerings built on top of the XDC Network's blockchain DLT for forward-facing banks, FIs, and corporates.">
+ <meta name="twitter:title" content="ISO 20022 Financial Messaging API and the R3 Corda Bridge | XDC Payments">
+ <style>
+  a.cta_button{-moz-box-sizing:content-box !important;-webkit-box-sizing:content-box !important;box-sizing:content-box !important;vertical-align:middle}.hs-breadcrumb-menu{list-style-type:none;margin:0px 0px 0px 0px;padding:0px 0px 0px 0px}.hs-breadcrumb-menu-item{float:left;padding:10px 0px 10px 10px}.hs-breadcrumb-menu-divider:before{content:'›';padding-left:10px}.hs-featured-image-link{border:0}.hs-featured-image{float:right;margin:0 0 20px 20px;max-width:50%}@media (max-width: 568px){.hs-featured-image{float:none;margin:0;width:100%;max-width:100%}}.hs-screen-reader-text{clip:rect(1px, 1px, 1px, 1px);height:1px;overflow:hidden;position:absolute !important;width:1px}
+ </style>
+ <link rel="stylesheet" href="./css/main.min.css">
+ <style>
+  /* Replace primary blue colors */
+  :root {
+    --primary-color: #3533cd;
+    --primary-hover: #2826a4;
+    --primary-light: #eeeeff;
+    --primary-lighter: #f5f5ff;
+    --primary-dark: #282894;
+    --primary-bg: #fafbff;
+  }
+
+  /* Update specific color instances */
+  .cat-title { 
+    color: #3533cd !important; 
+  }
+
+  .technology-mod .cat-title,
+  .offer-mod .cat-title,
+  .faqs-mod .cat-title { 
+    color: #3533cd; 
+  }
+
+  .header__navigation .menu-primary-menu-container ul > li.current-menu-item > a,
+  .header__navigation .menu-primary-menu-container ul > li:hover > a {
+    color: #3533cd;
+  }
+
+  .submenu-wide-container-link:hover .sub-menu-text,
+  .submenu-wide-container-link.active .sub-menu-text {
+    color: #3533cd;
+  }
+
+  .offer-item:hover .item-title {
+    color: #3533cd;
+  }
+
+  .technology-item:hover .item-title {
+    color: #3533cd;
+  }
+
+  /* Update background colors */
+  .btn-primary,
+  .hs-button {
+    background-color: #3533cd;
+  }
+
+  .btn-primary:hover,
+  .hs-button:hover {
+    background-color: #2826a4;
+  }
+
+  /* Update border colors */
+  .offer-item:hover {
+    border-color: #3533cd;
+  }
+
+  .technology-item:hover {
+    border-color: #3533cd;
+  }
+
+  /* Update any #005DF2 or #002C72 instances */
+  [style*="color:#005DF2"],
+  [style*="color: #005DF2"] {
+    color: #3533cd !important;
+  }
+
+  [style*="color:#002C72"],
+  [style*="color: #002C72"] {
+    color: #3533cd !important;
+  }
+
+  /* Update background patterns and icons */
+  .item-icon {
+    background-color: #3533cd;
+  }
+
+  .pattern svg path {
+    stroke: #3533cd;
+    opacity: 0.1;
+  }
+
+  .header {
+   position:absolute;
+   top:0;
+   left:0;
+   width:100%;
+   padding:20px 0 20px;
+   z-index:99;
+  }
+
+  /* Logo */
+
+  .header__logo {
+   -webkit-box-align: center;
+   -ms-flex-align: center;
+   align-items: center;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   height: auto;
+   margin-right: auto;
+   max-width: 200px;
+   overflow: hidden;
+  }
+
+  .header__logo img {
+   max-width: 100%;
+  }
+  .logo-dark {
+   display:none;
+  }
+  .light-header .logo-dark {
+   display:block;
+  }
+  .light-header .logo-light {
+   display:none;
+  }
+
+  .header__logo .logo-company-name {
+   font-size: 28px;
+   margin-top: 7px;
+  }
+
+  /* Search bar */
+
+  .header__search {
+   padding: 0 22px;
+   width: auto;
+  }
+
+  .header__search .hs-search-field__input {
+   background-color: #FFF;
+   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiIHZpZXdCb3g9IiAgMCAyNCAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4gICAgICAgIDx0aXRsZT5TZWFyY2g8L3RpdGxlPiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4gICAgPGRlZnM+ICAgICAgICA8cGF0aCBkPSJNOS4xMzg2MTUzNCwxNS44OTI1Njg1IEM1LjQxMzk1NzQyLDE1Ljg5MjU2ODUgMi4zODM4ODUyNywxMi44NjM0NDc1IDIuMzgzODg1MjcsOS4xMzkwMDM3NiBDMi4zODM4ODUyNyw1LjQxNDU2MDA1IDUuNDEzOTU3NDIsMi4zODM4ODUyNyA5LjEzODYxNTM0LDIuMzgzODg1MjcgQzEyLjg2MzI3MzMsMi4zODM4ODUyNyAxNS44OTI1Njg1LDUuNDE0NTYwMDUgMTUuODkyNTY4NSw5LjEzOTAwMzc2IEMxNS44OTI1Njg1LDEyLjg2MzQ0NzUgMTIuODYzMjczMywxNS44OTI1Njg1IDkuMTM4NjE1MzQsMTUuODkyNTY4NSBNOS4xMzg3NTI0NSwyLjQzMzYwODg3ZS0xMyBDMTQuMTc3OTk1NSwyLjQzMzYwODg3ZS0xMyAxOC4yNzY0NTM3LDQuMTAwMzI0NzEgMTguMjc2NDUzNyw5LjEzOTI3Nzk2IEMxOC4yNzY0NTM3LDExLjIyOTgyMTEgMTcuNTcxMDE2OSwxMy4xNTg0NDM0IDE2LjM4NTYzMTMsMTQuNjk5NjY5NiBMMjMuNjUwODg4MSwyMS45NjUyMjY2IEMyNC4xMTYzNzA2LDIyLjQzMDcwOTIgMjQuMTE2MzcwNiwyMy4xODU0MDU1IDIzLjY1MDg4ODEsMjMuNjUwODg4MSBDMjMuMTg1NDA1NSwyNC4xMTYzNzA2IDIyLjQzMDcwOTIsMjQuMTE2MzcwNiAyMS45NjUyMjY2LDIzLjY1MDg4ODEgTDE0LjY5OTgxMzMsMTYuMzg1NDcxMyBDMTMuMTU4NDQwNSwxNy41NzA5NTA5IDExLjIyOTU3MzgsMTguMjc2NDUzNyA5LjEzODc1MjQ1LDE4LjI3NjQ1MzcgQzQuMDk5NTA5MzgsMTguMjc2NDUzNyAtMy43MzAzNDkzNmUtMTQsMTQuMTc4MjMxMiAtMy43MzAzNDkzNmUtMTQsOS4xMzkyNzc5NiBDLTMuNzMwMzQ5MzZlLTE0LDQuMTAwMzI0NzEgNC4wOTk1MDkzOCwyLjQzMzYwODg3ZS0xMyA5LjEzODc1MjQ1LDIuNDMzNjA4ODdlLTEzIFoiIGlkPSJwYXRoLTEiPjwvcGF0aD4gICAgPC9kZWZzPiAgICA8ZyBpZD0iU2VhcmNoIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4gICAgICAgIDxtYXNrIGlkPSJtYXNrLTIiIGZpbGw9IndoaXRlIj4gICAgICAgICAgICA8dXNlIHhsaW5rOmhyZWY9IiNwYXRoLTEiPjwvdXNlPiAgICAgICAgPC9tYXNrPiAgICAgICAgPHVzZSBpZD0iSWNvbnMvQWN0aW9ucy9TZWFyY2giIGZpbGw9IiM0OTRBNTIiIHhsaW5rOmhyZWY9IiNwYXRoLTEiPjwvdXNlPiAgICA8L2c+PC9zdmc+);
+   background-position: center right 15px;
+   background-repeat: no-repeat;
+   border: 1.79px solid #D1D6DC;
+   border-radius: 6px;
+   color: #494A52;
+   font-family: Lato, serif;
+   font-size: 22px;
+   font-weight: 300;
+   height: 45px;
+   padding: 0 15px;
+  }
+
+  .header__search .hs-search-field--open .hs-search-field__input {
+   border: 1.79px solid #D1D6DC;
+   border-bottom: none;
+   border-radius: 6px 6px 0 0;
+   background-color: #FFF;
+  }
+
+  .header__search .hs-search-field__input::placeholder {
+   color: transparent;
+  }
+
+  .header__search .hs-search-field--open .hs-search-field__suggestions {
+   background-color: #FFF;
+   border: 1.79px solid #D1D6DC;
+   border-top: -2px solid #FFF;
+   border-radius: 0 0 6px 6px;
+   position: absolute;
+   width: 100%;
+   z-index: 10;
+  }
+
+  .header__search .hs-search-field__suggestions li {
+   border-top: 1px solid #D1D6DC;
+   font-family: Lato, serif;
+   font-size: 22px;
+  }
+
+  .header__search .hs-search-field__suggestions li a {
+   color: #494A52;
+   padding: 3px 15px;
+   text-decoration: none;
+   transition: background-color 0.3s;
+  }
+
+  .header__search .hs-search-field__suggestions #results-for {
+   display: none;
+  }
+
+  /* Language switcher */
+
+  .header__language-switcher {
+   cursor: pointer;
+   padding-right: 35px;
+  }
+
+  .header__language-switcher .lang_switcher_class {
+   position: static;
+  }
+
+  .header__language-switcher .lang_list_class {
+   border: 2px solid #D1D6DC;
+   border-radius: 6px;
+   box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.2);
+   color: #494A52;
+   display: block;
+   font-family: Lato, serif;
+   font-size: 0.8rem;
+   left: calc(100% - 24px);
+   opacity: 0;
+   min-width: 100px;
+   padding-top: 0;
+   text-align: left;
+   top: 100%;
+   transition: opacity 0.3s;
+   visibility: hidden;
+  }
+
+  .header__language-switcher:hover .lang_list_class {
+   opacity: 1;
+   transition: opacity 0.3s;
+   visibility: visible;
+  }
+
+  .header__language-switcher .lang_list_class:before {
+   border-bottom-color: #D1D6DC;
+   left: 70%;
+   top: -25px;
+  }
+
+  .header__language-switcher .lang_list_class:after {
+   left: 70%;
+   top: -22px;
+  }
+
+  .header__language-switcher .lang_list_class.first-active::after {
+   border-bottom-color: #EBEFF3;
+   top: -22px;
+   transition: 0.3s;
+  }
+
+  .header__language-switcher .lang_list_class li {
+   border: none;
+   font-size: 18px;
+   padding: 10px 15px;
+  }
+
+  .header__language-switcher .lang_list_class li:first-child {
+   border-radius: 6px 6px 0 0;
+   border-top: none;
+  }
+
+  .header__language-switcher .lang_list_class li:last-child {
+   border-bottom: none;
+   border-radius: 0 0 6px 6px;
+  }
+
+  .header__language-switcher .lang_list_class li:hover {
+   background-color: #EBEFF3;
+   transition: background-color 0.3s;
+  }
+
+  .header__language-switcher .lang_list_class li a {
+   color: #494A52;
+   font-family: Lato, serif;
+  }
+
+  .header__language-switcher .lang_list_class li a:hover {
+   color: #494A52;
+  }
+
+  .header__language-switcher--label {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   position: relative;
+  }
+
+  .header__language-switcher--label-current {
+   -webkit-box-align: center;
+   -ms-flex-align: center;
+   align-items: center;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   font-size: 18px;
+   margin-bottom: 5px;
+   margin-left: 10px;
+  }
+
+  .header__language-switcher--label-current:after {
+   border-left: 4px solid transparent;
+   border-right: 4px solid transparent;
+   border-top: 6px solid #494A52;
+   content: "";
+   display: block;
+   height: 0px;
+   margin-left: 10px;
+   margin-top: 3px;
+   width: 0px;
+  }
+
+  /* Navigation */
+
+  #nav-toggle {
+   display: none;
+  }
+
+  .header__menu--flex {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+  }
+
+  .header__navigation .cta_button {
+   margin:0 0 0 10px;
+  }
+
+  @media (max-width: 1300px) and (min-width: 767px) {
+   .header__logo{ max-width:120px; }
+  }
+
+  /* Tablet styles */
+
+  @media (max-width: 1150px) and (min-width: 767px) {
+   .header__column {
+    width: 100%;
+   }
+  }
+
+  /* Mobile styles */
+
+  @media (max-width: 767px) {
+   .header {
+    padding:30px 0 20px;
+   }
+   .header__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 20px 0 0;
+   }
+
+   .header__container form {
+    max-width: 100%;
+   }
+
+   .header__logo {
+    margin: 0 auto;
+    width: 100%;
+    max-width:148px;
+   }
+
+   .header__navigation,
+   .header__search,
+   .header__language-switcher {
+    display: none;
+    width: 100%;
+   }
+
+   .header__search.open,
+   .header__language-switcher.open {
+    background-color: #F8FAFC;
+    display: block;
+    height: calc(100vh - 115px);
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 75px;
+    z-index: 2;
+   }
+
+   .header__search--toggle,
+   .header__language-switcher--toggle,
+   .header__close--toggle {
+    cursor: pointer;
+    margin: 0 5vw;
+    position: relative;
+   }
+
+   .header__navigation--toggle.hide,
+   .header__search--toggle.hide,
+   .header__language-switcher--toggle.hide {
+    display: none;
+   }
+
+   .header__search--toggle.open,
+   .header__language-switcher--toggle.open {
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+   }
+
+   .header__search--toggle.open:after,
+   .header__language-switcher--toggle.open:after {
+    display: block;
+    word-break: normal;
+   }
+
+   .header__search--toggle:after,
+   .header__language-switcher--toggle:after {
+    display: none;
+    font-size: 26px;
+    font-weight: 600;
+    position: absolute;
+    left: 40px;
+    text-transform: uppercase;
+    top: -10px;
+   }
+
+   .header__column {
+    position: relative;
+   }
+
+   .header__row-1 {
+    padding-top: 0;
+   }
+
+   .header__row-2 {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position:relative;
+   }
+
+   .header__navigation.open {
+    background:var(--c-lightblue);
+    display:block;
+    position:absolute;
+    top:calc(100% + 30px);
+    right:-30px;
+    width:100vw;
+    height:calc(100vh - 94px);
+   }
+
+   .header__navigation--toggle {
+    cursor: pointer;
+    height: 22px;
+    width: 30px;
+    position:relative;
+   }
+   .header__navigation--toggle span {
+    height:4px;
+    width:30px;
+    position:absolute;
+    border-radius:1.5px;
+    background:var(--c-blue);
+    transition:opacity 0.2s, transform 0.2s;
+   }
+   .on-dark-header .header__navigation--toggle span {
+    background:var(--c-white);
+   }
+   .header__navigation--toggle .line1 {
+    top:0;
+   }
+   .header__navigation--toggle .line2,
+   .header__navigation--toggle .line3 {
+    top:calc(50% - 2px);
+   }
+   .header__navigation--toggle .line4 {
+    top:calc(100% - 4px);
+   }
+
+
+   .header__navigation--toggle.open .line1,
+   .header__navigation--toggle.open .line4 {
+    opacity:0;
+   }
+   .header__navigation--toggle.open .line2 {
+    transform:rotate(45deg);
+   }
+   .header__navigation--toggle.open .line3 {
+    transform:rotate(-45deg);
+   }
+
+   .header__language-switcher--toggle {
+    background-image: url(//static.hsappstatic.net/cos-LanguageSwitcher/static-1.1/img/globe.png);
+    background-size: cover;
+    height: 25px;
+    width: 25px;
+   }
+
+   .header__language-switcher--toggle:after {
+    content: "Language";
+   }
+
+   .header__language-switcher {
+    border-top: 2px solid #CED4DB;
+    padding-left: 30px;
+    padding-right: 0;
+   }
+
+   .header__language-switcher .lang_list_class {
+    background-color: inherit;
+    border: none;
+    border-radius: 0;
+    box-shadow: unset;
+    display: block;
+    left: 30px;
+    opacity: 1;
+    padding: 0 30px;
+    top: 0;
+    visibility: visible;
+   }
+
+   .header__language-switcher .lang_list_class li {
+    background-color: inherit;
+    font-size: 22px;
+   }
+
+   .header__language-switcher--label-current {
+    display: none;
+   }
+
+   .header__language-switcher .globe_class {
+    background-image: none;
+   }
+
+   .header__language-switcher .lang_list_class li:hover {
+    background-color: inherit;
+   }
+
+   .header__language-switcher .lang_list_class:before,
+   .header__language-switcher .lang_list_class:after {
+    content: none;
+   }
+
+   .header__search--toggle {
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4gICAgICAgIDx0aXRsZT5TZWFyY2g8L3RpdGxlPiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4gICAgPGRlZnM+ICAgICAgICA8cGF0aCBkPSJNOS4xMzg2MTUzNCwxNS44OTI1Njg1IEM1LjQxMzk1NzQyLDE1Ljg5MjU2ODUgMi4zODM4ODUyNywxMi44NjM0NDc1IDIuMzgzODg1MjcsOS4xMzkwMDM3NiBDMi4zODM4ODUyNyw1LjQxNDU2MDA1IDUuNDEzOTU3NDIsMi4zODM4ODUyNyA5LjEzODYxNTM0LDIuMzgzODg1MjcgQzEyLjg2MzI3MzMsMi4zODM4ODUyNyAxNS44OTI1Njg1LDUuNDE0NTYwMDUgMTUuODkyNTY4NSw5LjEzOTAwMzc2IEMxNS44OTI1Njg1LDEyLjg2MzQ0NzUgMTIuODYzMjczMywxNS44OTI1Njg1IDkuMTM4NjE1MzQsMTUuODkyNTY4NSBNOS4xMzg3NTI0NSwyLjQzMzYwODg3ZS0xMyBDMTQuMTc3OTk1NSwyLjQzMzYwODg3ZS0xMyAxOC4yNzY0NTM3LDQuMTAwMzI0NzEgMTguMjc2NDUzNyw5LjEzOTI3Nzk2IEMxOC4yNzY0NTM3LDExLjIyOTgyMTEgMTcuNTcxMDE2OSwxMy4xNTg0NDM0IDE2LjM4NTYzMTMsMTQuNjk5NjY5NiBMMjMuNjUwODg4MSwyMS45NjUyMjY2IEMyNC4xMTYzNzA2LDIyLjQzMDcwOTIgMjQuMTE2MzcwNiwyMy4xODU0MDU1IDIzLjY1MDg4ODEsMjMuNjUwODg4MSBDMjMuMTg1NDA1NSwyNC4xMTYzNzA2IDIyLjQzMDcwOTIsMjQuMTE2MzcwNiAyMS45NjUyMjY2LDIzLjY1MDg4ODEgTDE0LjY5OTgxMzMsMTYuMzg1NDcxMyBDMTMuMTU4NDQwNSwxNy41NzA5NTA5IDExLjIyOTU3MzgsMTguMjc2NDUzNyA5LjEzODc1MjQ1LDE4LjI3NjQ1MzcgQzQuMDk5NTA5MzgsMTguMjc2NDUzNyAtMy43MzAzNDkzNmUtMTQsMTQuMTc4MjMxMiAtMy43MzAzNDkzNmUtMTQsOS4xMzkyNzc5NiBDLTMuNzMwMzQ5MzZlLTE0LDQuMTAwMzI0NzEgNC4wOTk1MDkzOCwyLjQzMzYwODg3ZS0xMyA5LjEzODc1MjQ1LDIuNDMzNjA4ODdlLTEzIFoiIGlkPSJwYXRoLTEiPjwvcGF0aD4gICAgPC9kZWZzPiAgICA8ZyBpZD0iU2VhcmNoIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4gICAgICAgIDxtYXNrIGlkPSJtYXNrLTIiIGZpbGw9IndoaXRlIj4gICAgICAgICAgICA8dXNlIHhsaW5rOmhyZWY9IiNwYXRoLTEiPjwvdXNlPiAgICAgICAgPC9tYXNrPiAgICAgICAgPHVzZSBpZD0iSWNvbnMvQWN0aW9ucy9TZWFyY2giIGZpbGw9IiM0OTRBNTIiIHhsaW5rOmhyZWY9IiNwYXRoLTEiPjwvdXNlPiAgICA8L2c+PC9zdmc+);
+    background-size: cover;
+    height: 25px;
+    width: 25px;
+   }
+
+   .header__search--toggle:after {
+    content: "Search";
+   }
+
+   .header__search {
+    border-top: 2px solid #CED4DB;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+    padding: 30px;
+   }
+
+   .header__search .hs-search-field__input {
+    padding-left: 15px;
+   }
+
+   .header__search .hs-search-field__suggestions li {
+    padding: 10px 0;
+   }
+
+   .header__close--toggle {
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjE5cHgiIHZpZXdCb3g9IjAgMCAyNCAxOSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4gICAgICAgIDx0aXRsZT5jbG9zZTwvdGl0bGU+ICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPiAgICA8ZyBpZD0iY2xvc2UiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPiAgICAgICAgPGcgaWQ9Ikdyb3VwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyLjAwMDAwMCwgLTEuMDAwMDAwKSIgc3Ryb2tlPSIjNDk0QTUyIiBzdHJva2Utd2lkdGg9IjMiPiAgICAgICAgICAgIDxyZWN0IGlkPSJSZWN0YW5nbGUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEwLjAwMDAwMCwgMTAuNTAwMDAwKSByb3RhdGUoLTQ1LjAwMDAwMCkgdHJhbnNsYXRlKC0xMC4wMDAwMDAsIC0xMC41MDAwMDApICIgeD0iLTAuNSIgeT0iMTAuNSIgd2lkdGg9IjIxIiBoZWlnaHQ9IjEiIHJ4PSIwLjUiPjwvcmVjdD4gICAgICAgICAgICA8cmVjdCBpZD0iUmVjdGFuZ2xlLUNvcHktNSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTAuMDAwMDAwLCAxMC41MDAwMDApIHJvdGF0ZSg0NS4wMDAwMDApIHRyYW5zbGF0ZSgtMTAuMDAwMDAwLCAtMTAuNTAwMDAwKSAiIHg9Ii0wLjUiIHk9IjEwLjUiIHdpZHRoPSIyMSIgaGVpZ2h0PSIxIiByeD0iMC41Ij48L3JlY3Q+ICAgICAgICA8L2c+ICAgIDwvZz48L3N2Zz4=);
+    background-repeat: no-repeat;
+    background-size: 110%;
+    display: none;
+    height: 25px;
+    margin-right: 0;
+    width: 25px;
+   }
+
+   .header__close--toggle.show {
+    display: block;
+   }
+
+   .header__navigation .cta_button {
+    margin:20px 30px 0;
+    display:block;
+   }
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+   .submenu.level-1 > li {
+    padding: 22px 5px;
+   }
+   .navigation-primary a {
+    font-size: 14px;
+   }
+   .submenu.level-1 > li:last-child {
+    padding-right: 5px;
+   }
+   .header__navigation #hs_cos_wrapper_nav_cta a {
+    padding: 15px 14px;
+    font-size: 14px;
+   }
+  }
+
+  @media (min-width: 768px) and (max-width: 1199px) {
+   body {
+    margin-top: 84px !important;
+   }
+  }
+ </style>
+ <link rel="stylesheet" href="./css/menu-mega-impel.min.css">
+ <style>
+  .hero-widget_1647996451566{ padding-top: 90px;
+   padding-bottom: 10px;
+  }
+  .hero-widget_1647996451566 .section-content{ position:relative; }
+  .hero-widget_1647996451566 .cat-title{ display:block; font-size:16px; font-weight:400; line-height:1; margin-bottom:15px; letter-spacing:0.05em; text-transform:uppercase; }
+  .hero-widget_1647996451566 .section-title{ font-size:35px; font-weight:400; line-height:1.29; margin:0 0 19px; }
+  .hero-widget_1647996451566 .section-text{ font-size:16px; font-weight:300; line-height:1.625; margin:0 0 30px; }
+  .hero-widget_1647996451566 .section-text strong{ font-weight:500;}
+  .hero-widget_1647996451566 .section-text > *:last-child{ margin-bottom:0; }
+
+  .hero-widget_1647996451566 .hs_cos_wrapper_type_cta{ display:block; padding-bottom:20px; }
+  /*
+  .cta_button .arrow{ display:inline-block; width:10px; height:10px; background-size:auto; background-position:center center; background-repeat:no-repeat;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='7' height='10' viewBox='0 0 7 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.81434 5.38862L1.68093 9.83902C1.43335 10.0537 1.03196 10.0537 0.784406 9.83902L0.185678 9.31995C-0.0614783 9.10568 -0.0619537 8.75841 0.184622 8.54363L4.25294 4.99999L0.184622 1.45637C-0.0619537 1.24159 -0.0614783 0.89432 0.185678 0.680047L0.784406 0.160979C1.03198 -0.0536598 1.43337 -0.0536598 1.68093 0.160979L6.81431 4.61138C7.06189 4.826 7.06189 5.17398 6.81434 5.38862Z' fill='%23005DF2'/%3E%3C/svg%3E");
+  }
+  .cta_button:focus .arrow,
+  .cta_button:hover .arrow{
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='7' height='10' viewBox='0 0 7 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.81434 5.38862L1.68093 9.83902C1.43335 10.0537 1.03196 10.0537 0.784406 9.83902L0.185678 9.31995C-0.0614783 9.10568 -0.0619537 8.75841 0.184622 8.54363L4.25294 4.99999L0.184622 1.45637C-0.0619537 1.24159 -0.0614783 0.89432 0.185678 0.680047L0.784406 0.160979C1.03198 -0.0536598 1.43337 -0.0536598 1.68093 0.160979L6.81431 4.61138C7.06189 4.826 7.06189 5.17398 6.81434 5.38862Z' fill='%2354CCCC'/%3E%3C/svg%3E");
+  }*/
+
+  .hero-widget_1647996451566 .col-img.desktop,
+  .hero-widget_1647996451566 .arrow-down{ display:none;}
+  .hero-widget_1647996451566 .section-img{ width:calc(100% + 60px); margin-top:-50px; margin-left:-30px; }
+  .hero-widget_1647996451566 .section-img img{ width:728px; }
+
+  @media screen and (min-width:992px){
+   .hero-widget_1647996451566{ padding-top: 100px;
+    padding-bottom: 0px;
+   }
+   .hero-widget_1647996451566 .page-center{ max-width:1393px; }
+
+   .hero-widget_1647996451566 .section-title{ font-size:60px; line-height:1.17; margin-bottom:25px; }
+   .hero-widget_1647996451566 .section-text{ max-width:695px; font-size:20px; line-height:1.5; margin-bottom:36px; }
+   .hero-widget_1647996451566 .hs_cos_wrapper_type_cta{ display:inline-block; }
+   .hero-widget_1647996451566 .hs_cos_wrapper_type_cta:first-child{ padding-right:5%; }
+
+   .hero-widget_1647996451566 .col-img.mobile{ display:none; }
+   .hero-widget_1647996451566 .col-img.desktop{ display:block; position:relative; }
+   .hero-widget_1647996451566 .section-img{ width:45vw; overflow:hidden; margin:0; }
+   .hero-widget_1647996451566 .section-img img{ width:693px; max-width:693px; position:relative; top:-80px; }
+   .hero-widget_1647996451566 .arrow-down{ display:inline-block; width:95.9%; height:100px; border-left:3px solid #005DF2; border-top:3px solid #005DF2; margin:111px 0 0 -91px; position:relative; }
+   .hero-widget_1647996451566 .arrow-down:before{ content:""; display:inline-block; width:400px; height:3px; background-color:#005DF2; position:absolute; top:-103px; left:95.7%; transform:rotate(-30.2deg); }
+   .hero-widget_1647996451566 .arrow-down svg{ position:absolute; left:-12px; top:86%; }
+
+   .hero-entry{ display:flex; align-items:self-end; }
+   .hero-entry .col-content{ width:61%; position:relative; padding-left:90px; box-sizing:border-box; }
+   .hero-entry .col-img{ width:39%; }
+  }
+
+
+  @media screen and (min-width:992px) and (max-width:1024px){
+   .hero-widget_1647996451566 .arrow-down:before{ left:93.5%; }
+   .hero-widget_1647996451566 .section-img img{ top:-74px; }
+  }
+  @media screen and (min-width:1025px) and (max-width:1100px){
+   .hero-widget_1647996451566 .arrow-down:before{ left:94.3%; }
+   .hero-widget_1647996451566 .section-img img{ top:-73px; }
+  }
+  @media screen and (min-width:1101px) and (max-width:1200px){
+   .hero-widget_1647996451566 .arrow-down:before{ left:94.6%; }
+   .hero-widget_1647996451566 .section-img img{ top:-75px; }
+  }
+
+  @media screen and (min-width:1201px) and (max-width:1300px){
+   .hero-widget_1647996451566 .section-img img{ top:-76px; }
+  }
+  @media screen and (min-width:1301px) and (max-width:1350px){
+   .hero-widget_1647996451566 .arrow-down:before{ left:95.5%; }
+   .hero-widget_1647996451566 .section-img img{ top:-77px; }
+  }
+
+  .hero-widget_1647996451566 .anchored-cta a{ pointer-events: none; touch-action: none; }
+  .hero-widget_1647996451566 .anchored-cta { cursor:pointer; }
+
+  .btn-style{
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: auto;
+      height: 45px;
+      background: #015DF2;
+      color: white;
+      border: 2px solid #015DF2;
+      border-radius: 4px;
+      padding: 7px 30px 6px;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 600;
+      transition: all .3s ease-in-out;
+  }
+
+  .btn-style:hover{
+      background: transparent;
+      color: #015DF2;
+  }
+
+
+
+  @media (min-width:992px) {
+   #hs_cos_wrapper_widget_1647996451566 .col-img.desktop {
+    position:static;
+    min-height:700px;
+   }
+
+   #hs_cos_wrapper_widget_1647996451566 .col-content {
+    padding-bottom:150px;
+    z-index:3;
+    position:relative;
+   }
+
+   #hs_cos_wrapper_widget_1647996451566 .page-center .hero-entry { position:relative; }
+
+   #hs_cos_wrapper_widget_1647996451566 .col-img.desktop lottie-player {
+    position:absolute;
+    width:1800px !important;
+    height:auto;
+    left:-9px;
+    bottom:-325px;
+    z-index:2;
+   }
+  }
+
+
+ </style>
+ <link rel="stylesheet" href="./css/title_and_text.min.css">
+ <link rel="stylesheet" href="./css/video.min.css">
+ <style>
+  #hs_cos_wrapper_widget_1667843320582 .video-mod {
+   padding-top:70px;
+   padding-bottom:70px;
+  }
+
+  @media screen and (min-width:992px) {
+   #hs_cos_wrapper_widget_1667843320582 .video-mod {
+    padding-top:100px;
+    padding-bottom:100px;
+   }
+  }
+
+ </style>
+
+ <link rel="stylesheet" href="./css/_slick.min.css">
+ <link rel="stylesheet" href="./css/offer.min.css">
+ <style>
+  #hs_cos_wrapper_widget_1648058358122 .offer-mod {
+   padding-top:0px;
+   padding-bottom:0px;
+   color:#005DF2;
+  }
+
+  #hs_cos_wrapper_widget_1648058358122 .offer-mod .offer-entry {
+   padding-top:50px;
+   padding-right:30px;
+   padding-bottom:40px;
+   padding-left:30px;
+   margin-top:0px;
+   background-color:#D9ECFF;
+  }
+
+  #hs_cos_wrapper_widget_1648058358122 .offer-mod .cat-title { color:#005DF2; }
+
+  #hs_cos_wrapper_widget_1648058358122 .card-header {
+   display:flex;
+   align-items:center;
+  }
+
+  #hs_cos_wrapper_widget_1648058358122 .offer-item .item-icon {
+   width:100px;
+   max-width:100px;
+   height:auto;
+  }
+
+  #hs_cos_wrapper_widget_1648058358122 .offer-item .item-icon img {
+   width:150%;
+   max-width:100%;
+   height:auto;
+  }
+
+  #hs_cos_wrapper_widget_1648058358122 .offer-item .item-title {
+   width:calc(100% - 100px);
+   padding-left:20px;
+  }
+
+  @media screen and (min-width:992px) {
+   #hs_cos_wrapper_widget_1648058358122 .offer-mod {
+    padding-top:0px;
+    padding-bottom:0px;
+   }
+
+   #hs_cos_wrapper_widget_1648058358122 .offer-mod .offer-entry {
+    border-right:2px dashed #C1C1C1;
+    padding-top:100px;
+    padding-right:97px;
+    padding-bottom:70px;
+    padding-left:97px;
+   }
+  }
+
+  #hs_cos_wrapper_widget_1648058358122 .offer-mod .anchored-cta a { pointer-events:none; }
+
+  #hs_cos_wrapper_widget_1648058358122 .offer-mod .anchored-cta {
+   cursor:pointer;
+   display:inline-block;
+   touch-action:none;
+  }
+
+ </style>
+ <style>
+  #hs_cos_wrapper_widget_1655930218604 strong { font-weight:400; }
+
+  #hs_cos_wrapper_widget_1655930218604 h2 { margin-top:0; }
+
+  #hs_cos_wrapper_widget_1655930218604 .cta-bannerBlock {
+   padding-top:100px;
+   padding-bottom:100px;
+  }
+
+  #hs_cos_wrapper_widget_1655930218604 .cta-bannerBlock__inner {
+   max-width:1330px;
+   margin:0 auto;
+   padding:50px 0;
+   background-color:rgba(217,236,255,1.0);
+   background:linear-gradient(to top,rgba(0,93,242,1),rgba(0,44,114,1));
+  }
+
+  #hs_cos_wrapper_widget_1655930218604 .cta-bannerBlock__heading h2 { color:var(--c-white); }
+
+  #hs_cos_wrapper_widget_1655930218604 .cta-bannerBlock__text { color:var(--c-white); }
+
+  #hs_cos_wrapper_widget_1655930218604 .cta-bannerBlock.style-v2 .cta-bannerBlock__inner { padding:127px 55px !important; }
+
+  #hs_cos_wrapper_widget_1655930218604 .cta-bannerBlock.style-v2 .cta-bannerBlock__row { justify-content:center; }
+
+  #hs_cos_wrapper_widget_1655930218604 .cta-bannerBlock.style-v2 .cta-bannerBlock__left,
+  #hs_cos_wrapper_widget_1655930218604 .cta-bannerBlock.style-v2 .cta-bannerBlock__right {
+   width:auto !important;
+   flex:unset !important;
+   max-width:unset !important;
+  }
+
+  #hs_cos_wrapper_widget_1655930218604 .cta-bannerBlock.style-v2 .cta-bannerBlock__right .cta_button::after {
+   content:url(./images/Vector.svg);
+   vertical-align:-5px;
+   margin-left:15px;
+   -moz-transition:all .4s ease;
+   -webkit-transition:all .4s ease;
+   -o-transition:all .4s ease;
+  }
+
+  #hs_cos_wrapper_widget_1655930218604 .cta-bannerBlock.style-v2 .cta-bannerBlock__right .cta_button:hover::after { filter:brightness(0) invert(1); }
+
+  @media (max-width:1199px) {
+   #hs_cos_wrapper_widget_1655930218604 .cta-bannerBlock.style-v2 .cta-bannerBlock__left,
+   #hs_cos_wrapper_widget_1655930218604 .cta-bannerBlock.style-v2 .cta-bannerBlock__right {
+    width:100% !important;
+    text-align:center;
+   }
+
+   #hs_cos_wrapper_widget_1655930218604 .cta-bannerBlock.style-v2 .cta-bannerBlock__left { margin:0 0 30px; }
+  }
+
+  @media (max-width:767px) {
+   #hs_cos_wrapper_widget_1655930218604 .cta-bannerBlock.style-v2 .cta-bannerBlock__inner { padding:50px 40px !important; }
+
+   #hs_cos_wrapper_widget_1655930218604 .cta-bannerBlock.style-v2 .cta-bannerBlock__left { margin:0; }
+  }
+
+  @media (min-width:768px) {
+   #hs_cos_wrapper_widget_1655930218604 .cta-bannerBlock__inner {
+    padding:100px 55px;
+    border-radius:5px;
+   }
+
+   #hs_cos_wrapper_widget_1655930218604 .cta-bannerBlock.style-v2 .cta-bannerBlock__inner { padding:127px 55px !important; }
+
+   #hs_cos_wrapper_widget_1655930218604 .cta-bannerBlock__text,
+   #hs_cos_wrapper_widget_1655930218604 .cta-bannerBlock__heading-copy { font-size:18px; }
+
+   #hs_cos_wrapper_widget_1655930218604 .cta-bannerBlock__heading h2,
+   #hs_cos_wrapper_widget_1655930218604 .cta-bannerBlock__text h2 { font-size:55px; }
+
+   #hs_cos_wrapper_widget_1655930218604 .cta-bannerBlock__text { max-width:780px; }
+  }
+
+  @media (max-width:991px) {
+   #hs_cos_wrapper_widget_1655930218604 .cta-bannerBlock {
+    padding-top:57px;
+    padding-bottom:56px;
+   }
+  }
+
+ </style>
+
+ <link rel="stylesheet" href="./css/technology.min.css">
+ <link rel="stylesheet" href="./css/XDC_Network.min.css">
+ <style>
+  #hs_cos_wrapper_widget_1648238945629 .xdcNetwork-mod {
+   padding-top:25px;
+   padding-bottom:54px;
+  }
+
+  #hs_cos_wrapper_widget_1648238945629 .xdcNetwork-ctas .anchored-cta+.anchored-cta { padding-top:20px; }
+
+  #hs_cos_wrapper_widget_1648238945629 .xdcNetwork-mod .anchored-cta a {
+   pointer-events:none;
+   touch-action:none;
+  }
+
+  #hs_cos_wrapper_widget_1648238945629 .xdcNetwork-mod .anchored-cta {
+   cursor:pointer;
+   display:inline-block;
+  }
+
+  @media screen and (min-width:992px) {
+   #hs_cos_wrapper_widget_1648238945629 .xdcNetwork-mod {
+    padding-top:19px;
+    padding-bottom:92px;
+   }
+
+   #hs_cos_wrapper_widget_1648238945629 .xdcNetwork-mod .section-title {
+    margin-bottom:50px;
+    letter-spacing:0em;
+   }
+
+   #hs_cos_wrapper_widget_1648238945629 .xdcNetwork-imgs { margin-top:0px; }
+
+   #hs_cos_wrapper_widget_1648238945629 .xdcNetwork-ctas>*+* {
+    padding-top:0;
+    padding-left:25px;
+   }
+  }
+
+  @media screen and (max-width:991px) {}
+
+  #hs_cos_wrapper_widget_1648238945629 .xdcNetwork-imgs { display:none; }
+
+  #hs_cos_wrapper_widget_1648238945629 .xdcNetwork-arrowLine { display:none; }
+
+  @media (min-width:992px) {
+   #hs_cos_wrapper_widget_1648238945629 .lottie-mobile { display:none; }
+
+   #hs_cos_wrapper_widget_1648238945629 .lottie-desktop {
+    position:absolute;
+    left:0px;
+    top:-256px;
+    z-index:-1;
+    width:425px;
+    background:#fff;
+   }
+  }
+
+  @media (max-width:991px) {
+   #hs_cos_wrapper_widget_1648238945629 .lottie-desktop { display:none; }
+
+   #hs_cos_wrapper_widget_1648238945629 .lottie-mobile {
+    margin:0px -30px;
+    margin-bottom:30px;
+   }
+  }
+
+  @media (max-width:1500px) and (min-width:1200px) {
+   #hs_cos_wrapper_widget_1648238945629 .lottie-desktop { left:-2vw; }
+  }
+
+  @media (max-width:1200px) {
+   #hs_cos_wrapper_widget_1648238945629 .lottie-desktop {
+    position:absolute;
+    left:-3vw;
+    top:-256px;
+    z-index:-1;
+    width:440px;
+    padding-top:30px;
+    padding-right:30px;
+    background:#fff;
+   }
+  }
+
+ </style>
+
+ <link rel="stylesheet" href="./css/discover.min.css">
+
+ <link rel="stylesheet" href="./css/logos.min.css">
+
+ <link rel="stylesheet" href="./css/FAQs.min.css">
+
+ <link rel="stylesheet" href="./css/CTA_banner.min.css">
+ <style>
+  .ctab-widget_1648161168293{ padding-top: 25px;
+   padding-bottom: 50px;
+   color:#FFFFFF; }
+  .ctab-widget_1648161168293 .page-center{ max-width:1330px; padding:0; }
+  .ctab-widget_1648161168293 .ctab-entry{
+   padding-top: 50px;
+   padding-right: 30px;
+   padding-bottom: 50px;
+   padding-left: 30px;
+   margin-top: 0px;
+
+   background-image:linear-gradient(to bottom, rgba(0, 93, 242, 1), rgba(0, 44, 114, 1));
+   text-align: CENTER
+  ;
+  }
+
+  @media screen and (min-width:992px){
+   .ctab-widget_1648161168293{ padding-top: 0px;
+    padding-bottom: 100px;
+   }
+   .ctab-widget_1648161168293 .ctab-entry{ padding-top: 60px;
+    padding-right: 93px;
+    padding-bottom: 80px;
+    padding-left: 93px;
+    text-align:left; align-items:center; }
+
+
+   .ctab-widget_1648161168293 .section-header{ width:60%; }
+   .ctab-widget_1648161168293 .ctab-ctas{ width:40%; }
+
+
+   .ctab-widget_1648161168293 .pattern-left{ left:-100px; bottom:-100px; }
+   .ctab-widget_1648161168293 .pattern-right{ right:-100px; bottom:-100px; }
+  }
+ </style>
+
+ <link rel="stylesheet" href="./css/form.min.css">
+
+ <link rel="stylesheet" href="./css/widget.min.css">
+ <style>
+  #hs_cos_wrapper_module_16526748730613 .lightbox-form-cta { margin-bottom:30px; }
+
+  #hs_cos_wrapper_module_16526748730613 .lightbox-cta {
+   display:inline-block;
+   width:auto;
+   height:auto;
+   padding:15px 25px;
+   text-align:center;
+   border:3px solid #005DF2;
+   color:#FFFFFF;
+   border-radius:0;
+   font-family:graphie,sans-serif;
+   font-size:16px;
+   font-weight:400;
+   letter-spacing:0.04em;
+   line-height:1.125;
+   background:rgb(0,93,242);
+   transition:0.4s ease all;
+   -webkit-transition:0.4s ease all;
+   text-decoration:none;
+  }
+
+  #hs_cos_wrapper_module_16526748730613 .lightbox-cta:hover {
+   text-decoration:none;
+   background:rgba(0,93,242,0);
+   color:rgb(0,93,242);
+  }
+
+  #hs_cos_wrapper_module_16526748730613 .lightbox-form-container {
+   display:none;
+   position:fixed;
+   top:0px;
+   left:0px;
+   height:100%;
+   width:100%;
+   background:rgba(255,255,255,0.9);
+   z-index:999;
+  }
+
+  #hs_cos_wrapper_module_16526748730613 .lightboxform-container-inner {
+   background:#FFF;
+   max-width:750px;
+   width:100%;
+   min-height:30vh;
+   max-height:calc(95vh - 60px);
+   overflow-y:auto;
+   margin:10px auto 30px;
+   padding:50px 40px;
+   border:3px solid #005df2;
+   border-radius:5px;
+  }
+
+  #hs_cos_wrapper_module_16526748730613 .lightboxform-container-inner::-webkit-scrollbar { width:4px; }
+
+  #hs_cos_wrapper_module_16526748730613 .lightboxform-container-inner::-webkit-scrollbar-track { -webkit-box-shadow:inset 0 0 6px #fff; }
+
+  #hs_cos_wrapper_module_16526748730613 .lightboxform-container-inner::-webkit-scrollbar-thumb {
+   background-color:#ccc;
+   outline:1px solid #ddd;
+  }
+
+  #hs_cos_wrapper_module_16526748730613 .submitted-message {
+   font-size:20px;
+   text-align:center;
+  }
+
+  #hs_cos_wrapper_module_16526748730613 .lightbox-form-container h3 { margin-top:0; }
+
+  @media (max-width:767px) {
+   #hs_cos_wrapper_module_16526748730613 .lightbox-form-container { background:rgba(255,255,255,1); }
+
+   #hs_cos_wrapper_module_16526748730613 .lightboxform-container-inner {
+    padding:10px 30px 30px;
+    margin:0px auto;
+   }
+  }
+
+  #hs_cos_wrapper_module_16526748730613 .top-section {
+   position:relative;
+   max-width:750px;
+   margin:0px auto;
+   height:60px;
+  }
+
+  #hs_cos_wrapper_module_16526748730613 .close-lightbox {
+   position:absolute;
+   right:0;
+   top:20px;
+   height:40px;
+   width:40px;
+   background-size:cover;
+   background-repeat:no-repeat;
+   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 50 50' width='50px' height='50px'%3E%3Cpath d='M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z'/%3E%3C/svg%3E");
+  }
+
+  #hs_cos_wrapper_module_16526748730613 .hs_cos_wrapper.form-title { display:none !important; }
+
+ </style>
+
+ <link rel="stylesheet" href="./css/social-follow.min.css">
+ <link rel="canonical" href="index.html">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <!-- Google Tag Manager -->
+ <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+ })(window,document,'script','dataLayer','GTM-WZNCNMP');</script>
+ <!-- End Google Tag Manager -->
+ <meta property="og:image" content="https://www.impel.global/hubfs/IMP_SocialShareImage_sc_1b-01.png#keepProtocol">
+ <meta property="og:image:width" content="300">
+ <meta property="og:image:height" content="175">
+ <meta name="twitter:image" content="https://www.impel.global/hubfs/IMP_SocialShareImage_sc_1b-01.png#keepProtocol">
+ <meta property="og:url" content="https://www.impel.global">
+ <script>var hsVars = { app_hs_base_url: 'https://app.hubspot.com' };</script>
+ <meta name="twitter:card" content="summary_large_image">
+ <meta http-equiv="content-language" content="en">
+ <meta name="google-site-verification" content="vn10GPWHGzrxdIjFbdmh8rPA_TuEhX5vm3t77tcCuYc">
+ <style>
+  @media (min-width: 992px) {
+   #hs_cos_wrapper_widget_1647996451566 .col-img.desktop lottie-player {
+    width: 2200px !important;
+    left: -245px;
+    bottom: -440px;
+   }
+  }
+ </style>
+ <meta name="generator" content="HubSpot">
+
+<!-- Add this in the header section, after the existing styles -->
+<style>
+/* Theme Variables */
+:root {
+  /* Light Theme (Default) */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5ff;
+  --text-primary: #3533cd;
+  --text-secondary: #3533cd;
+  --accent-color: #3533cd;
+  --accent-hover: #2826a4;
+  --card-bg: #ffffff;
+  --border-color: #e5e5e5;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --bg-primary: #1a1a2e;
+  --bg-secondary: #242444;
+  --text-primary: #ffffff;
+  --text-secondary: #ffffff;
+  --accent-color: #3533cd;
+  --accent-hover: #4644de;
+  --card-bg: #2d2d4d;
+  --border-color: #3533cd;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.theme-toggle:hover {
+  background: var(--accent-hover);
+}
+
+/* Apply theme colors */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+.offer-item, .technology-item, .faqs-items .question {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+}
+
+.technology-mod .technology-content {
+  background-color: var(--bg-secondary) !important;
+}
+
+.section-title, .item-title {
+  color: var(--text-primary);
+}
+
+.item-desc p, .answer p {
+  color: var(--text-secondary);
+}
+
+/* Update dark theme colors for better visibility */
+[data-theme="dark"] {
+  --bg-primary: #1a1a2e;
+  --bg-secondary: #242444;
+  --text-primary: #ffffff;
+  --text-secondary: #ffffff;
+  --accent-color: #3533cd;
+  --accent-hover: #4644de;
+  --card-bg: #2d2d4d;
+  --border-color: #3533cd;
+}
+
+/* Additional dark theme styles */
+[data-theme="dark"] {
+  /* Text colors */
+  .sub-menu-text,
+  .item-desc p,
+  .answer p,
+  .section-title,
+  .cat-title,
+  .item-title,
+  .question,
+  .sub-menu-desc,
+  .technology-item p,
+  .offer-item p,
+  .citation {
+    color: var(--text-secondary) !important;
+  }
+
+  /* Background colors */
+  .header,
+  .light-header,
+  .submenu-wide-container,
+  .submenu-wide-container-child,
+  .technology-mod .technology-content,
+  .offer-item,
+  .technology-item,
+  .faqs-items .question,
+  .xdcValue-mod,
+  .cta-bannerBlock,
+  footer {
+    background-color: var(--card-bg) !important;
+  }
+
+  /* Menu and navigation */
+  .header__navigation .menu-primary-menu-container ul > li > a,
+  .submenu-wide-container-link .sub-menu-text {
+    color: var(--text-secondary);
+  }
+
+  /* Hover states */
+  .header__navigation .menu-primary-menu-container ul > li:hover > a,
+  .submenu-wide-container-link:hover .sub-menu-text {
+    color: var(--accent-color);
+  }
+
+  /* Cards and containers */
+  .offer-item,
+  .technology-item,
+  .faqs-items .question {
+    border-color: var(--border-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Bottom sections */
+  .xdcValue-widget_1652805460493,
+  .cta-bannerBlock,
+  .footer {
+    background-color: var(--bg-secondary) !important;
+  }
+
+  /* Icons and images */
+  .item-icon img,
+  .menu-item-icon img {
+    filter: brightness(0.8) invert(1);
+  }
+
+  /* Links */
+  a:not(.theme-toggle) {
+    color: var(--accent-color);
+  }
+
+  a:hover:not(.theme-toggle) {
+    color: var(--accent-hover);
+  }
+
+  /* Coinmarketcap widget */
+  .coinmarketcap-currency-widget {
+    background-color: var(--card-bg) !important;
+    color: var(--text-secondary) !important;
+  }
+
+  /* Pattern and decorative elements */
+  .pattern svg path {
+    stroke: var(--accent-color);
+    opacity: 0.2;
+  }
+
+  /* Buttons and CTAs */
+  .btn-primary,
+  .hs-button {
+    background-color: var(--accent-color);
+    color: white;
+  }
+
+  .btn-primary:hover,
+  .hs-button:hover {
+    background-color: var(--accent-hover);
+  }
+}
+
+/* Smooth transitions */
+body,
+.header,
+.offer-item,
+.technology-item,
+.faqs-items .question,
+a,
+.btn-primary,
+.hs-button {
+  transition: all 0.3s ease;
+}
+
+/* Light Theme Text Colors */
+:root {
+  --text-primary: #3533cd;
+  --text-secondary: #3533cd;
+  --heading-color: #3533cd;
+}
+
+/* Update light theme text colors */
+body:not([data-theme="dark"]) {
+  .section-title,
+  .cat-title,
+  .item-title,
+  .sub-menu-text,
+  .item-desc p,
+  .answer p,
+  .question,
+  .sub-menu-desc,
+  .technology-item p,
+  .offer-item p,
+  .citation,
+  .header__navigation .menu-primary-menu-container ul > li > a,
+  .submenu-wide-container-link .sub-menu-text,
+  h1, h2, h3, h4, h5, h6,
+  p {
+    color: var(--text-primary) !important;
+  }
+}
+
+/* Dark Theme Text Colors */
+[data-theme="dark"] {
+  --text-primary: #ffffff;
+  --text-secondary: #ffffff;
+  --heading-color: #ffffff;
+
+  /* Update all text elements to white */
+  .section-title,
+  .cat-title,
+  .item-title,
+  .sub-menu-text,
+  .item-desc p,
+  .answer p,
+  .question,
+  .sub-menu-desc,
+  .technology-item p,
+  .offer-item p,
+  .citation,
+  .header__navigation .menu-primary-menu-container ul > li > a,
+  .submenu-wide-container-link .sub-menu-text,
+  h1, h2, h3, h4, h5, h6,
+  p,
+  .cta-bannerBlock__heading h2,
+  .footer__copyright,
+  .footer-menu li a {
+    color: var(--text-primary) !important;
+  }
+
+  /* Adjust hover states */
+  a:hover:not(.theme-toggle),
+  .header__navigation .menu-primary-menu-container ul > li:hover > a,
+  .submenu-wide-container-link:hover .sub-menu-text {
+    color: var(--accent-color) !important;
+  }
+
+  /* Ensure CoinMarketCap widget text is white */
+  .coinmarketcap-currency-widget * {
+    color: var(--text-primary) !important;
+  }
+}
+
+/* Smooth transitions */
+* {
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+</style>
+
+<!-- Add this right after the body tag -->
+<button class="theme-toggle" onclick="toggleTheme()">
+  <span class="theme-icon">🌙</span>
+  <span class="theme-text">Dark Mode</span>
+</button>
+
+<!-- Add this script before closing body tag -->
+<script>
+function toggleTheme() {
+  const html = document.documentElement;
+  const themeToggle = document.querySelector('.theme-toggle');
+  const themeIcon = themeToggle.querySelector('.theme-icon');
+  const themeText = themeToggle.querySelector('.theme-text');
+  
+  if (html.getAttribute('data-theme') === 'dark') {
+    html.removeAttribute('data-theme');
+    themeIcon.textContent = '🌙';
+    themeText.textContent = 'Dark Mode';
+    localStorage.setItem('theme', 'light');
+  } else {
+    html.setAttribute('data-theme', 'dark');
+    themeIcon.textContent = '☀️';
+    themeText.textContent = 'Light Mode';
+    localStorage.setItem('theme', 'dark');
+  }
+}
+
+// Check for saved theme preference
+document.addEventListener('DOMContentLoaded', () => {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    document.querySelector('.theme-icon').textContent = '☀️';
+    document.querySelector('.theme-text').textContent = 'Light Mode';
+  }
+});
+</script>
+</head>
+<body>
+<div class="body-wrapper   hs-content-id-69220847528 hs-site-page page ">
+ <div data-global-resource-path="impel2020/templates/partials/header-w-mega.html">
+  <header class="header">
+   <div class="page-center">
+    <div class="row align-items-center justify-content-between">
+     <div class="col-auto">
+      <a class="header__logo header__logo--main" href="index.html"> <img class="logo-light" alt="XDC Payments logo" src="./images/xdcp3.png"> <img class="logo-dark" alt="XDC Payments logo" src="./images/xdcp3.png"> </a>
+     </div>
+     <div class="col-auto col-mega">
+      <div class="header__row-2">
+       <span class="header-menu-icon"> <span></span> <span></span> <span></span> </span>
+       <div class="header__navigation header--element">
+        <nav aria-label="Main menu" class="navigation-primary mega-menu-s2">
+         <ul class="submenu level-1" arai-hidden="false">
+          <li class="has-submenu menu-item submenu-wide-container-parent "> 
+            <a data-mm-item="1" class="menu-link"> Our Offerings <span class="arrow"></span> </a> 
+            <span class="arrow arrow-dropdown"></span>
+            <ul class="submenu level-2 layout-default " aria-hidden="true">
+              <ul class="submenu-wide-container-links">
+                <li class="submenu-wide-container-link active" data-target="1"> 
+                  <span class="menu-item-icon"> 
+                    <img src="./images/ISO.svg" alt="ISO" loading="lazy" width="78" height="60"> 
+                  </span> 
+                  <span class="sub-menu-text">ISO 20022 API</span> 
+                </li>
+
+                <li class="submenu-wide-container-link" data-target="2"> 
+                  <span class="menu-item-icon"> 
+                    <img src="./images/icon-lock-1.svg" alt="Custody" loading="lazy" width="78" height="60"> 
+                  </span> 
+                  <span class="sub-menu-text">Custody Solutions</span> 
+                </li>
+
+                <li class="submenu-wide-container-link" data-target="3"> 
+                  <span class="menu-item-icon"> 
+                    <img src="./images/icon-payments.svg" alt="On & Off Ramp" loading="lazy" width="78" height="60"> 
+                  </span> 
+                  <span class="sub-menu-text">On & Off Ramp Solutions</span> 
+                </li>
+
+                <li class="submenu-wide-container-link" data-target="4"> 
+                  <span class="menu-item-icon"> 
+                    <img src="./images/icon-tech-1.svg" alt="Merchant" loading="lazy" width="78" height="60"> 
+                  </span> 
+                  <span class="sub-menu-text">Merchant Payments</span> 
+                </li>
+
+                <li class="submenu-wide-container-link" data-target="5"> 
+                  <span class="menu-item-icon"> 
+                    <img src="./images/icon-payments.svg" alt="Cross Border" loading="lazy" width="78" height="60"> 
+                  </span> 
+                  <span class="sub-menu-text">Cross Border Payments</span> 
+                </li>
+
+                <li class="flex-anchor submenu-wide-container-link" data-target="6"> 
+                  <a href="https://xdc.cash" target="_blank" rel="noopener">
+                    <span class="menu-item-icon"> 
+                      <img src="./images/icon-payments.svg" alt="XDC.cash" loading="lazy" width="78" height="60"> 
+                    </span> 
+                    <span class="sub-menu-text">XDC.cash</span> 
+                  </a>
+                </li>
+              </ul>
+            </ul>
+          </li>
+          <li class="has-submenu menu-item submenu-wide-container-parent layout-fixed"> <a data-mm-item="2" class="menu-link"> Resources <span class="arrow"></span> </a> <span class="arrow arrow-dropdown"></span>
+         <ul class="submenu level-2 layout-medium layout-pops" aria-hidden="true">
+          <ul class="submenu-wide-container-links">
+           <li class="flex-anchor submenu-wide-container-link " data-target="1"> <a href="./blog.html"> <span class="menu-item-icon"> <img src="./images/news-insights.svg" alt="news-insights" loading="lazy" width="21" height="21"> </span> <span class="sub-menu-text">News + Insights</span> </a> </li>
+           <li class="flex-anchor submenu-wide-container-link " data-target="2"> <a href="faqs.html?hsLang=en"> <span class="menu-item-icon"> <img src="./images/Frame%20461.svg" alt="Frame 461" loading="lazy" width="21" height="22"> </span> <span class="sub-menu-text">FAQs</span> </a> </li>
+           <li class="flex-anchor submenu-wide-container-link " data-target="3"> <a href="roadmap-milestones.html?hsLang=en"> <span class="menu-item-icon"> <img src="./images/explore.svg" alt="explore" loading="lazy" width="20" height="20"> </span> <span class="sub-menu-text">Roadmap &amp; Milestones</span> </a> </li>
+           <li class=" submenu-wide-container-link " data-target="4"> <span class="menu-item-icon"> <img src="./images/campaign.svg" alt="campaign" loading="lazy" width="21" height="19"> </span> <span class="sub-menu-text">Social Media</span> </li>
+           <li class="flex-anchor submenu-wide-container-link " data-target="5"> <a href="press.html?hsLang=en"> <span class="menu-item-icon"> <img src="./images/Frame%20463.svg" alt="Frame 463" loading="lazy" width="21" height="21"> </span> <span class="sub-menu-text">Press Kit</span> </a> </li>
+          </ul>
+          <ul class="
+                 submenu-wide-container no-desc ">
+           <li class="submenu-wide-container-item " data-index="1" data-items="0">
+            <div class="submenu-wide-container-desc">
+             <a href="./blog.html"> <span class="menu-item-icon mobile-icon"> <img src="./images/news-insights.svg" alt="news-insights" loading="lazy" width="21" height="21"> </span> <span class="sub-menu-text">News + Insights</span> <span class="sub-menu-desc">Lorem ipsum dolor sit amet, consectetur adipiscing et do adipiscing elit, sed do eiusmod. </span> </a>
+            </div> </li>
+           <li class="submenu-wide-container-item " data-index="2" data-items="0">
+            <div class="submenu-wide-container-desc">
+             <a href="/faqs?hsLang=en"> <span class="menu-item-icon mobile-icon"> <img src="./images/Frame%20461.svg" alt="Frame 461" loading="lazy" width="21" height="22"> </span> <span class="sub-menu-text">FAQs</span> <span class="sub-menu-desc">Lorem ipsum dolor sit amet, consectetur adipiscing et do adipiscing elit, sed do eiusmod. </span> </a>
+            </div> </li>
+           <li class="submenu-wide-container-item " data-index="3" data-items="0">
+            <div class="submenu-wide-container-desc">
+             <a href="/roadmap-milestones?hsLang=en"> <span class="menu-item-icon mobile-icon"> <img src="./images/explore.svg" alt="explore" loading="lazy" width="20" height="20"> </span> <span class="sub-menu-text">Roadmap &amp; Milestones</span> <span class="sub-menu-desc">Lorem ipsum dolor sit amet, consectetur adipiscing et do adipiscing elit, sed do eiusmod. </span> </a>
+            </div> </li>
+           <li class="submenu-wide-container-item " data-index="4" data-items="5">
+            <div class="submenu-wide-container-desc">
+             <a> <span class="menu-item-icon mobile-icon"> <img src="./images/campaign.svg" alt="campaign" loading="lazy" width="21" height="19"> </span> <span class="sub-menu-text">Social Media</span> <span class="sub-menu-desc">Lorem ipsum dolor sit amet, consectetur adipiscing et do adipiscing elit, sed do eiusmod. </span> </a>
+            </div>
+            <div class="submenu-wide-container-child">
+             <ul class="submenu-wide-container-child-ul ">
+              <li class="submenu-wide-container-child-ul-item " data-index="1"> <a href="https://www.linkedin.com/company/impel-official/" target="_blank" rel="noopener"> <span class="menu-item-icon"> <img src="./images/linkedin.svg" alt="linkedin" loading="lazy" width="16" height="16"> </span> <span class="sub-menu-text">Linkedin</span> </a> </li>
+              <li class="submenu-wide-container-child-ul-item " data-index="2"> <a href="https://twitter.com/Impel_official" target="_blank" rel="noopener"> <span class="menu-item-icon"> <img src="./images/twitter%20white.svg" alt="twitter white" loading="lazy" width="16" height="16"> </span> <span class="sub-menu-text">Twitter</span> </a> </li>
+              <li class="submenu-wide-container-child-ul-item " data-index="3"> <a href="https://t.me/impel_official" target="_blank" rel="noopener"> <span class="menu-item-icon"> <img src="./images/Telegram%20-%20Negative.svg" alt="Telegram - Negative" loading="lazy" width="16" height="16"> </span> <span class="sub-menu-text">Telegram</span> </a> </li>
+              <li class="submenu-wide-container-child-ul-item " data-index="4"> <a href="https://www.youtube.com/c/Impel_official" target="_blank" rel="noopener"> <span class="menu-item-icon"> <img src="./images/youtube%20white.svg" alt="youtube white" loading="lazy" width="16" height="16"> </span> <span class="sub-menu-text">Youtube</span> </a> </li>
+              <li class="submenu-wide-container-child-ul-item " data-index="5"> <a href="https://www.instagram.com/impel.official/" target="_blank" rel="noopener"> <span class="menu-item-icon"> <img src="./images/icon-instagram.svg" alt="icon-instagram" loading="lazy" width="20" height="20"> </span> <span class="sub-menu-text">Instagram</span> </a>
+               <ul class="submenu-wide-container-child-ul-item-child-ul" data-child="1">
+                <li class="submenu-wide-container-child-ul-item-child-ul-item"> <a href="https://www.instagram.com/impel.official/"> <span class="sub-menu-text"></span> </a> </li>
+               </ul> </li>
+             </ul>
+            </div> </li>
+           <li class="submenu-wide-container-item " data-index="5" data-items="0">
+            <div class="submenu-wide-container-desc">
+             <a href="/press?hsLang=en"> <span class="menu-item-icon mobile-icon"> <img src="./images/Frame%20463.svg" alt="Frame 463" loading="lazy" width="21" height="21"> </span> <span class="sub-menu-text">Press Kit</span> <span class="sub-menu-desc">Lorem ipsum dolor sit amet, consectetur adipiscing et do adipiscing elit, sed do eiusmod. </span> </a>
+            </div> </li>
+          </ul>
+         </ul> </li>
+        <li class="has-submenu menu-item submenu-wide-container-parent "> <a data-mm-item="3" class="menu-link"> XDC Network <span class="arrow"></span> </a> <span class="arrow arrow-dropdown"></span>
+         <ul class="submenu level-2 layout-narrow " aria-hidden="true">
+          <ul class="has-active
+                 submenu-wide-container  hide-parent-mobile">
+           <li class="submenu-wide-container-item active" data-index="1" data-items="2">
+            <div class="submenu-wide-container-desc">
+             <a href="the-xdc-network.html?hsLang=en">
+              <div class="menu-item-main_icon">
+               <img src="./images/XDC.svg" alt="XDC" loading="lazy" width="50" height="50">
+              </div> <span class="sub-menu-text">XDC Network</span> <span class="sub-menu-desc">The XDC Network is an enterprise-grade, EVM-compatible Layer 1 blockchain DLT network equipped with interoperable smart contracts.</span> <span class="sub-menu-morelink"> Learn more <span class="arrow">
+                  <svg width="8" height="10" viewbox="0 0 8 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                   <path d="M7.06434 5.38862L1.93093 9.83902C1.68335 10.0537 1.28196 10.0537 1.03441 9.83902L0.435678 9.31995C0.188522 9.10568 0.188046 8.75841 0.434622 8.54363L4.50294 4.99999L0.434622 1.45637C0.188046 1.24159 0.188522 0.89432 0.435678 0.680047L1.03441 0.160979C1.28198 -0.0536598 1.68337 -0.0536598 1.93093 0.160979L7.06431 4.61138C7.31189 4.826 7.31189 5.17398 7.06434 5.38862Z" fill="currentColor" />
+                  </svg> </span> </span> </a>
+            </div>
+            <div class="submenu-wide-container-child">
+             <ul class="submenu-wide-container-child-ul hide-child-icon">
+              <li class="submenu-wide-container-child-ul-item no-hover" data-index="1"> <a> <span class="menu-item-icon"> <img src="./images/explore.svg" alt="explore" loading="lazy" width="20" height="20"> </span> <span class="sub-menu-text">Ecosystem Resources:</span> </a>
+               <ul class="submenu-wide-container-child-ul-item-child-ul" data-child="5">
+                <li class="submenu-wide-container-child-ul-item-child-ul-item"> <a href="https://xdc.blocksscan.io/" target="_blank" rel="noopener"> <span class="sub-menu-text">Block Explorer</span> </a> </li>
+                <li class="submenu-wide-container-child-ul-item-child-ul-item"> <a href="https://xinfin.network/#stats" target="_blank" rel="noopener"> <span class="sub-menu-text">XDC Network Stats</span> </a> </li>
+                <li class="submenu-wide-container-child-ul-item-child-ul-item"> <a href="https://www.xdc.community/" target="_blank" rel="noopener"> <span class="sub-menu-text">XDC Community</span> </a> </li>
+                <li class="submenu-wide-container-child-ul-item-child-ul-item"> <a href="https://www.xdc.org/" target="_blank" rel="noopener"> <span class="sub-menu-text">XDC Foundation</span> </a> </li>
+                <li class="submenu-wide-container-child-ul-item-child-ul-item"> <a href="https://xinfin.org/" target="_blank" rel="noopener"> <span class="sub-menu-text">XinFin</span> </a> </li>
+               </ul> </li>
+              <li class="submenu-wide-container-child-ul-item no-hover" data-index="2"> <a> <span class="menu-item-icon"> <img src="./images/settings.svg" alt="settings" loading="lazy" width="21" height="20"> </span> <span class="sub-menu-text">Developer Resources:</span> </a>
+               <ul class="submenu-wide-container-child-ul-item-child-ul" data-child="2">
+                <li class="submenu-wide-container-child-ul-item-child-ul-item"> <a href="https://www.xdc.dev/" target="_blank" rel="noopener"> <span class="sub-menu-text">XDC &lt;.dev&gt;</span> </a> </li>
+                <li class="submenu-wide-container-child-ul-item-child-ul-item"> <a href="https://docs.xdc.community/" target="_blank" rel="noopener"> <span class="sub-menu-text">XDC Community GitBook</span> </a> </li>
+               </ul> </li>
+             </ul>
+            </div> </li>
+          </ul>
+         </ul> </li>
+       </ul>
+      </nav>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScSBrTdgQqvHOAORQc8dwSaH3mYVHCSHtpJzf2v-f2rLJY9sA/viewform?usp=sf_link" target="_blank" class="btn-style"> Contact us </a>
+     </div>
+    </div>
+   </div>
+  </header>
+ </div>
+ <main class="body-container-wrapper">
+    <span id="hs_cos_wrapper_page_content" class="hs_cos_wrapper hs_cos_wrapper_widget_container hs_cos_wrapper_type_widget_container" style="" data-hs-cos-general-type="widget_container" data-hs-cos-type="widget_container">
+     <div id="hs_cos_wrapper_widget_1647996451566" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+      <section class="hero-banner hero-widget_1647996451566 v-1">
+       <div class="page-center">
+        <div class="hero-entry">
+         <span class="col-content">
+          <div class="section-content">
+           <h1 class="section-title">Redefining the standard for cross-border payments and financial messaging</h1>
+           <div class="section-text">
+            <p>XDC Payments is a fintech innovator that uses blockchain technology to deliver <strong>financial messaging (ISO 20022) with optional collateral for instant settlement, and a bridge to the R3 Corda platform</strong> to future-facing banks and fintechs.</p>
+           </div>
+           <span class="section-cta-wrap"> <span id="hs_cos_wrapper_widget_1647996451566_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_cta" style="" data-hs-cos-general-type="widget" data-hs-cos-type="cta">
+             <!--HubSpot Call-to-Action Code --><span class="hs-cta-wrapper" id="hs-cta-wrapper-b9021963-5012-42dd-8ccb-1de29e25dd43"><span class="hs-cta-node hs-cta-b9021963-5012-42dd-8ccb-1de29e25dd43" id="hs-cta-b9021963-5012-42dd-8ccb-1de29e25dd43">
+               <!--[if lte IE 8]><div id="hs-cta-ie-element"></div><![endif]--><a href="iso-20022-demo-access-new.html"><img class="hs-cta-img" id="hs-cta-img-b9021963-5012-42dd-8ccb-1de29e25dd43" style="border-width:0px;" src="https://no-cache.hubspot.com/cta/default/21152810/b9021963-5012-42dd-8ccb-1de29e25dd43.png" alt="Send an ISO 20022 compliant message now"></a></span><script charset="utf-8" src="/hs/cta/cta/current.js"></script><script type="text/javascript"> hbspt.cta._relativeUrls=true;hbspt.cta.load(21152810, 'b9021963-5012-42dd-8ccb-1de29e25dd43', {"useNewLoader":"true","region":"na1"}); </script></span>
+            <!-- end HubSpot Call-to-Action Code --></span> <span id="hs_cos_wrapper_widget_1647996451566_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_cta" style="" data-hs-cos-general-type="widget" data-hs-cos-type="cta">
+             <!--HubSpot Call-to-Action Code --><span class="hs-cta-wrapper" id="hs-cta-wrapper-8fc21c1b-70b7-4496-bd18-1dae56d240f5"><span class="hs-cta-node hs-cta-8fc21c1b-70b7-4496-bd18-1dae56d240f5" id="hs-cta-8fc21c1b-70b7-4496-bd18-1dae56d240f5">
+               <!--[if lte IE 8]><div id="hs-cta-ie-element"></div><![endif]--><a href="contact-us.html"><img class="hs-cta-img" id="hs-cta-img-8fc21c1b-70b7-4496-bd18-1dae56d240f5" style="border-width:0px;" src="https://no-cache.hubspot.com/cta/default/21152810/8fc21c1b-70b7-4496-bd18-1dae56d240f5.png" alt="Connect with our team"></a></span><script charset="utf-8" src="/hs/cta/cta/current.js"></script><script type="text/javascript"> hbspt.cta._relativeUrls=true;hbspt.cta.load(21152810, '8fc21c1b-70b7-4496-bd18-1dae56d240f5', {"useNewLoader":"true","region":"na1"}); </script></span>
+            <!-- end HubSpot Call-to-Action Code --></span> </span>
+          </div> </span>
+         <span class="col-img desktop">
+          <lottie-player src="https://21152810.fs1.hubspotusercontent-na1.net/hubfs/21152810/lottie/home/Hero-v4-desktop.json" background="transparent" speed="1" style="width: 100%; height: auto;" loop autoplay></lottie-player> </span>
+         <span class="col-img mobile">
+          <lottie-player src="https://21152810.fs1.hubspotusercontent-na1.net/hubfs/21152810/lottie/home/Hero-v4-mobile.json" background="transparent" speed="1" style="width: 100%; height: auto;" loop autoplay></lottie-player> </span>
+        </div>
+       </div>
+      </section>
+     </div>
+     <div id="hs_cos_wrapper_widget_1648013409584" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+      <style>
+  .text-widget_1648013409584{ padding-top: 0px;
+   padding-bottom: 50px;
+  }
+  .text-widget_1648013409584 .cat-title{ color:#005DF2; }
+
+
+  @media screen and (min-width:992px){
+   .text-widget_1648013409584{ padding-top: 0px;
+    padding-bottom: 0px;
+   }
+   .text-widget_1648013409584 .text-entry{ border-bottom: 2px none #C1C1C1;
+    border-left: 2px none #C1C1C1;
+    padding-top: 0px;
+    padding-right: 93px;
+    padding-bottom: 77px;
+    padding-left: 93px;
+    margin-top: -7px;
+   }
+  }
+</style>
+      <section class="text-mod text-widget_1648013409584">
+       <div class="page-center">
+        <div class="text-entry">
+         <h6 class="cat-title">Our Mission</h6>
+         <h2 class="section-title">Web3 is redefining what's possible for our industry</h2>
+         <div class="section-text">
+          <p>XDC Payments was created to provide a cost-effective alternative to legacy financial messaging solutions like SWIFT and SEPA. We use <strong>a decentralized, enterprise-ready hybrid blockchain to securely and quickly send financial messages and payments</strong> and enable instant settlement.</p>
+          <p>This approach will provide an interoperable standard for financial data exchange while also streamlining payments and reconciliation. Financial institutions can use XDC Payments as a catalyst to strategically transform their businesses and unlock value-added opportunities enabled by the new standard.</p>
+         </div>
+        </div>
+       </div>
+      </section>
+     </div>
+     <div id="hs_cos_wrapper_widget_1648058358122" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+      <section class="offer-mod offer-widget_1648058358122">
+       <div class="page-center">
+        <div class="offer-entry">
+         <div class="section-header">
+          <h6 class="cat-title">What we offer</h6>
+          <h2 class="section-title">Why do businesses choose XDC Payments?</h2>
+          <span class="anchored-cta" data-target="#NextStepForm"><span id="hs_cos_wrapper_widget_1648058358122_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_cta" style="" data-hs-cos-general-type="widget" data-hs-cos-type="cta"></span></span>
+         </div>
+         <span class="items-col">
+          <div class="offer-items">
+            <span class="item-col">
+              <div class="offer-item">
+                <div class="card-header">
+                  <span class="item-icon"> <img src="./images/icon-payments.svg" alt="cross-border-payments" loading="lazy" width="50" height="50"> </span>
+                  <h6 class="item-title">Cross Border & Domestic Settlements</h6>
+                </div>
+                <div class="item-desc">
+                  <p>Supports seamless cross-border payments and domestic settlements with instant finality.</p>
+                </div>
+              </div>
+            </span>
+
+            <span class="item-col">
+              <div class="offer-item">
+                <div class="card-header">
+                  <span class="item-icon"> <img src="./images/icon-tech-1.svg" alt="swift-network" loading="lazy" width="50" height="50"> </span>
+                  <h6 class="item-title">SWIFT Network Integration</h6>
+                </div>
+                <div class="item-desc">
+                  <p>Seamlessly integrates with the SWIFT Network for global reach and compatibility.</p>
+                </div>
+              </div>
+            </span>
+
+            <span class="item-col">
+              <div class="offer-item">
+                <div class="card-header">
+                  <span class="item-icon"> <img src="./images/icon-lock-1.svg" alt="liquidity-access" loading="lazy" width="50" height="50"> </span>
+                  <h6 class="item-title">Liquidity Access</h6>
+                </div>
+                <div class="item-desc">
+                  <p>Provides reliable access to liquidity for smooth transaction processing.</p>
+                </div>
+              </div>
+            </span>
+
+            <span class="item-col">
+              <div class="offer-item">
+                <div class="card-header">
+                  <span class="item-icon"> <img src="./images/icon-message-1.svg" alt="security-compliance" loading="lazy" width="50" height="50"> </span>
+                  <h6 class="item-title">Security & Compliance</h6>
+                </div>
+                <div class="item-desc">
+                  <p>100% Secure & Compliant with industry standards and regulations.</p>
+                </div>
+              </div>
+            </span>
+
+            <span class="item-col">
+              <div class="offer-item">
+                <div class="card-header">
+                  <span class="item-icon"> <img src="./images/icon-no-cost.svg" alt="deferred-payments" loading="lazy" width="50" height="50"> </span>
+                  <h6 class="item-title">Deferred Payments</h6>
+                </div>
+                <div class="item-desc">
+                  <p>Supports flexible deferred payment options for better business management.</p>
+                </div>
+              </div>
+            </span>
+
+            <span class="item-col">
+              <div class="offer-item">
+                <div class="card-header">
+                  <span class="item-icon"> <img src="./images/icon-cog-1.svg" alt="future-first" loading="lazy" width="50" height="50"> </span>
+                  <h6 class="item-title">Future-first Offering</h6>
+                </div>
+                <div class="item-desc">
+                  <p>Built with future technologies and scalability in mind.</p>
+                </div>
+              </div>
+            </span>
+
+            <span class="item-col">
+              <div class="offer-item">
+                <div class="card-header">
+                  <span class="item-icon"> <img src="./images/icon-payments.svg" alt="business-margins" loading="lazy" width="50" height="50"> </span>
+                  <h6 class="item-title">Better Business Margins</h6>
+                </div>
+                <div class="item-desc">
+                  <p>Lower operational costs translate to better margins and competitive pricing for customers.</p>
+                </div>
+              </div>
+            </span>
+
+            <span class="item-col">
+              <div class="offer-item">
+                <div class="card-header">
+                  <span class="item-icon"> <img src="./images/icon-payments.svg" alt="micro-payments" loading="lazy" width="50" height="50"> </span>
+                  <h6 class="item-title">Cost-Effective Micro Payments</h6>
+                </div>
+                <div class="item-desc">
+                  <p>Makes micro payments economically viable with minimal transaction costs.</p>
+                </div>
+              </div>
+            </span>
+
+            <span class="item-col">
+              <div class="offer-item">
+                <div class="card-header">
+                  <span class="item-icon"> <img src="./images/icon-tech-1.svg" alt="seamless-tech" loading="lazy" width="50" height="50"> </span>
+                  <h6 class="item-title">Seamless Technology</h6>
+                </div>
+                <div class="item-desc">
+                  <p>Easy-to-integrate technology that works seamlessly with existing systems.</p>
+                </div>
+              </div>
+            </span>
+
+            <span class="item-col">
+              <div class="offer-item">
+                <div class="card-header">
+                  <span class="item-icon"> <img src="./images/icon-message-1.svg" alt="iso-mletr" loading="lazy" width="50" height="50"> </span>
+                  <h6 class="item-title">ISO20022 + MLETR Compliant</h6>
+                </div>
+                <div class="item-desc">
+                  <p>Fully compliant with ISO20022 Messaging standards and Model Law on Electronic Transferable Records.</p>
+                </div>
+              </div>
+            </span>
+          </div> </span>
+         <span class="offer-anim">
+          <svg width="277" height="397" viewbox="0 0 277 397" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <path fill-rule="evenodd" clip-rule="evenodd" d="M293.133 197.144L147.067 282.289L0.999975 197.144L147.067 112L293.133 197.144Z" stroke="#C1C1C1" stroke-width="2" stroke-linejoin="round" stroke-dasharray="4 4" />
+           <path fill-rule="evenodd" clip-rule="evenodd" d="M478.133 86.1444L332.067 171.289L186 86.1444L332.067 0.999957L478.133 86.1444Z" stroke="#C1C1C1" stroke-width="2" stroke-linejoin="round" stroke-dasharray="4 4" />
+           <path fill-rule="evenodd" clip-rule="evenodd" d="M476.133 310.144L330.067 395.289L184 310.144L330.067 225L476.133 310.144Z" stroke="#C1C1C1" stroke-width="2" stroke-linejoin="round" stroke-dasharray="4 4" />
+           <path fill-rule="evenodd" clip-rule="evenodd" d="M79.0002 114.244L147.03 75L215.06 114.244L147.03 153.488L79.0002 114.244Z" fill="white" stroke="#C1C1C1" stroke-width="2" stroke-linejoin="round" stroke-dasharray="4 4" />
+           <path fill-rule="evenodd" clip-rule="evenodd" d="M147.556 232.189L215.586 192.945V114.456L147.556 153.7V232.189Z" fill="white" />
+           <path d="M147.556 232.189L215.586 192.945V114.456L147.556 153.7V232.189" stroke="#C1C1C1" stroke-width="2" stroke-linejoin="round" stroke-dasharray="4 4" />
+           <path fill-rule="evenodd" clip-rule="evenodd" d="M147.03 231.977V153.488L79 114.244V192.733L147.03 231.977Z" fill="white" />
+           <path d="M147.03 231.977V153.488L79 114.244V192.733L147.03 231.977" stroke="#C1C1C1" stroke-width="2" stroke-linejoin="round" stroke-dasharray="4 4" />
+          </svg></span>
+        </div>
+       </div>
+      </section>
+     </div>
+     <div id="hs_cos_wrapper_widget_1655930218604" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+      </div>
+     </div>
+     <div id="hs_cos_wrapper_widget_1648145975919" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+      <style>
+  #hs_cos_wrapper_widget_1648145975919 .technology-mod {
+   padding-top:50px;
+   padding-bottom:25px;
+   color:#002C72;
+  }
+
+  #hs_cos_wrapper_widget_1648145975919 .technology-mod .page-center {
+   max-width:1333px;
+   padding:0;
+  }
+
+  #hs_cos_wrapper_widget_1648145975919 .technology-mod .technology-content {
+   padding-top:47px;
+   padding-right:30px;
+   padding-bottom:47px;
+   padding-left:30px;
+   margin-top:0px;
+   background-color:#F4FAFF;
+  }
+
+  #hs_cos_wrapper_widget_1648145975919 .technology-mod .cat-title { color:#005DF2; }
+
+  @media screen and (min-width:992px) {
+   #hs_cos_wrapper_widget_1648145975919 .technology-mod {
+    padding-top:97px;
+    padding-bottom:30px;
+   }
+
+   #hs_cos_wrapper_widget_1648145975919 .technology-mod .technology-entry { padding:0 97px 56px; }
+
+   #hs_cos_wrapper_widget_1648145975919 .technology-mod .technology-content {
+    padding-top:54px;
+    padding-right:36px;
+    padding-bottom:48px;
+    padding-left:66px;
+   }
+
+   #hs_cos_wrapper_widget_1648145975919 .technology-mod .section-title { margin-bottom:50px; }
+
+   #hs_cos_wrapper_widget_1648145975919 .technology-content .col-text {
+    width:50%;
+    padding-left:30px;
+   }
+
+   #hs_cos_wrapper_widget_1648145975919 .technology-content .col-img {
+    width:50%;
+    padding-right:30px;
+   }
+  }
+
+</style>
+     </div>
+      <style>
+  .faqs-widget_1648189442461{ padding-top: 0px;
+   padding-bottom: 25px;
+   color: #002C72; }
+  @media screen and (min-width:992px){
+   .faqs-widget_1648189442461{ padding-top: 50px;
+    padding-bottom: 50px;
+   }
+   .faqs-widget_1648189442461 .faqs-entry{ padding-top: 0px;
+    padding-right: 93px;
+    padding-bottom: 0px;
+    padding-left: 93px;
+   }
+  }
+</style>
+     </div>
+     <div id="hs_cos_wrapper_widget_1648161168293" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+     </div>
+     <div id="hs_cos_wrapper_widget_1648164227428" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"></div>
+     <div id="hs_cos_wrapper_widget_1652805460493" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+      <style>
+  .xdcValue-widget_1652805460493{
+   padding-top: 50px;
+   padding-bottom: 50px;
+
+   background-color:#D9ECFF;
+  }
+
+  @media only screen and (min-width:992px){
+   .xdcValue-widget_1652805460493{
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+   }
+  }
+</style>
+      <div class="xdcValue-mod xdcValue-widget_1652805460493">
+       <span class="xdcValue-dashedline"></span>
+       <span class="xdcValue-line"></span>
+       <span class="xdcValue-pattern"> <img class="desktop" alt="XDC Payments background pattern" src="./images/pattern-xdc-value.svg"> <img class="mobile" alt="XDC Payments background pattern" src="./images/pattern-sdc-value-mobile.svg"> </span>
+       <div class="page-center">
+        <div class="entry">
+         <div class="xdcValue-card">
+          <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
+          <div class="coinmarketcap-currency-widget" data-currencyid="2634" data-base="USD" data-secondary="" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-statsticker="true" data-stats="USD"></div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div id="hs_cos_wrapper_widget_1655930218604" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+      </div>
+     </div>
+     <div id="hs_cos_wrapper_widget_1648145975919" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+      <style>
+  #hs_cos_wrapper_widget_1648145975919 .technology-mod {
+   padding-top:50px;
+   padding-bottom:25px;
+   color:#002C72;
+  }
+
+  #hs_cos_wrapper_widget_1648145975919 .technology-mod .page-center {
+   max-width:1333px;
+   padding:0;
+  }
+
+  #hs_cos_wrapper_widget_1648145975919 .technology-mod .technology-content {
+   padding-top:47px;
+   padding-right:30px;
+   padding-bottom:47px;
+   padding-left:30px;
+   margin-top:0px;
+   background-color:#F4FAFF;
+  }
+
+  #hs_cos_wrapper_widget_1648145975919 .technology-mod .cat-title { color:#005DF2; }
+
+  @media screen and (min-width:992px) {
+   #hs_cos_wrapper_widget_1648145975919 .technology-mod {
+    padding-top:97px;
+    padding-bottom:30px;
+   }
+
+   #hs_cos_wrapper_widget_1648145975919 .technology-mod .technology-entry { padding:0 97px 56px; }
+
+   #hs_cos_wrapper_widget_1648145975919 .technology-mod .technology-content {
+    padding-top:54px;
+    padding-right:36px;
+    padding-bottom:48px;
+    padding-left:66px;
+   }
+
+   #hs_cos_wrapper_widget_1648145975919 .technology-mod .section-title { margin-bottom:50px; }
+
+   #hs_cos_wrapper_widget_1648145975919 .technology-content .col-text {
+    width:50%;
+    padding-left:30px;
+   }
+
+   #hs_cos_wrapper_widget_1648145975919 .technology-content .col-img {
+    width:50%;
+    padding-right:30px;
+   }
+  }
+
+</style>
+      <section class="technology-mod technology-widget_1648145975919">
+       <div class="page-center">
+        <div class="technology-entry">
+         <div class="section-header">
+          <h6 class="cat-title">Our technology</h6>
+          <h2 class="section-title">The future of secure, lightning-fast financial messaging and cross-border payments</h2>
+     </div>
+         <div class="technology-content">
+          <span class="technology-col col-img">
+           <div class="technology-images">
+            <span id="tech-item-img-1" class="item-img tech-item-img-1"> <img src="./images/power-of-blockchain.jpg" alt="power-of-blockchain" loading="lazy" width="522" height="515" srcset="./images/power-of-blockchain.jpg 261w, ./images/power-of-blockchain.jpg 522w, ./images/power-of-blockchain.jpg 783w, ./images/power-of-blockchain.jpg 1044w, ./images/power-of-blockchain.jpg 1305w, ./images/power-of-blockchain.jpg 1566w" sizes="(max-width: 522px) 100vw, 522px"> </span>
+            <span id="tech-item-img-2" class="item-img tech-item-img-2"> <img src="./images/the-future-of-secure.jpg" alt="the-future-of-secure" loading="lazy" width="522" height="515" srcset="./images/the-future-of-secure.jpg 261w, ./images/the-future-of-secure.jpg 522w, ./images/the-future-of-secure.jpg 783w, ./images/the-future-of-secure.jpg 1044w, ./images/the-future-of-secure.jpg 1305w, ./images/the-future-of-secure.jpg 1566w" sizes="(max-width: 522px) 100vw, 522px"> </span>
+            <span id="tech-item-img-3" class="item-img tech-item-img-3"> <img src="./images/Faster-International.jpg" alt="Faster-International" loading="lazy" width="522" height="515" srcset="./images/Faster-International.jpg 261w, ./images/Faster-International.jpg 522w, ./images/Faster-International.jpg 783w, ./images/Faster-International.jpg 1044w, ./images/Faster-International.jpg 1305w, ./images/Faster-International.jpg 1566w" sizes="(max-width: 522px) 100vw, 522px"> </span>
+           </div> </span>
+          <span class="technology-col col-text">
+           <div class="technology-items long-arrow">
+            <div class="technology-item technology-item-1">
+             <h6 class="item-title">The power of the blockchain</h6>
+             <div class="item-desc">
+              <p>The XDC Network is an enterprise-ready hybrid blockchain for global trade and finance.</p>
+     </div>
+     </div>
+            <div class="technology-item technology-item-2">
+             <h6 class="item-title">Runs on the XDC Network</h6>
+             <div class="item-desc">
+              <p>XDC Payments' service offerings run on the XDC Network, a top 100 blockchain project* and a layer-1 blockchain protocol that is Ethereum Virtual Machine (EVM) compatible.</p>
+         </div>
+        </div>
+            <div class="technology-item technology-item-3">
+             <h6 class="item-title">Faster cross-boarder payments</h6>
+             <div class="item-desc">
+              <p>We're engaged with large global banks, payment companies, and small FIs in emerging markets as part of our pilot implementation roadmap. We expect that XDC Payments' payment platform will become ubiquitous globally within two years.</p>
+       </div>
+      </div>
+           </div> <p class="citation">*Per CoinMarketCap (CMC)</p> </span>
+     </div>
+      </div>
+     </div>
+      </section>
+     </div>
+      <style>
+  .faqs-widget_1648189442461{ padding-top: 0px;
+   padding-bottom: 25px;
+   color: #002C72; }
+  @media screen and (min-width:992px){
+   .faqs-widget_1648189442461{ padding-top: 50px;
+    padding-bottom: 50px;
+   }
+   .faqs-widget_1648189442461 .faqs-entry{ padding-top: 0px;
+    padding-right: 93px;
+    padding-bottom: 0px;
+    padding-left: 93px;
+   }
+  }
+</style>
+      <section class="faqs-mod faqs-widget_1648189442461">
+       <div class="page-center">
+        <div class="faqs-entry">
+         <h2 class="section-title">FAQ</h2>
+         <div class="faqs-items">
+          <ul>
+            <li class="13">
+              <h6 class="question">What is XDC Payments? <span class="plusMinus"></span></h6>
+              <div class="answer">
+                <p>XDC Payments is a blockchain-powered payment solution built on the XDC Network. It facilitates fast, secure, and cost-effective cross-border settlements using digital assets and ISO 20022-compliant messaging.</p>
+     </div>
+            </li>
+
+            <li class="13">
+              <h6 class="question">How does XDC Payments enable cross-border transactions? <span class="plusMinus"></span></h6>
+              <div class="answer">
+                <p>XDC Payments leverages blockchain technology for real-time settlements, utilizing stablecoins and digital assets to eliminate intermediaries, reduce transaction costs, and enhance speed.</p>
+     </div>
+            </li>
+
+            <li class="13">
+              <h6 class="question">What role does ISO 20022 play in the XDC Payments ecosystem? <span class="plusMinus"></span></h6>
+              <div class="answer">
+                <p>ISO 20022 is a global financial messaging standard that enhances interoperability between banks, fintechs, and payment providers. XDC Payments integrates ISO 20022 messaging formats such as pain.001 (payment initiation) and pacs.008 (final settlement) to streamline transactions.</p>
+              </div>
+            </li>
+
+            <li class="13">
+              <h6 class="question">How does XDC Payments support stablecoins? <span class="plusMinus"></span></h6>
+              <div class="answer">
+                <p>Stablecoins serve as a bridge between traditional and digital finance. Users can on-ramp fiat into stablecoins, transact across borders, and off-ramp into local fiat currencies seamlessly.</p>
+              </div>
+            </li>
+
+            <li class="13">
+              <h6 class="question">Can businesses and merchants integrate XDC Payments? <span class="plusMinus"></span></h6>
+              <div class="answer">
+                <p>Yes! Merchants can integrate XDC Payments to accept stablecoins and digital assets, allowing them to tap into a global customer base while benefiting from instant settlements and lower transaction fees.</p>
+         </div>
+            </li>
+          </ul>
+
+          <ul>
+            <li class="13">
+              <h6 class="question">What are the advantages of using XDC Payments over traditional payment systems? <span class="plusMinus"></span></h6>
+              <div class="answer">
+                <p>
+                  • Lower transaction costs due to blockchain efficiency.<br>
+                  • Instant cross-border settlements without banking delays.<br>
+                  • Interoperability with ISO 20022 ensures global compliance.<br>
+                  • Stablecoin and fiat on/off-ramps provide seamless transactions.
+                </p>
+        </div>
+            </li>
+
+            <li class="13">
+              <h6 class="question">How does XDC Payments ensure security and compliance? <span class="plusMinus"></span></h6>
+              <div class="answer">
+                <p>XDC Payments follows industry-standard security protocols, including cryptographic verification, AML/KYC compliance for regulated entities, and ISO 20022 message validation to meet global financial regulations.</p>
+       </div>
+            </li>
+
+            <li class="13">
+              <h6 class="question">Can XDC Payments be used for B2B transactions? <span class="plusMinus"></span></h6>
+              <div class="answer">
+                <p>Yes! Enterprises can use XDC Payments for cross-border trade, supply chain settlements, and corporate remittances with improved efficiency and reduced costs.</p>
+      </div>
+            </li>
+
+            <li class="13">
+              <h6 class="question">How does XDC Payments integrate with existing financial systems? <span class="plusMinus"></span></h6>
+              <div class="answer">
+                <p>XDC Payments offers APIs and SDKs for banks, fintechs, and merchants to integrate seamlessly with existing financial infrastructures while enabling blockchain-powered settlements.</p>
+     </div>
+            </li>
+
+            <li class="13">
+              <h6 class="question">Where can I learn more or get started with XDC Payments? <span class="plusMinus"></span></h6>
+              <div class="answer">
+                <p>To learn more about XDC Payments and how to integrate it into your business, visit XDC Network's official website or reach out to the XDC community for support.</p>
+      </div>
+            </li>
+          </ul>
+     </div>
+     </div>
+       </div>
+      </section>
+     </div>
+     <div id="hs_cos_wrapper_widget_1648161168293" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+     </div>
+     <div id="hs_cos_wrapper_widget_1648164227428" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"></div>
+     <div id="hs_cos_wrapper_widget_1652805460493" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+      <style>
+  .xdcValue-widget_1652805460493{
+   padding-top: 50px;
+   padding-bottom: 50px;
+
+   background-color:#D9ECFF;
+  }
+
+  @media only screen and (min-width:992px){
+   .xdcValue-widget_1652805460493{
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+   }
+  }
+</style>
+      <div class="xdcValue-mod xdcValue-widget_1652805460493">
+       <span class="xdcValue-dashedline"></span>
+       <span class="xdcValue-line"></span>
+       <span class="xdcValue-pattern"> <img class="desktop" alt="XDC Payments background pattern" src="./images/pattern-xdc-value.svg"> <img class="mobile" alt="XDC Payments background pattern" src="./images/pattern-sdc-value-mobile.svg"> </span>
+       <div class="page-center">
+        <div class="entry">
+         <div class="xdcValue-card">
+          <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
+          <div class="coinmarketcap-currency-widget" data-currencyid="2634" data-base="USD" data-secondary="" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-statsticker="true" data-stats="USD"></div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div id="hs_cos_wrapper_widget_fund_flow" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">    </div>
+      <style>
+    .fund-flow-mod {
+      padding: 60px 0;
+      background: #fff;
+    }
+
+    .fund-flow-steps {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .step {
+      text-align: center;
+      flex: 1;
+      min-width: 200px;
+      position: relative;
+    }
+
+    .step-icon {
+      background: #002C72;
+      border: 2px solid #FFA300;
+      border-radius: 12px;
+      width: 100px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+
+    .step-icon img {
+      width: 50px;
+      height: 50px;
+      filter: invert(1);
+    }
+
+    .step-number {
+      background: #FFA300;
+      color: #002C72;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin: -15px auto 15px;
+    }
+
+    .step-title {
+      font-size: 16px;
+      line-height: 1.4;
+      color: #002C72;
+    }
+
+    @media (max-width: 992px) {
+      .fund-flow-steps {
+        justify-content: center;
+      }
+      
+      .step {
+        flex: 0 0 calc(33.33% - 20px);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .step {
+        flex: 0 0 calc(50% - 20px);
+   }
+  }
+</style>
+    </span>
+ </main>
+ <div data-global-resource-path="impel2020/templates/partials/footer-with-menu.html">
+  <footer class="footer site-footer">
+   <div class="footer__container content-wrapper">
+    <div class="page-center">
+     <div class="row justify-content-between">
+      <div class="col-12 col-md-auto">
+       <div class="footer__company-info">
+        <div class="footer__logo">
+         <img class="logo-light" alt="XDC Payments logo" src="./images/xdcp3.png">
+     </div>
+        <span id="hs_cos_wrapper_footer_company_descrip" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"></span>
+     </div>
+       <div class="footer-menu-wrap">
+          <span id="hs_cos_wrapper_footer_menu" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_simple_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="simple_menu">
+           <div id="hs_menu_wrapper_footer_menu" class="hs-menu-wrapper active-branch flyouts hs-menu-flow-vertical" role="navigation" data-sitemap-name="" data-menu-id="" aria-label="Navigation Menu">
+            <ul role="menu">
+             <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="iso-20022.html" role="menuitem" target="_self">ISO 20022 API</a></li>
+             <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="xdc.cash" role="menuitem" target="_blank">XDC.cash</a></li>
+             <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="/blog" role="menuitem" target="_self">News + Insights</a></li>
+             <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="the-xdc-network.html" role="menuitem" target="_self">XDC Network</a></li>
+             <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="contact-us.html" role="menuitem" target="_self">Connect with our team</a></li>
+            </ul>
+           </div></span>
+       </div>
+      </div>
+      <div class="col-12 col-md-7">
+       <div class="single-line-form">
+          <span id="hs_cos_wrapper_footer_form" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_form" style="" data-hs-cos-general-type="widget" data-hs-cos-type="form"><h3 id="hs_cos_wrapper_footer_form_title" class="hs_cos_wrapper form-title" data-hs-cos-general-type="widget_field" data-hs-cos-type="text">Subscribe to our newsletter</h3>
+           <div id="hs_form_target_footer_form"></div> </span>
+       </div>
+       <div class="footer__company-contact">
+        <span id="hs_cos_wrapper_footer_company_contact" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"></span>
+        <div class="cta-social-wrap">
+         <div class="footer-lightbox-cta-container">
+          <div id="hs_cos_wrapper_module_16526748730613" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+           <div class="lightbox-form-cta module_16526748730613">
+            <a href="index.html" class="lightbox-cta"> Submit Technical Support Ticket </a>
+            <div class="lightbox-form-container">
+             <div class="top-section">
+              <span class="close-lightbox"></span>
+             </div>
+             <div class="lightboxform-container-inner">
+              <div class="form-container">
+                 <span id="hs_cos_wrapper_module_16526748730613_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_form" style="" data-hs-cos-general-type="widget" data-hs-cos-type="form"><h3 id="hs_cos_wrapper_form_491934369_title" class="hs_cos_wrapper form-title" data-hs-cos-general-type="widget_field" data-hs-cos-type="text"></h3>
+                  <div id="hs_form_target_form_491934369"></div> </span>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="footer__social-links">
+          <div id="hs_cos_wrapper_footer_social" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+      <style>
+
+</style>
+           <div class="social-links">
+            <a class="social-links__link" href="https://www.linkedin.com/company/xdc-payments" rel="noopener" target="_blank"> <span id="hs_cos_wrapper_footer_social_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon social-links__icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon">
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" aria-labelledby="linkedin1" role="img">
+                 <title id="linkedin1">Follow us on LinkedIn</title>
+                 <g id="linkedin1_layer">
+                  <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                 </g>
+                </svg></span> </a>
+            <a class="social-links__link" href="https://twitter.com/XDC_Payments" rel="noopener" target="_blank"> <span id="hs_cos_wrapper_footer_social__2" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon social-links__icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon">
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512" aria-labelledby="twitter2" role="img">
+                 <title id="twitter2">Follow us on Twitter</title>
+                 <g id="twitter2_layer">
+                  <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" />
+                 </g>
+                </svg></span> </a>
+            <a class="social-links__link" href="https://t.me/xdc_payments" rel="noopener" target="_blank"> <span class="social-links__icon">
+                <svg width="1000px" height="1000px" viewbox="0 0 1000 1000" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                 <circle id="Oval" fill="#002C72" cx="500" cy="500" r="500"></circle>
+                 <path d="M226.328419,494.722069 C372.088573,431.216685 469.284839,389.350049 517.917216,369.122161 C656.772535,311.36743 685.625481,301.334815 704.431427,301 C708.567621,300.93067 717.815839,301.955743 723.806446,306.816707 C728.864797,310.92121 730.256552,316.46581 730.922551,320.357329 C731.588551,324.248848 732.417879,333.113828 731.758626,340.040666 C724.234007,419.102486 691.675104,610.964674 675.110982,699.515267 C668.10208,736.984342 654.301336,749.547532 640.940618,750.777006 C611.904684,753.448938 589.856115,731.588035 561.733393,713.153237 C517.726886,684.306416 492.866009,666.349181 450.150074,638.200013 C400.78442,605.66878 432.786119,587.789048 460.919462,558.568563 C468.282091,550.921423 596.21508,434.556479 598.691227,424.000355 C599.00091,422.680135 599.288312,417.758981 596.36474,415.160431 C593.441168,412.561881 589.126229,413.450484 586.012448,414.157198 C581.598758,415.158943 511.297793,461.625274 375.109553,553.556189 C355.154858,567.258623 337.080515,573.934908 320.886524,573.585046 C303.033948,573.199351 268.692754,563.490928 243.163606,555.192408 C211.851067,545.013936 186.964484,539.632504 189.131547,522.346309 C190.260287,513.342589 202.659244,504.134509 226.328419,494.722069 Z" fill="#d9ecff"></path>
+                </svg> </span> </a>
+            <a class="social-links__link" href="https://www.instagram.com/xdc.payments/" rel="noopener" target="_blank"> <span id="hs_cos_wrapper_footer_social__4" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon social-links__icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon">
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" aria-labelledby="instagram3" role="img">
+                 <title id="instagram3">Follow us on Facebook</title>
+                 <g id="instagram3_layer">
+                  <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                 </g>
+                </svg></span> </a>
+            <a class="social-links__link" href="https://www.youtube.com/c/XDC_Payments" rel="noopener" target="_blank"> <span id="hs_cos_wrapper_footer_social__5" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon social-links__icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon">
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 576 512" aria-labelledby="youtube4" role="img">
+                 <title id="youtube4">Follow us on Youtube</title>
+                 <g id="youtube4_layer">
+                  <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-29.5 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" />
+                 </g>
+                </svg></span> </a>
+            <a class="social-links__link" href="https://gitlab.com/XDC-Payments" rel="noopener" target="_blank"> <span class="social-links__icon">
+                <svg width="26" height="24" viewbox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                 <path d="M24.9197 9.50067L24.8846 9.41113L21.4925 0.558358C21.4235 0.384848 21.3013 0.237659 21.1434 0.13791C20.9855 0.0398554 20.8012 -0.00737091 20.6156 0.00260769C20.4299 0.0125863 20.2518 0.0792893 20.1053 0.19371C19.9604 0.311417 19.8553 0.470913 19.8042 0.650493L17.5138 7.65797H8.23929L5.94889 0.650493C5.89922 0.469934 5.79387 0.309639 5.64783 0.192412C5.50129 0.0779913 5.32318 0.0112883 5.13753 0.00130973C4.95188 -0.00866887 4.76764 0.0385575 4.60968 0.136612C4.45218 0.236764 4.33008 0.383824 4.26061 0.55706L0.861984 9.40594L0.828245 9.49548C0.339931 10.7714 0.279657 12.1714 0.656509 13.4846C1.03336 14.7977 1.82691 15.9527 2.91751 16.7755L2.92919 16.7846L2.96033 16.8066L8.12769 20.6763L10.6841 22.6111L12.2413 23.7868C12.4235 23.9251 12.6459 24 12.8746 24C13.1033 24 13.3257 23.9251 13.5079 23.7868L15.0651 22.6111L17.6215 20.6763L22.82 16.7833L22.833 16.7729C23.9212 15.95 24.7129 14.7961 25.0891 13.4848C25.4654 12.1734 25.406 10.7753 24.9197 9.50067V9.50067Z" fill="#002C72" />
+                </svg> </span> </a>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+      </div>
+     </div>
+     <div class="footer__middle-row row">
+      <div class="col-auto col-md-auto">
+       <div class="footer__copyright">
+        XDC Payments © 2024
+       </div>
+      </div>
+      <div class="col-auto col-md-auto">
+       <div class="footer__tos-links">
+          <span id="hs_cos_wrapper_tos_links" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_simple_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="simple_menu">
+           <div id="hs_menu_wrapper_tos_links" class="hs-menu-wrapper active-branch flyouts hs-menu-flow-horizontal" role="navigation" data-sitemap-name="" data-menu-id="" aria-label="Navigation Menu">
+            <ul role="menu">
+             <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="privacy-policy.html" role="menuitem" target="_self">Privacy Policy</a></li>
+             <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="terms-conditions.html" role="menuitem" target="_self">Terms of Service</a></li>
+            </ul>
+           </div></span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </footer>
+ </div>
+</div>
+<script src="./js/jquery-3.7.1.min.js"></script>
+<script>hsjQuery = window['jQuery'];</script>
+
+<script src="./js/main.min.js"></script>
+
+<script src="./js/lottie.min.js"></script>
+<script>
+ var hsVars = hsVars || {}; hsVars['language'] = 'en';
+</script>
+<script src="/hs/hsstatic/cos-i18n/static-1.53/bundles/project.js"></script>
+
+<script src="./js/menu-mega-impel.min.js"></script>
+<script>
+ $('.hero-widget_1647996451566 .anchored-cta')
+         .click(function(){
+          window.location.hash="";
+          var target = $(this).attr('data-target');
+          if (target != "#"){
+           window.location.hash=target;
+          }
+         });
+</script>
+
+<script src="./js/slick.min.js"></script>
+
+<script src="./js/offer.min.js"></script>
+<script>
+ $('.offer-widget_1648058358122 .anchored-cta')
+         .click(function(){
+          window.location.hash="";
+          var target = $(this).attr('data-target');
+          if (target != "#"){
+           window.location.hash=target;
+          }
+         });
+</script>
+
+<script src="./js/technology.min.js"></script>
+<script>
+ $('.xdcNetwork-widget_1648238945629 .anchored-cta')
+         .click(function(){
+          window.location.hash="";
+          var target = $(this).attr('data-target');
+          if (target != "#"){
+           window.location.hash=target;
+          }
+         });
+</script>
+
+<script src="./js/FAQs.min.js"></script>
+<!--[if lte IE 8]>
+<script charset="utf-8" src="https://js.hsforms.net/forms/v2-legacy.js"></script>
+<![endif]-->
+
+<script data-hs-allowed="true" src="./js/v2.js"></script>
+<script data-hs-allowed="true">
+ var options = {
+  portalId: '21152810',
+  formId: '8d6a6a50-7b7c-44f2-829c-f0f7292abd3d',
+  formInstanceId: '985',
+  pageId: '69220847528',
+  region: 'na1',
+
+
+
+
+  pageName: "ISO 20022 Financial Messaging API and the R3 Corda Bridge | XDC Payments",
+
+
+
+  inlineMessage: "Thanks for signing up!",
+
+
+  rawInlineMessage: "Thanks for signing up!",
+
+
+  hsFormKey: "168c1cd94d6b70f22d56b110f42421ce",
+
+
+  deactivateSmartForm: true,
+
+  css: '',
+  target: '#hs_form_target_footer_form',
+
+
+
+
+
+  contentType: "standard-page",
+
+
+
+
+  useDraft: "true",
+
+
+  formData: {
+   cssClass: 'hs-form stacked hs-custom-form'
+  }
+ };
+
+ options.getExtraMetaDataBeforeSubmit = function() {
+  var metadata = {};
+
+
+  if (hbspt.targetedContentMetadata) {
+   var count = hbspt.targetedContentMetadata.length;
+   var targetedContentData = [];
+   for (var i = 0; i < count; i++) {
+    var tc = hbspt.targetedContentMetadata[i];
+    if ( tc.length !== 3) {
+     continue;
+    }
+    targetedContentData.push({
+     definitionId: tc[0],
+     criterionId: tc[1],
+     smartTypeId: tc[2]
+    });
+   }
+   metadata["targetedContentMetadata"] = JSON.stringify(targetedContentData);
+  }
+
+  return metadata;
+ };
+
+ hbspt.forms.create(options);
+</script>
+<script data-hs-allowed="true">
+ var options = {
+  portalId: '21152810',
+  formId: '1e807dd4-4051-43d7-927c-11ec600da230',
+  formInstanceId: '8108',
+  pageId: '69220847528',
+  region: 'na1',
+
+
+
+
+  pageName: "ISO 20022 Financial Messaging API and the R3 Corda Bridge | XDC Payments",
+
+
+
+  inlineMessage: "Thanks for submitting the form.",
+
+
+  rawInlineMessage: "Thanks for submitting the form.",
+
+
+  hsFormKey: "f24d91b29f3b3923f898b265d8a1dcde",
+
+
+  deactivateSmartForm: true,
+
+  css: '',
+  target: '#hs_form_target_form_491934369',
+
+
+
+
+
+  contentType: "standard-page",
+
+
+
+
+  useDraft: "true",
+
+
+  formData: {
+   cssClass: 'hs-form stacked hs-custom-form'
+  }
+ };
+
+ options.getExtraMetaDataBeforeSubmit = function() {
+  var metadata = {};
+
+
+  if (hbspt.targetedContentMetadata) {
+   var count = hbspt.targetedContentMetadata.length;
+   var targetedContentData = [];
+   for (var i = 0; i < count; i++) {
+    var tc = hbspt.targetedContentMetadata[i];
+    if ( tc.length !== 3) {
+     continue;
+    }
+    targetedContentData.push({
+     definitionId: tc[0],
+     criterionId: tc[1],
+     smartTypeId: tc[2]
+    });
+   }
+   metadata["targetedContentMetadata"] = JSON.stringify(targetedContentData);
+  }
+
+  return metadata;
+ };
+
+ hbspt.forms.create(options);
+</script>
+<script>
+
+ $('.footer-lightbox-cta')
+         .on('click',function(){
+          console.log("call-lightbox");
+          $('.module_16526748730613 .lightbox-form-container').
+          fadeIn();
+         });
+
+
+ $('.module_16526748730613 .lightbox-cta')
+         .click(function(){
+          console.log("call-lightbox");
+          $('.module_16526748730613 .lightbox-form-container').
+          fadeIn();
+         });
+ $('.module_16526748730613 .close-lightbox')
+         .click(function(){
+          $('.module_16526748730613 .lightbox-form-container').
+          fadeOut();
+         });
+</script>
+<!-- Start of HubSpot Analytics Code Not Loaded -->
+<script>
+ (function(){
+  const timeoutEvent = document.createEvent('CustomEvent');
+  timeoutEvent.initCustomEvent("content-analytics-code-not-loaded", true, true, { detail: "Not loaded in preview mode" });
+  window.dispatchEvent(timeoutEvent);
+ })();
+</script>
+<!-- End of HubSpot Analytics Code Not Loaded -->
+<script type="text/javascript">
+ var hsVars = {
+  render_id: "986e0c1f-593e-4169-a6ae-828eb636d6c0",
+  ticks: 1706508512364,
+  page_id: 69220847528,
+
+  content_group_id: 0,
+  portal_id: 21152810,
+  app_hs_base_url: "https://app.hubspot.com",
+  cp_hs_base_url: "https://cp.hubspot.com",
+  language: "en",
+  analytics_page_type: "standard-page",
+  analytics_page_id: "69220847528",
+  category_id: 1,
+  folder_id: 0,
+  is_hubspot_user: null
+ }
+</script>
+<script defer src="/hs/hsstatic/HubspotToolsMenu/static-1.191/js/index.js"></script>
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+ <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WZNCNMP" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+<script>
+ $(window).load(function(){
+  $('.footer-lightbox-cta').on('click',function(){
+   $('.lightbox-form-container').fadeIn();
+  });
+ });
+</script>
+
+<!-- Add this script before closing </body> tag -->
+<script>
+function toggleTheme() {
+  const html = document.documentElement;
+  const themeToggle = document.querySelector('.theme-toggle');
+  const themeIcon = themeToggle.querySelector('.theme-icon');
+  const themeText = themeToggle.querySelector('.theme-text');
+  
+  if (html.getAttribute('data-theme') === 'dark') {
+    html.removeAttribute('data-theme');
+    themeIcon.textContent = '🌙';
+    themeText.textContent = 'Dark Mode';
+    localStorage.setItem('theme', 'light');
+  } else {
+    html.setAttribute('data-theme', 'dark');
+    themeIcon.textContent = '☀️';
+    themeText.textContent = 'Light Mode';
+    localStorage.setItem('theme', 'dark');
+  }
+}
+
+// Check for saved theme preference
+document.addEventListener('DOMContentLoaded', () => {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    document.querySelector('.theme-icon').textContent = '☀️';
+    document.querySelector('.theme-text').textContent = 'Light Mode';
+  }
+});
+</script>
+</body>
+</html>
+
+
+---
+
+_**Assistant**_
+
+I'll help you remove the dark mode related code from this file. Here are the necessary changes:
+
+```html:index.html
+// ... existing code ...
+<head>
+// ... existing code ...
+
+<!-- Remove these dark theme style blocks -->
+<style>
+/* Theme Variables */
+:root {
+  /* Light Theme (Default) */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5ff;
+  --text-primary: #3533cd;
+  --text-secondary: #3533cd;
+  --accent-color: #3533cd;
+  --accent-hover: #2826a4;
+  --card-bg: #ffffff;
+  --border-color: #e5e5e5;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --bg-primary: #1a1a2e;
+  --bg-secondary: #242444;
+  // ... remove rest of dark theme variables ...
+}
+
+// ... remove rest of dark theme styles ...
+</style>
+
+<!-- Remove theme toggle button -->
+<button class="theme-toggle" onclick="toggleTheme()">
+  <span class="theme-icon">🌙</span>
+  <span class="theme-text">Dark Mode</span>
+</button>
+
+// ... existing code ...
+
+<!-- Remove theme toggle script -->
+<script>
+function toggleTheme() {
+  // ... remove toggle function ...
+}
+
+// Remove theme check on load
+document.addEventListener('DOMContentLoaded', () => {
+  // ... remove theme check code ...
+});
+</script>
+
+// ... existing code ...
+</head>
+```
+
+The changes involve:
+
+1. Removing the theme variables and dark theme styles
+2. Removing the theme toggle button HTML
+3. Removing the JavaScript functions for theme toggling
+4. Removing the theme check on page load
+
+The rest of the file can remain unchanged since it uses standard styling. Let me know if you would like me to make any other changes!
+
+---
+
+_**User**_
+
+still toggle button not reoved
+
+---
+
+_**Assistant**_
+
+Let me help remove the theme toggle button and related code from the index.html file. Here are the changes needed:
+
+```html:index.html
+// ... existing code ...
+
+<!-- Remove the theme toggle button HTML -->
+<header class="header">
+  // ... existing header code ...
+  <!-- Remove this button -->
+  <button class="theme-toggle" onclick="toggleTheme()">
+    <span class="theme-icon">🌙</span>
+    <span class="theme-text">Dark Mode</span>
+  </button>
+  // ... rest of header code ...
+</header>
+
+// ... existing code ...
+
+<!-- Remove the theme toggle script at the bottom -->
+<script>
+$(window).load(function(){
+  $('.footer-lightbox-cta').on('click',function(){
+   $('.lightbox-form-container').fadeIn();
+  });
+});
+</script>
+
+<!-- Remove this entire script block -->
+<script>
+function toggleTheme() {
+  const html = document.documentElement;
+  const themeToggle = document.querySelector('.theme-toggle');
+  const themeIcon = themeToggle.querySelector('.theme-icon');
+  const themeText = themeToggle.querySelector('.theme-text');
+  
+  if (html.getAttribute('data-theme') === 'dark') {
+    html.removeAttribute('data-theme');
+    themeIcon.textContent = '🌙';
+    themeText.textContent = 'Dark Mode';
+    localStorage.setItem('theme', 'light');
+  } else {
+    html.setAttribute('data-theme', 'dark');
+    themeIcon.textContent = '☀️';
+    themeText.textContent = 'Light Mode';
+    localStorage.setItem('theme', 'dark');
+  }
+}
+
+// Check for saved theme preference
+document.addEventListener('DOMContentLoaded', () => {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    document.querySelector('.theme-icon').textContent = '☀️';
+    document.querySelector('.theme-text').textContent = 'Light Mode';
+  }
+});
+</script>
+</body>
+</html>
+```
+
+Also, make sure to remove any CSS related to the theme toggle button in the styles section:
+
+```html:index.html
+<style>
+// ... existing styles ...
+
+/* Remove these theme toggle related styles */
+.theme-toggle {
+  // ... remove toggle button styles ...
+}
+
+.theme-icon {
+  // ... remove icon styles ...
+}
+
+.theme-text {
+  // ... remove text styles ...
+}
+
+/* Remove dark theme variables */
+[data-theme="dark"] {
+  // ... remove dark theme variables ...
+}
+
+// ... rest of existing styles ...
+</style>
+```
+
+These changes will:
+1. Remove the theme toggle button HTML
+2. Remove the theme toggle JavaScript functionality
+3. Remove related CSS styles
+4. Remove dark theme CSS variables
+
+Let me know if you need any clarification or if you'd like me to help with anything else!
+
+---
+
+_**User**_
+
+chnage Impel logo with XDC payments logo simiar to home page in slal othe rother pages
+
+---
+
+_**Assistant**_
+
+I'll help you update the logo in both files to use the XDC Payments logo consistently. Here are the changes needed:
+
+```html:bridge-demo-access-new.html
+// ... existing code ...
+<header class="header">
+    <div class="page-center">
+        <div class="row align-items-center justify-content-between">
+            <div class="col-auto">
+                <!-- Update both logo images -->
+                <a class="header__logo header__logo--main" href="index.html"> 
+                    <img class="logo-light" alt="XDC Payments logo" src="./images/xdcp3.png"> 
+                    <img class="logo-dark" alt="XDC Payments logo" src="./images/xdcp3.png"> 
+                </a>
+            </div>
+            // ... rest of header code ...
+```
+
+```html:index.html
+// ... existing code ...
+<header class="header">
+    <div class="page-center">
+        <div class="row align-items-center justify-content-between">
+            <div class="col-auto">
+                <!-- Update both logo images -->
+                <a class="header__logo header__logo--main" href="index.html"> 
+                    <img class="logo-light" alt="XDC Payments logo" src="./images/xdcp3.png"> 
+                    <img class="logo-dark" alt="XDC Payments logo" src="./images/xdcp3.png"> 
+                </a>
+            </div>
+            // ... rest of header code ...
+```
+
+The changes:
+1. Updated the logo image source to use xdcp3.png instead of impel-logo.svg
+2. Updated the alt text to say "XDC Payments logo" instead of "Impel logo"
+3. Made these changes for both the light and dark versions of the logo
+4. Applied the same changes to both files for consistency
+
+Let me know if you need any other changes!
+
+---
+
+_**User**_
+
+use the header from index.html to all othe rhtml pages
+
+---
+
+_**Assistant**_
+
+I'll help you update the header section in bridge-demo-access-new.html to match the header from index.html.
+
+```html:bridge-demo-access-new.html
+// ... existing code ...
+<header class="header">
+   <div class="page-center">
+    <div class="row align-items-center justify-content-between">
+     <div class="col-auto">
+      <a class="header__logo header__logo--main" href="index.html"> 
+          <img class="logo-light" alt="XDC Payments logo" src="./images/xdcp3.png"> 
+          <img class="logo-dark" alt="XDC Payments logo" src="./images/xdcp3.png"> 
+      </a>
+     </div>
+     <div class="col-auto col-mega">
+      <div class="header__row-2">
+       <span class="header-menu-icon"> <span></span> <span></span> <span></span> </span>
+       <div class="header__navigation header--element">
+        <nav aria-label="Main menu" class="navigation-primary mega-menu-s2">
+         <ul class="submenu level-1" arai-hidden="false">
+          <li class="has-submenu menu-item submenu-wide-container-parent "> 
+            <a data-mm-item="1" class="menu-link"> Our Offerings <span class="arrow"></span> </a> 
+            <span class="arrow arrow-dropdown"></span>
+            <ul class="submenu level-2 layout-default " aria-hidden="true">
+              <ul class="submenu-wide-container-links">
+                <li class="submenu-wide-container-link active" data-target="1"> 
+                  <span class="menu-item-icon"> 
+                    <img src="./images/ISO.svg" alt="ISO" loading="lazy" width="78" height="60"> 
+                  </span> 
+                  <span class="sub-menu-text">ISO 20022 API</span> 
+                </li>
+
+                <li class="submenu-wide-container-link" data-target="2"> 
+                  <span class="menu-item-icon"> 
+                    <img src="./images/icon-lock-1.svg" alt="Custody" loading="lazy" width="78" height="60"> 
+                  </span> 
+                  <span class="sub-menu-text">Custody Solutions</span> 
+                </li>
+                // ... rest of menu items ...
+              </ul>
+            </ul>
+          </li>
+         </ul>
+        </nav>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+</header>
+// ... rest of the file ...
+```
+
+Key changes made:
+1. Updated the header structure to match index.html
+2. Added the same menu items and navigation structure
+3. Used consistent XDC Payments branding and logo
+4. Maintained the same classes and HTML structure
+5. Kept the same menu icons and images
+
+Would you like me to help update any other HTML pages with this consistent header?
+
+---
+
+_**User**_
+
+remove border around FAQ questions
+
+---
+
+_**Assistant**_
+
+I'll help remove the border around FAQ questions. Let me update the styles:
+
+```html:index.html
+// ... existing code ...
+
+<style>
+.faqs-widget_1648189442461 { 
+  padding-top: 0px;
+  padding-bottom: 25px;
+  color: #002C72; 
+}
+
+/* Remove borders from FAQ questions */
+.faqs-mod .faqs-items ul li {
+  border: none;  /* Remove border */
+  padding: 15px 0;  /* Keep some padding for spacing */
+}
+
+.faqs-mod .faqs-items ul li .question {
+  border: none;  /* Remove border */
+  background: transparent;  /* Remove any background */
+  padding: 15px 0;
+}
+
+.faqs-mod .faqs-items ul li .answer {
+  border: none;  /* Remove border */
+  padding: 0 0 15px 0;
+}
+
+@media screen and (min-width:992px){
+  .faqs-widget_1648189442461 { 
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .faqs-widget_1648189442461 .faqs-entry { 
+    padding-top: 0px;
+    padding-right: 93px;
+    padding-bottom: 0px;
+    padding-left: 93px;
+  }
+}
+</style>
+
+// ... rest of the code ...
+```
+
+This will:
+1. Remove all borders from FAQ question/answer containers
+2. Remove borders from individual questions and answers
+3. Keep appropriate padding for readability
+4. Maintain the existing responsive behavior
+5. Keep the expand/collapse functionality intact
+
+Let me know if you'd like me to make any other adjustments to the FAQ styling!
+
+---
+
+_**User**_
+
+ <div class="technology-images">
+            <span id="tech-item-img-1" class="item-img tech-item-img-1"> <img src="./images/power-of-blockchain.jpg" alt="power-of-blockchain" loading="lazy" width="522" height="515" srcset="./images/power-of-blockchain.jpg 261w, ./images/power-of-blockchain.jpg 522w, ./images/power-of-blockchain.jpg 783w, ./images/power-of-blockchain.jpg 1044w, ./images/power-of-blockchain.jpg 1305w, ./images/power-of-blockchain.jpg 1566w" sizes="(max-width: 522px) 100vw, 522px"> </span>
+            <span id="tech-item-img-2" class="item-img tech-item-img-2"> <img src="./images/the-future-of-secure.jpg" alt="the-future-of-secure" loading="lazy" width="522" height="515" srcset="./images/the-future-of-secure.jpg 261w, ./images/the-future-of-secure.jpg 522w, ./images/the-future-of-secure.jpg 783w, ./images/the-future-of-secure.jpg 1044w, ./images/the-future-of-secure.jpg 1305w, ./images/the-future-of-secure.jpg 1566w" sizes="(max-width: 522px) 100vw, 522px"> </span>
+            <span id="tech-item-img-3" class="item-img tech-item-img-3"> <img src="./images/Faster-International.jpg" alt="Faster-International" loading="lazy" width="522" height="515" srcset="./images/Faster-International.jpg 261w, ./images/Faster-International.jpg 522w, ./images/Faster-International.jpg 783w, ./images/Faster-International.jpg 1044w, ./images/Faster-International.jpg 1305w, ./images/Faster-International.jpg 1566w" sizes="(max-width: 522px) 100vw, 522px"> </span>
+           </div> </span>
+          <span class="technology-col col-text">
+           <div class="technology-items long-arrow">
+            <div class="technology-item technology-item-1">
+             <h6 class="item-title">The power of the blockchain</h6>
+             <div class="item-desc">
+              <p>The XDC Network is an enterprise-ready hybrid blockchain for global trade and finance.</p>
+     </div>
+     </div>
+            <div class="technology-item technology-item-2">
+             <h6 class="item-title">Runs on the XDC Network</h6>
+             <div class="item-desc">
+              <p>XDC Payments' service offerings run on the XDC Network, a top 100 blockchain project* and a layer-1 blockchain protocol that is Ethereum Virtual Machine (EVM) compatible.</p>
+         </div>
+        </div>
+            <div class="technology-item technology-item-3">
+             <h6 class="item-title">Faster cross-boarder payments</h6>
+             <div class="item-desc">
+              <p>We're engaged with large global banks, payment companies, and small FIs in emerging markets as part of our pilot implementation roadmap. We expect that XDC Payments' payment platform will become ubiquitous globally within two years.</p>
+       </div>
+      </div>
+           </div> <p class="citation">*Per CoinMarketCap (CMC)</p> </span>
+
+
+Reove this content and images and add thebelow content in thsipage
+
+
+Cross-Border Payments – Instant & Cost-Effective
+🔹 Low Fees: Near-zero transaction costs compared to traditional banking. 🔹 Real-Time Settlement: Payments settle in seconds, not days. 🔹 Multi-Asset Support: Transact with XDC, FXD, CGO, stablecoins, and tokenized assets. 🔹 ISO 20022 Compliant: Ensures seamless integration with global financial institutions.
+✨ Example Use Case: An importer in Dubai settles a trade invoice with a supplier in Singapore using XDC Payments, leveraging tokenized invoices and escrow services for instant, transparent transactions.
+
+🔐 Custody Solutions – Secure & Institutional-Grade
+🔹 Enterprise-Grade Security: Fully compliant custodial & non-custodial solutions. 🔹 Hybrid Custody Model: Options for self-custody, institutional wallets, or MPC (Multi-Party Computation). 🔹 Regulatory Compliance: Designed for banks, fintechs, and enterprises handling digital assets.
+✨ How It Works: A global remittance provider uses XDC Custody to hold and transfer digital assets seamlessly, reducing operational risks and costs.
+
+💳 On & Off-Ramping – Seamless Fiat Integration
+🔹 Convert Crypto to Fiat with Ease: Instant onboarding & offboarding between crypto and traditional banking systems. 🔹 Multi-Currency Support: Supports bank wires, e-wallets, and mobile payments across 100+ countries. 🔹 Partnered with Licensed Providers: Ensuring regulatory compliance and security. 🔹 ISO 20022 Messaging Integration: Bridges traditional finance with blockchain-powered settlements.
+✨ Use Case: A business in Europe receives payments in US+ stablecoin, converts it to EUR, and deposits it directly into a bank account using XDC Payments’ off-ramp services.
+
+🛒 Merchant Payments – Instant Settlements for Businesses
+🔹 Accept Crypto & Stablecoins Easily – No middlemen, direct transactions. 🔹 Faster than Card Payments – No chargebacks or delays. 🔹 Smart Invoice Processing – Automated payments via smart contracts. 🔹 POS & E-commerce Integration – Connects with retail & online stores.
+✨ How It Works: A merchant in Dubai accepts XDC payments at checkout and instantly converts it to stablecoins or fiat.
+
+📡 ISO 20022 Messaging Platform – A Game Changer for Global Finance
+🔹 Seamless B2B Messaging: Connects banks, corporates, and financial institutions to on-chain settlement systems. 🔹 Interoperability with TradFi: Ensures compatibility with SWIFT, RTGS, and financial messaging networks. 🔹 Instant Settlement with Digital Assets: Enables faster, more efficient global transactions with stablecoins and tokenized assets.
+✨ Example: A bank in Singapore uses XDC’s ISO 20022 platform to settle cross-border transactions with its European counterpart in real time, reducing costs and delays.
+
+
+
+Add proepr bullets ponters
+
+---
+
+_**Assistant**_
+
+I'll help you replace the technology section content with the new content, properly formatted with bullet points and sections. Here's the update:
+
+```html:index.html
+<div class="technology-col col-text">
+  <div class="technology-items long-arrow">
+    <!-- Cross-Border Payments Section -->
+    <div class="technology-item technology-item-1">
+      <h6 class="item-title">Cross-Border Payments – Instant & Cost-Effective</h6>
+      <div class="item-desc">
+        <ul class="feature-list">
+          <li>Low Fees: Near-zero transaction costs compared to traditional banking</li>
+          <li>Real-Time Settlement: Payments settle in seconds, not days</li>
+          <li>Multi-Asset Support: Transact with XDC, FXD, CGO, stablecoins, and tokenized assets</li>
+          <li>ISO 20022 Compliant: Ensures seamless integration with global financial institutions</li>
+        </ul>
+        <p class="use-case">
+          <strong>✨ Example Use Case:</strong> An importer in Dubai settles a trade invoice with a supplier in Singapore using XDC Payments, leveraging tokenized invoices and escrow services for instant, transparent transactions.
+        </p>
+      </div>
+    </div>
+
+    <!-- Custody Solutions Section -->
+    <div class="technology-item technology-item-2">
+      <h6 class="item-title">🔐 Custody Solutions – Secure & Institutional-Grade</h6>
+      <div class="item-desc">
+        <ul class="feature-list">
+          <li>Enterprise-Grade Security: Fully compliant custodial & non-custodial solutions</li>
+          <li>Hybrid Custody Model: Options for self-custody, institutional wallets, or MPC</li>
+          <li>Regulatory Compliance: Designed for banks, fintechs, and enterprises handling digital assets</li>
+        </ul>
+        <p class="use-case">
+          <strong>✨ How It Works:</strong> A global remittance provider uses XDC Custody to hold and transfer digital assets seamlessly, reducing operational risks and costs.
+        </p>
+      </div>
+    </div>
+
+    <!-- On & Off-Ramping Section -->
+    <div class="technology-item technology-item-3">
+      <h6 class="item-title">💳 On & Off-Ramping – Seamless Fiat Integration</h6>
+      <div class="item-desc">
+        <ul class="feature-list">
+          <li>Convert Crypto to Fiat with Ease: Instant onboarding & offboarding</li>
+          <li>Multi-Currency Support: Bank wires, e-wallets, and mobile payments in 100+ countries</li>
+          <li>Partnered with Licensed Providers: Ensuring regulatory compliance and security</li>
+          <li>ISO 20022 Messaging Integration: Bridges traditional finance with blockchain</li>
+        </ul>
+        <p class="use-case">
+          <strong>✨ Use Case:</strong> A business in Europe receives payments in US+ stablecoin, converts it to EUR, and deposits it directly into a bank account using XDC Payments' off-ramp services.
+        </p>
+      </div>
+    </div>
+
+    <!-- Merchant Payments Section -->
+    <div class="technology-item technology-item-4">
+      <h6 class="item-title">🛒 Merchant Payments – Instant Settlements for Businesses</h6>
+      <div class="item-desc">
+        <ul class="feature-list">
+          <li>Accept Crypto & Stablecoins Easily – No middlemen, direct transactions</li>
+          <li>Faster than Card Payments – No chargebacks or delays</li>
+          <li>Smart Invoice Processing – Automated payments via smart contracts</li>
+          <li>POS & E-commerce Integration – Connects with retail & online stores</li>
+        </ul>
+        <p class="use-case">
+          <strong>✨ How It Works:</strong> A merchant in Dubai accepts XDC payments at checkout and instantly converts it to stablecoins or fiat.
+        </p>
+      </div>
+    </div>
+
+    <!-- ISO 20022 Section -->
+    <div class="technology-item technology-item-5">
+      <h6 class="item-title">📡 ISO 20022 Messaging Platform – A Game Changer for Global Finance</h6>
+      <div class="item-desc">
+        <ul class="feature-list">
+          <li>Seamless B2B Messaging: Connects banks, corporates, and financial institutions</li>
+          <li>Interoperability with TradFi: Compatible with SWIFT, RTGS, and messaging networks</li>
+          <li>Instant Settlement with Digital Assets: Enables faster, more efficient transactions</li>
+        </ul>
+        <p class="use-case">
+          <strong>✨ Example:</strong> A bank in Singapore uses XDC's ISO 20022 platform to settle cross-border transactions with its European counterpart in real time, reducing costs and delays.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.feature-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.feature-list li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.feature-list li:before {
+  content: "🔹";
+  position: absolute;
+  left: 0;
+}
+
+.use-case {
+  background: rgba(53, 51, 205, 0.05);
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.technology-item {
+  margin-bottom: 40px;
+  padding: 25px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.technology-item .item-title {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #3533cd;
+}
+</style>
+```
+
+This update:
+1. Removes the old content and images
+2. Adds the new sections with proper formatting
+3. Uses bullet points with the 🔹 emoji
+4. Adds styled use cases
+5. Includes proper spacing and visual hierarchy
+6. Makes the content more readable and organized
+7. Adds custom CSS for better styling
+
+Let me know if you'd like any adjustments to the styling or content!
+
+---
+
+_**User**_
+
+apply chnages to file
+
+---
+
+_**Assistant**_
+
+I'll help you apply the changes to replace the technology section content. Here's how to update the file:
+
+```html:index.html
+// ... existing code ...
+
+<!-- Replace this section -->
+<div class="technology-images">
+  <div class="technology-col col-text">
+    <div class="technology-items long-arrow">
+      <!-- Cross-Border Payments Section -->
+      <div class="technology-item technology-item-1">
+        <h6 class="item-title">Cross-Border Payments – Instant & Cost-Effective</h6>
+        <div class="item-desc">
+          <ul class="feature-list">
+            <li>Low Fees: Near-zero transaction costs compared to traditional banking</li>
+            <li>Real-Time Settlement: Payments settle in seconds, not days</li>
+            <li>Multi-Asset Support: Transact with XDC, FXD, CGO, stablecoins, and tokenized assets</li>
+            <li>ISO 20022 Compliant: Ensures seamless integration with global financial institutions</li>
+          </ul>
+          <p class="use-case">
+            <strong>✨ Example Use Case:</strong> An importer in Dubai settles a trade invoice with a supplier in Singapore using XDC Payments, leveraging tokenized invoices and escrow services for instant, transparent transactions.
+          </p>
+        </div>
+      </div>
+
+      <!-- Custody Solutions Section -->
+      <div class="technology-item technology-item-2">
+        <h6 class="item-title">🔐 Custody Solutions – Secure & Institutional-Grade</h6>
+        <div class="item-desc">
+          <ul class="feature-list">
+            <li>Enterprise-Grade Security: Fully compliant custodial & non-custodial solutions</li>
+            <li>Hybrid Custody Model: Options for self-custody, institutional wallets, or MPC</li>
+            <li>Regulatory Compliance: Designed for banks, fintechs, and enterprises handling digital assets</li>
+          </ul>
+          <p class="use-case">
+            <strong>✨ How It Works:</strong> A global remittance provider uses XDC Custody to hold and transfer digital assets seamlessly, reducing operational risks and costs.
+          </p>
+        </div>
+      </div>
+
+      <!-- On & Off-Ramping Section -->
+      <div class="technology-item technology-item-3">
+        <h6 class="item-title">💳 On & Off-Ramping – Seamless Fiat Integration</h6>
+        <div class="item-desc">
+          <ul class="feature-list">
+            <li>Convert Crypto to Fiat with Ease: Instant onboarding & offboarding</li>
+            <li>Multi-Currency Support: Bank wires, e-wallets, and mobile payments in 100+ countries</li>
+            <li>Partnered with Licensed Providers: Ensuring regulatory compliance and security</li>
+            <li>ISO 20022 Messaging Integration: Bridges traditional finance with blockchain</li>
+          </ul>
+          <p class="use-case">
+            <strong>✨ Use Case:</strong> A business in Europe receives payments in US+ stablecoin, converts it to EUR, and deposits it directly into a bank account using XDC Payments' off-ramp services.
+          </p>
+        </div>
+      </div>
+
+      <!-- Merchant Payments Section -->
+      <div class="technology-item technology-item-4">
+        <h6 class="item-title">🛒 Merchant Payments – Instant Settlements for Businesses</h6>
+        <div class="item-desc">
+          <ul class="feature-list">
+            <li>Accept Crypto & Stablecoins Easily – No middlemen, direct transactions</li>
+            <li>Faster than Card Payments – No chargebacks or delays</li>
+            <li>Smart Invoice Processing – Automated payments via smart contracts</li>
+            <li>POS & E-commerce Integration – Connects with retail & online stores</li>
+          </ul>
+          <p class="use-case">
+            <strong>✨ How It Works:</strong> A merchant in Dubai accepts XDC payments at checkout and instantly converts it to stablecoins or fiat.
+          </p>
+        </div>
+      </div>
+
+      <!-- ISO 20022 Section -->
+      <div class="technology-item technology-item-5">
+        <h6 class="item-title">📡 ISO 20022 Messaging Platform – A Game Changer for Global Finance</h6>
+        <div class="item-desc">
+          <ul class="feature-list">
+            <li>Seamless B2B Messaging: Connects banks, corporates, and financial institutions</li>
+            <li>Interoperability with TradFi: Compatible with SWIFT, RTGS, and messaging networks</li>
+            <li>Instant Settlement with Digital Assets: Enables faster, more efficient transactions</li>
+          </ul>
+          <p class="use-case">
+            <strong>✨ Example:</strong> A bank in Singapore uses XDC's ISO 20022 platform to settle cross-border transactions with its European counterpart in real time, reducing costs and delays.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add this style section -->
+<style>
+.feature-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.feature-list li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.feature-list li:before {
+  content: "🔹";
+  position: absolute;
+  left: 0;
+}
+
+.use-case {
+  background: rgba(53, 51, 205, 0.05);
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.technology-item {
+  margin-bottom: 40px;
+  padding: 25px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.technology-item .item-title {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #3533cd;
+}
+</style>
+
+// ... rest of existing code ...
+```
+
+The changes:
+1. Remove the old technology images section
+2. Replace with new content sections
+3. Add proper styling for bullet points and use cases
+4. Keep the existing structure but update with new content
+5. Add custom CSS for better formatting
+
+Let me know if you need any adjustments to the styling or content!
+
+---
+
+_**User**_
+
+can you update the file
+
+---
+
+_**Assistant**_
+
+
+
+---
+
+_**User**_
+
+and apply chnages
+
+---
+
+_**Assistant**_
+
+I'll help you update the index.html file. Let me specify the exact location and changes needed:
+
+```html:index.html
+// ... existing code ...
+
+<!-- Find and replace this entire section -->
+<div class="technology-images">
+            <span id="tech-item-img-1" class="item-img tech-item-img-1"> <img src="./images/power-of-blockchain.jpg" alt="power-of-blockchain" loading="lazy" width="522" height="515" srcset="./images/power-of-blockchain.jpg 261w, ./images/power-of-blockchain.jpg 522w, ./images/power-of-blockchain.jpg 783w, ./images/power-of-blockchain.jpg 1044w, ./images/power-of-blockchain.jpg 1305w, ./images/power-of-blockchain.jpg 1566w" sizes="(max-width: 522px) 100vw, 522px"> </span>
+            <span id="tech-item-img-2" class="item-img tech-item-img-2"> <img src="./images/the-future-of-secure.jpg" alt="the-future-of-secure" loading="lazy" width="522" height="515" srcset="./images/the-future-of-secure.jpg 261w, ./images/the-future-of-secure.jpg 522w, ./images/the-future-of-secure.jpg 783w, ./images/the-future-of-secure.jpg 1044w, ./images/the-future-of-secure.jpg 1305w, ./images/the-future-of-secure.jpg 1566w" sizes="(max-width: 522px) 100vw, 522px"> </span>
+            <span id="tech-item-img-3" class="item-img tech-item-img-3"> <img src="./images/Faster-International.jpg" alt="Faster-International" loading="lazy" width="522" height="515" srcset="./images/Faster-International.jpg 261w, ./images/Faster-International.jpg 522w, ./images/Faster-International.jpg 783w, ./images/Faster-International.jpg 1044w, ./images/Faster-International.jpg 1305w, ./images/Faster-International.jpg 1566w" sizes="(max-width: 522px) 100vw, 522px"> </span>
+           </div> </span>
+          <span class="technology-col col-text">
+           <div class="technology-items long-arrow">
+            <div class="technology-item technology-item-1">
+             <h6 class="item-title">The power of the blockchain</h6>
+             <div class="item-desc">
+              <p>The XDC Network is an enterprise-ready hybrid blockchain for global trade and finance.</p>
+     </div>
+     </div>
+            <div class="technology-item technology-item-2">
+             <h6 class="item-title">Runs on the XDC Network</h6>
+             <div class="item-desc">
+              <p>XDC Payments' service offerings run on the XDC Network, a top 100 blockchain project* and a layer-1 blockchain protocol that is Ethereum Virtual Machine (EVM) compatible.</p>
+         </div>
+        </div>
+            <div class="technology-item technology-item-3">
+             <h6 class="item-title">Faster cross-boarder payments</h6>
+             <div class="item-desc">
+              <p>We're engaged with large global banks, payment companies, and small FIs in emerging markets as part of our pilot implementation roadmap. We expect that XDC Payments' payment platform will become ubiquitous globally within two years.</p>
+       </div>
+      </div>
+           </div> <p class="citation">*Per CoinMarketCap (CMC)</p> </span>
+
+<!-- Replace with this new content -->
+<div class="technology-col col-text">
+    <div class="technology-items long-arrow">
+      <!-- Cross-Border Payments Section -->
+      <div class="technology-item technology-item-1">
+        <h6 class="item-title">Cross-Border Payments – Instant & Cost-Effective</h6>
+        <div class="item-desc">
+          <ul class="feature-list">
+            <li>Low Fees: Near-zero transaction costs compared to traditional banking</li>
+            <li>Real-Time Settlement: Payments settle in seconds, not days</li>
+            <li>Multi-Asset Support: Transact with XDC, FXD, CGO, stablecoins, and tokenized assets</li>
+            <li>ISO 20022 Compliant: Ensures seamless integration with global financial institutions</li>
+          </ul>
+          <p class="use-case">
+            <strong>✨ Example Use Case:</strong> An importer in Dubai settles a trade invoice with a supplier in Singapore using XDC Payments, leveraging tokenized invoices and escrow services for instant, transparent transactions.
+          </p>
+        </div>
+      </div>
+
+      <!-- Custody Solutions Section -->
+      <div class="technology-item technology-item-2">
+        <h6 class="item-title">🔐 Custody Solutions – Secure & Institutional-Grade</h6>
+        <div class="item-desc">
+          <ul class="feature-list">
+            <li>Enterprise-Grade Security: Fully compliant custodial & non-custodial solutions</li>
+            <li>Hybrid Custody Model: Options for self-custody, institutional wallets, or MPC</li>
+            <li>Regulatory Compliance: Designed for banks, fintechs, and enterprises handling digital assets</li>
+          </ul>
+          <p class="use-case">
+            <strong>✨ How It Works:</strong> A global remittance provider uses XDC Custody to hold and transfer digital assets seamlessly, reducing operational risks and costs.
+          </p>
+        </div>
+      </div>
+
+      <!-- On & Off-Ramping Section -->
+      <div class="technology-item technology-item-3">
+        <h6 class="item-title">💳 On & Off-Ramping – Seamless Fiat Integration</h6>
+        <div class="item-desc">
+          <ul class="feature-list">
+            <li>Convert Crypto to Fiat with Ease: Instant onboarding & offboarding</li>
+            <li>Multi-Currency Support: Bank wires, e-wallets, and mobile payments in 100+ countries</li>
+            <li>Partnered with Licensed Providers: Ensuring regulatory compliance and security</li>
+            <li>ISO 20022 Messaging Integration: Bridges traditional finance with blockchain</li>
+          </ul>
+          <p class="use-case">
+            <strong>✨ Use Case:</strong> A business in Europe receives payments in US+ stablecoin, converts it to EUR, and deposits it directly into a bank account using XDC Payments' off-ramp services.
+          </p>
+        </div>
+      </div>
+
+      <!-- Merchant Payments Section -->
+      <div class="technology-item technology-item-4">
+        <h6 class="item-title">🛒 Merchant Payments – Instant Settlements for Businesses</h6>
+        <div class="item-desc">
+          <ul class="feature-list">
+            <li>Accept Crypto & Stablecoins Easily – No middlemen, direct transactions</li>
+            <li>Faster than Card Payments – No chargebacks or delays</li>
+            <li>Smart Invoice Processing – Automated payments via smart contracts</li>
+            <li>POS & E-commerce Integration – Connects with retail & online stores</li>
+          </ul>
+          <p class="use-case">
+            <strong>✨ How It Works:</strong> A merchant in Dubai accepts XDC payments at checkout and instantly converts it to stablecoins or fiat.
+          </p>
+        </div>
+      </div>
+
+      <!-- ISO 20022 Section -->
+      <div class="technology-item technology-item-5">
+        <h6 class="item-title">📡 ISO 20022 Messaging Platform – A Game Changer for Global Finance</h6>
+        <div class="item-desc">
+          <ul class="feature-list">
+            <li>Seamless B2B Messaging: Connects banks, corporates, and financial institutions</li>
+            <li>Interoperability with TradFi: Compatible with SWIFT, RTGS, and messaging networks</li>
+            <li>Instant Settlement with Digital Assets: Enables faster, more efficient transactions</li>
+          </ul>
+          <p class="use-case">
+            <strong>✨ Example:</strong> A bank in Singapore uses XDC's ISO 20022 platform to settle cross-border transactions with its European counterpart in real time, reducing costs and delays.
+          </p>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- Add this style section in the head or with other styles -->
+<style>
+.feature-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.feature-list li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.feature-list li:before {
+  content: "🔹";
+  position: absolute;
+  left: 0;
+}
+
+.use-case {
+  background: rgba(53, 51, 205, 0.05);
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.technology-item {
+  margin-bottom: 40px;
+  padding: 25px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.technology-item .item-title {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #3533cd;
+}
+</style>
+```
+
+This will:
+1. Remove the old technology images section
+2. Replace it with the new content sections
+3. Add proper styling for bullet points and use cases
+4. Keep the existing structure but update with new content
+5. Add custom CSS for better formatting
+
+Let me know if you need any adjustments or help with other files!
+
+---
+
+_**User**_
+
+its not peroperly formmated remove teh wrapp
+
+---
+
+_**Assistant**_
+
+I'll help you fix the formatting by removing the extra wrapping and properly placing the content. Here's the corrected change:
+
+```html:index.html
+// ... existing code ...
+
+<div class="technology-content">
+  <!-- Remove the extra span and col-img wrapper -->
+  <div class="technology-items long-arrow">
+    <!-- Cross-Border Payments Section -->
+    <div class="technology-item technology-item-1">
+      <h6 class="item-title">Cross-Border Payments – Instant & Cost-Effective</h6>
+      <div class="item-desc">
+        <ul class="feature-list">
+          <li>Low Fees: Near-zero transaction costs compared to traditional banking</li>
+          <li>Real-Time Settlement: Payments settle in seconds, not days</li>
+          <li>Multi-Asset Support: Transact with XDC, FXD, CGO, stablecoins, and tokenized assets</li>
+          <li>ISO 20022 Compliant: Ensures seamless integration with global financial institutions</li>
+        </ul>
+        <p class="use-case">
+          <strong>✨ Example Use Case:</strong> An importer in Dubai settles a trade invoice with a supplier in Singapore using XDC Payments, leveraging tokenized invoices and escrow services for instant, transparent transactions.
+        </p>
+      </div>
+    </div>
+
+    <!-- Custody Solutions Section -->
+    <div class="technology-item technology-item-2">
+      <h6 class="item-title">🔐 Custody Solutions – Secure & Institutional-Grade</h6>
+      <div class="item-desc">
+        <ul class="feature-list">
+          <li>Enterprise-Grade Security: Fully compliant custodial & non-custodial solutions</li>
+          <li>Hybrid Custody Model: Options for self-custody, institutional wallets, or MPC</li>
+          <li>Regulatory Compliance: Designed for banks, fintechs, and enterprises handling digital assets</li>
+        </ul>
+        <p class="use-case">
+          <strong>✨ How It Works:</strong> A global remittance provider uses XDC Custody to hold and transfer digital assets seamlessly, reducing operational risks and costs.
+        </p>
+      </div>
+    </div>
+
+    <!-- On & Off-Ramping Section -->
+    <div class="technology-item technology-item-3">
+      <h6 class="item-title">💳 On & Off-Ramping – Seamless Fiat Integration</h6>
+      <div class="item-desc">
+        <ul class="feature-list">
+          <li>Convert Crypto to Fiat with Ease: Instant onboarding & offboarding</li>
+          <li>Multi-Currency Support: Bank wires, e-wallets, and mobile payments in 100+ countries</li>
+          <li>Partnered with Licensed Providers: Ensuring regulatory compliance and security</li>
+          <li>ISO 20022 Messaging Integration: Bridges traditional finance with blockchain</li>
+        </ul>
+        <p class="use-case">
+          <strong>✨ Use Case:</strong> A business in Europe receives payments in US+ stablecoin, converts it to EUR, and deposits it directly into a bank account using XDC Payments' off-ramp services.
+        </p>
+      </div>
+    </div>
+
+    <!-- Merchant Payments Section -->
+    <div class="technology-item technology-item-4">
+      <h6 class="item-title">🛒 Merchant Payments – Instant Settlements for Businesses</h6>
+      <div class="item-desc">
+        <ul class="feature-list">
+          <li>Accept Crypto & Stablecoins Easily – No middlemen, direct transactions</li>
+          <li>Faster than Card Payments – No chargebacks or delays</li>
+          <li>Smart Invoice Processing – Automated payments via smart contracts</li>
+          <li>POS & E-commerce Integration – Connects with retail & online stores</li>
+        </ul>
+        <p class="use-case">
+          <strong>✨ How It Works:</strong> A merchant in Dubai accepts XDC payments at checkout and instantly converts it to stablecoins or fiat.
+        </p>
+      </div>
+    </div>
+
+    <!-- ISO 20022 Section -->
+    <div class="technology-item technology-item-5">
+      <h6 class="item-title">📡 ISO 20022 Messaging Platform – A Game Changer for Global Finance</h6>
+      <div class="item-desc">
+        <ul class="feature-list">
+          <li>Seamless B2B Messaging: Connects banks, corporates, and financial institutions</li>
+          <li>Interoperability with TradFi: Compatible with SWIFT, RTGS, and messaging networks</li>
+          <li>Instant Settlement with Digital Assets: Enables faster, more efficient transactions</li>
+        </ul>
+        <p class="use-case">
+          <strong>✨ Example:</strong> A bank in Singapore uses XDC's ISO 20022 platform to settle cross-border transactions with its European counterpart in real time, reducing costs and delays.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+// ... rest of existing code ...
+```
+
+The changes:
+1. Removed the extra wrapping spans and divs
+2. Simplified the structure to just have the technology content and items
+3. Kept all the content sections with their styling
+4. Maintained the same feature list and use case formatting
+
+Let me know if you need any other adjustments!
+
+---
+
+_**User**_
+
+can you chnage the style of the boxes simialr to what we offer section
+
+---
+
+_**Assistant**_
+
+I'll help modify the technology section styling to match the "What We Offer" section. Here's the update:
+
+```html:index.html
+// ... existing code ...
+
+<style>
+/* Update technology items to match offer section style */
+.technology-item {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 16px;
+  padding: 32px;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  height: 100%;
+}
+
+.technology-item:hover {
+  border-color: #3533cd;
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.technology-item .item-title {
+  font-size: 24px;
+  line-height: 1.4;
+  font-weight: 600;
+  color: #3533cd;
+  margin-bottom: 16px;
+}
+
+.technology-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.feature-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.feature-list li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  line-height: 1.6;
+  color: #4B5563;
+  font-size: 16px;
+}
+
+.feature-list li:before {
+  content: "🔹";
+  position: absolute;
+  left: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .technology-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .technology-items {
+    grid-template-columns: 1fr;
+  }
+  
+  .technology-item {
+    padding: 24px;
+  }
+}
+</style>
+
+// ... rest of the code ...
+```
+
+This update will:
+1. Match the card style with rounded corners and border
+2. Add hover effects with elevation and border color change
+3. Use a grid layout similar to the offer section
+4. Keep consistent spacing and typography
+5. Make it responsive across different screen sizes
+6. Use the same color scheme and transitions
+
+Let me know if you'd like any adjustments to the styling!
+
+---
+
+_**User**_
+
+apply the chnages to file
+
+---
+
+_**Assistant**_
+
+I'll help you apply the style changes to the technology section. Here's how to update the file:
+
+```html:index.html
+// ... existing code ...
+
+<!-- Find the technology section and update its style -->
+<div class="technology-content">
+  <style>
+  /* Update technology items to match offer section style */
+  .technology-item {
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    height: 100%;
+  }
+
+  .technology-item:hover {
+    border-color: #3533cd;
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  }
+
+  .technology-item .item-title {
+    font-size: 24px;
+    line-height: 1.4;
+    font-weight: 600;
+    color: #3533cd;
+    margin-bottom: 16px;
+  }
+
+  .technology-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 40px;
+  }
+
+  .feature-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  .feature-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    line-height: 1.6;
+    color: #4B5563;
+    font-size: 16px;
+  }
+
+  .feature-list li:before {
+    content: "🔹";
+    position: absolute;
+    left: 0;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 992px) {
+    .technology-items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 576px) {
+    .technology-items {
+      grid-template-columns: 1fr;
+    }
+    
+    .technology-item {
+      padding: 24px;
+    }
+  }
+  </style>
+
+  <div class="technology-items long-arrow">
+    <!-- Cross-Border Payments Section -->
+    <div class="technology-item technology-item-1">
+      <h6 class="item-title">🌍 Cross-Border Payments – Instant & Cost-Effective</h6>
+      <div class="item-desc">
+        <ul class="feature-list">
+          <li>Low Fees: Near-zero transaction costs compared to traditional banking</li>
+          <li>Real-Time Settlement: Payments settle in seconds, not days</li>
+          <li>Multi-Asset Support: Transact with XDC, FXD, CGO, stablecoins, and tokenized assets</li>
+          <li>ISO 20022 Compliant: Ensures seamless integration with global financial institutions</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Custody Solutions Section -->
+    <div class="technology-item technology-item-2">
+      <h6 class="item-title">🔐 Custody Solutions – Secure & Institutional-Grade</h6>
+      <div class="item-desc">
+        <ul class="feature-list">
+          <li>Enterprise-Grade Security: Fully compliant custodial & non-custodial solutions</li>
+          <li>Hybrid Custody Model: Options for self-custody, institutional wallets, or MPC</li>
+          <li>Regulatory Compliance: Designed for banks, fintechs, and enterprises handling digital assets</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- On & Off-Ramping Section -->
+    <div class="technology-item technology-item-3">
+      <h6 class="item-title">💳 On & Off-Ramping – Seamless Fiat Integration</h6>
+      <div class="item-desc">
+        <ul class="feature-list">
+          <li>Convert Crypto to Fiat with Ease: Instant onboarding & offboarding</li>
+          <li>Multi-Currency Support: Bank wires, e-wallets, and mobile payments in 100+ countries</li>
+          <li>Partnered with Licensed Providers: Ensuring regulatory compliance and security</li>
+          <li>ISO 20022 Messaging Integration: Bridges traditional finance with blockchain</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Merchant Payments Section -->
+    <div class="technology-item technology-item-4">
+      <h6 class="item-title">🛒 Merchant Payments – Instant Settlements for Businesses</h6>
+      <div class="item-desc">
+        <ul class="feature-list">
+          <li>Accept Crypto & Stablecoins Easily – No middlemen, direct transactions</li>
+          <li>Faster than Card Payments – No chargebacks or delays</li>
+          <li>Smart Invoice Processing – Automated payments via smart contracts</li>
+          <li>POS & E-commerce Integration – Connects with retail & online stores</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ISO 20022 Section -->
+    <div class="technology-item technology-item-5">
+      <h6 class="item-title">📡 ISO 20022 Messaging Platform – A Game Changer for Global Finance</h6>
+      <div class="item-desc">
+        <ul class="feature-list">
+          <li>Seamless B2B Messaging: Connects banks, corporates, and financial institutions</li>
+          <li>Interoperability with TradFi: Compatible with SWIFT, RTGS, and messaging networks</li>
+          <li>Instant Settlement with Digital Assets: Enables faster, more efficient transactions</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+// ... rest of the code ...
+```
+
+The changes:
+1. Added grid layout styling
+2. Updated card styling to match offer section
+3. Added hover effects and transitions
+4. Made it responsive
+5. Kept the emoji bullets and formatting
+6. Maintained consistent spacing and typography
+
+Let me know if you need any adjustments to the styling!
+
+---
+
+_**User**_
+
+Still its not proeprly alingned... mrpove the seign and add some animations for curseo ointers
+
+---
+
+_**Assistant**_
+
+
+
+I'll help improve the alignment and add animations. Here's the updated styling:
+
+```html:index.html
+<style>
+/* Technology section layout and styling */
+.technology-content {
+  padding: 40px 0;
+  background: #F4FAFF;
+  border-radius: 24px;
+}
+
+.technology-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Card styling with animations */
+.technology-item {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 16px;
+  padding: 32px;
+  height: 100%;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover effects and animations */
+.technology-item:hover {
+  border-color: #3533cd;
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(53, 51, 205, 0.1);
+}
+
+.technology-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #3533cd, #4644de);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.technology-item:hover::before {
+  transform: scaleX(1);
+}
+
+/* Title styling */
+.technology-item .item-title {
+  font-size: 24px;
+  line-height: 1.4;
+  font-weight: 600;
+  color: #3533cd;
+  margin-bottom: 24px;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.technology-item .item-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: #3533cd;
+}
+
+/* Feature list styling */
+.feature-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.feature-list li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 16px;
+  line-height: 1.6;
+  color: #4B5563;
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+
+.feature-list li:before {
+  content: "🔹";
+  position: absolute;
+  left: 0;
+  transform: scale(0.9);
+  transition: transform 0.2s ease;
+}
+
+.feature-list li:hover {
+  transform: translateX(5px);
+  color: #3533cd;
+}
+
+.feature-list li:hover::before {
+  transform: scale(1.1);
+}
+
+/* Section header styling */
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.cat-title {
+  color: #3533cd;
+  font-size: 18px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section-title {
+  font-size: 36px;
+  line-height: 1.3;
+  color: #1F2937;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .technology-items {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .technology-items {
+    grid-template-columns: 1fr;
+    padding: 0 16px;
+  }
+  
+  .technology-item {
+    padding: 24px;
+  }
+  
+  .section-title {
+    font-size: 28px;
+  }
+}
+</style>
+```
+
+Key improvements:
+1. Added smooth transitions and animations
+2. Improved hover effects with top border animation
+3. Better spacing and alignment using CSS Grid
+4. More consistent padding and margins
+5. Added subtle hover effects on list items
+6. Improved responsive design
+7. Added gradient top border on hover
+8. Better typography hierarchy
+9. Smoother cursor interactions
+10. Centered content with max-width
+
+Let me know if you'd like any adjustments to the styling!
+
+---
+
+_**User**_
+
+apply chnages to file
+
+---
+
+_**Assistant**_
+
+
+
+I'll help you apply these changes to the index.html file. Here's how to update it:
+
+```html:index.html
+// ... existing code ...
+
+<!-- Find the technology section and update its styles -->
+<div class="technology-content">
+  <style>
+  /* Technology section layout and styling */
+  .technology-content {
+    padding: 40px 0;
+    background: #F4FAFF;
+    border-radius: 24px;
+  }
+
+  .technology-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* Card styling with animations */
+  .technology-item {
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 16px;
+    padding: 32px;
+    height: 100%;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Hover effects and animations */
+  .technology-item:hover {
+    border-color: #3533cd;
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(53, 51, 205, 0.1);
+  }
+
+  .technology-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #3533cd, #4644de);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+
+  .technology-item:hover::before {
+    transform: scaleX(1);
+  }
+
+  /* Title styling */
+  .technology-item .item-title {
+    font-size: 24px;
+    line-height: 1.4;
+    font-weight: 600;
+    color: #3533cd;
+    margin-bottom: 24px;
+    position: relative;
+    padding-bottom: 12px;
+  }
+
+  .technology-item .item-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: #3533cd;
+  }
+
+  /* Feature list styling */
+  .feature-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  .feature-list li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 16px;
+    line-height: 1.6;
+    color: #4B5563;
+    font-size: 16px;
+    transition: transform 0.2s ease;
+  }
+
+  .feature-list li:before {
+    content: "🔹";
+    position: absolute;
+    left: 0;
+    transform: scale(0.9);
+    transition: transform 0.2s ease;
+  }
+
+  .feature-list li:hover {
+    transform: translateX(5px);
+    color: #3533cd;
+  }
+
+  .feature-list li:hover::before {
+    transform: scale(1.1);
+  }
+
+  /* Section header styling */
+  .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .cat-title {
+    color: #3533cd;
+    font-size: 18px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .section-title {
+    font-size: 36px;
+    line-height: 1.3;
+    color: #1F2937;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 1200px) {
+    .technology-items {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .technology-items {
+      grid-template-columns: 1fr;
+      padding: 0 16px;
+    }
+    
+    .technology-item {
+      padding: 24px;
+    }
+    
+    .section-title {
+      font-size: 28px;
+    }
+  }
+  </style>
+
+  <div class="section-header">
+    <h6 class="cat-title">Our technology</h6>
+    <h2 class="section-title">The future of secure, lightning-fast financial messaging and cross-border payments</h2>
+  </div>
+
+  <div class="technology-items">
+    <!-- Keep existing technology items with their current content -->
+    // ... existing technology items ...
+  </div>
+</div>
+
+// ... rest of the code ...
+```
+
+The changes will:
+1. Add proper grid layout
+2. Improve spacing and alignment
+3. Add animations and hover effects
+4. Make the section responsive
+5. Add better typography and visual hierarchy
+6. Keep all existing content but improve its presentation
+
+Let me know if you need any adjustments to the styling!
+
+---
+
+_**User**_
+
+apply chage sto file all the times.. dont suggets just the chnage spls.
+
+---
+
+_**Assistant**_
+
+I understand you want me to apply the changes directly to the file. Let me help with that:
+
+```html:index.html
+// ... existing code ...
+
+<div class="technology-content">
+  <div class="section-header">
+    <h6 class="cat-title">Our technology</h6>
+    <h2 class="section-title">The future of secure, lightning-fast financial messaging and cross-border payments</h2>
+  </div>
+
+  <div class="technology-items">
+    <!-- Cross-Border Payments Section -->
+    <div class="technology-item technology-item-1">
+      <h6 class="item-title">🌍 Cross-Border Payments – Instant & Cost-Effective</h6>
+      <div class="item-desc">
+        <ul class="feature-list">
+          <li>Low Fees: Near-zero transaction costs compared to traditional banking</li>
+          <li>Real-Time Settlement: Payments settle in seconds, not days</li>
+          <li>Multi-Asset Support: Transact with XDC, FXD, CGO, stablecoins, and tokenized assets</li>
+          <li>ISO 20022 Compliant: Ensures seamless integration with global financial institutions</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Custody Solutions Section -->
+    <div class="technology-item technology-item-2">
+      <h6 class="item-title">🔐 Custody Solutions – Secure & Institutional-Grade</h6>
+      <div class="item-desc">
+        <ul class="feature-list">
+          <li>Enterprise-Grade Security: Fully compliant custodial & non-custodial solutions</li>
+          <li>Hybrid Custody Model: Options for self-custody, institutional wallets, or MPC</li>
+          <li>Regulatory Compliance: Designed for banks, fintechs, and enterprises handling digital assets</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- On & Off-Ramping Section -->
+    <div class="technology-item technology-item-3">
+      <h6 class="item-title">💳 On & Off-Ramping – Seamless Fiat Integration</h6>
+      <div class="item-desc">
+        <ul class="feature-list">
+          <li>Convert Crypto to Fiat with Ease: Instant onboarding & offboarding</li>
+          <li>Multi-Currency Support: Bank wires, e-wallets, and mobile payments in 100+ countries</li>
+          <li>Partnered with Licensed Providers: Ensuring regulatory compliance and security</li>
+          <li>ISO 20022 Messaging Integration: Bridges traditional finance with blockchain</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Merchant Payments Section -->
+    <div class="technology-item technology-item-4">
+      <h6 class="item-title">🛒 Merchant Payments – Instant Settlements for Businesses</h6>
+      <div class="item-desc">
+        <ul class="feature-list">
+          <li>Accept Crypto & Stablecoins Easily – No middlemen, direct transactions</li>
+          <li>Faster than Card Payments – No chargebacks or delays</li>
+          <li>Smart Invoice Processing – Automated payments via smart contracts</li>
+          <li>POS & E-commerce Integration – Connects with retail & online stores</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ISO 20022 Section -->
+    <div class="technology-item technology-item-5">
+      <h6 class="item-title">📡 ISO 20022 Messaging Platform – A Game Changer for Global Finance</h6>
+      <div class="item-desc">
+        <ul class="feature-list">
+          <li>Seamless B2B Messaging: Connects banks, corporates, and financial institutions</li>
+          <li>Interoperability with TradFi: Compatible with SWIFT, RTGS, and messaging networks</li>
+          <li>Instant Settlement with Digital Assets: Enables faster, more efficient transactions</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* Technology section layout and styling */
+.technology-content {
+  padding: 40px 0;
+  background: #F4FAFF;
+  border-radius: 24px;
+}
+
+.technology-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Card styling with animations */
+.technology-item {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 16px;
+  padding: 32px;
+  height: 100%;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover effects and animations */
+.technology-item:hover {
+  border-color: #3533cd;
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(53, 51, 205, 0.1);
+}
+
+.technology-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #3533cd, #4644de);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.technology-item:hover::before {
+  transform: scaleX(1);
+}
+
+/* Title styling */
+.technology-item .item-title {
+  font-size: 24px;
+  line-height: 1.4;
+  font-weight: 600;
+  color: #3533cd;
+  margin-bottom: 24px;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.technology-item .item-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: #3533cd;
+}
+
+/* Feature list styling */
+.feature-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.feature-list li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 16px;
+  line-height: 1.6;
+  color: #4B5563;
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+
+.feature-list li:before {
+  content: "🔹";
+  position: absolute;
+  left: 0;
+  transform: scale(0.9);
+  transition: transform 0.2s ease;
+}
+
+.feature-list li:hover {
+  transform: translateX(5px);
+  color: #3533cd;
+}
+
+.feature-list li:hover::before {
+  transform: scale(1.1);
+}
+
+/* Section header styling */
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.cat-title {
+  color: #3533cd;
+  font-size: 18px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section-title {
+  font-size: 36px;
+  line-height: 1.3;
+  color: #1F2937;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .technology-items {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .technology-items {
+    grid-template-columns: 1fr;
+    padding: 0 16px;
+  }
+  
+  .technology-item {
+    padding: 24px;
+  }
+  
+  .section-title {
+    font-size: 28px;
+  }
+}
+</style>
+
+// ... rest of existing code ...
+```
+
+This update includes:
+1. Complete technology section with grid layout
+2. All styling improvements
+3. Animations and hover effects
+4. Responsive design
+5. Section header with proper styling
+6. All technology items with their content
+
+Let me know if you need any adjustments!
+
+---
+
+_**User**_
+
+can you make header and footer background dark coour and asjust foints accdoonrly
+
+---
+
+_**Assistant**_
+
+
+
+I'll help update the header and footer styles to have dark backgrounds and adjust the fonts accordingly:
+
+```html:index.html
+<style>
+/* Header styling */
+.header {
+  background: #1a1a2e;
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.header__logo img {
+  height: 40px;
+  width: auto;
+}
+
+.header__navigation .menu-primary-menu-container ul > li > a {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.header__navigation .menu-primary-menu-container ul > li:hover > a {
+  color: #3533cd;
+}
+
+.submenu-wide-container {
+  background: #242444;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.submenu-wide-container-link .sub-menu-text {
+  color: #ffffff;
+}
+
+.submenu-wide-container-link:hover {
+  background: rgba(53, 51, 205, 0.1);
+}
+
+/* Footer styling */
+.footer {
+  background: #1a1a2e;
+  padding: 60px 0;
+  color: #ffffff;
+}
+
+.footer__logo img {
+  height: 40px;
+  width: auto;
+  margin-bottom: 20px;
+}
+
+.footer-menu-wrap ul li a {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.8;
+  transition: color 0.2s ease;
+}
+
+.footer-menu-wrap ul li a:hover {
+  color: #3533cd;
+}
+
+.footer__social-links a {
+  color: #ffffff;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.footer__social-links a:hover {
+  opacity: 1;
+}
+
+.footer__company-contact {
+  color: rgba(255,255,255,0.8);
+}
+
+/* Social icons in footer */
+.social-links__icon svg path {
+  fill: #ffffff;
+}
+
+/* Dark theme adjustments */
+.submenu-wide-container-child {
+  background: #242444;
+}
+
+.sub-menu-desc {
+  color: rgba(255,255,255,0.7);
+}
+
+/* Menu icon for mobile */
+.header-menu-icon span {
+  background: #ffffff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .header {
+    padding: 10px 0;
+  }
+  
+  .footer {
+    padding: 40px 0;
+  }
+}
+</style>
+```
+
+This update will:
+1. Set dark backgrounds for header and footer
+2. Adjust text colors to be readable on dark backgrounds
+3. Add proper hover states for menu items
+4. Style dropdown menus with dark theme
+5. Update social icons to be visible
+6. Make the header fixed for better navigation
+7. Add smooth transitions
+8. Ensure mobile responsiveness
+9. Improve dropdown menu visibility
+10. Keep branding consistent
+
+Let me know if you'd like any adjustments to the colors or styling!
+
+---
+
+_**User**_
+
+updat the code
+
+---
+
+_**Assistant**_
+
+
+
+I'll help update the header and footer styles in the index.html file:
+
+```html:index.html
+// ... existing code ...
+
+<!-- Add these styles after existing styles -->
+<style>
+/* Header styling */
+.header {
+  background: #1a1a2e !important;
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.header__logo img {
+  height: 40px;
+  width: auto;
+}
+
+.header__navigation .menu-primary-menu-container ul > li > a {
+  color: #ffffff !important;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.header__navigation .menu-primary-menu-container ul > li:hover > a {
+  color: #3533cd !important;
+}
+
+.submenu-wide-container {
+  background: #242444 !important;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.submenu-wide-container-link .sub-menu-text {
+  color: #ffffff !important;
+}
+
+.submenu-wide-container-link:hover {
+  background: rgba(53, 51, 205, 0.1);
+}
+
+/* Footer styling */
+.footer, .site-footer {
+  background: #1a1a2e !important;
+  padding: 60px 0;
+  color: #ffffff !important;
+}
+
+.footer__logo img {
+  height: 40px;
+  width: auto;
+  margin-bottom: 20px;
+}
+
+.footer-menu-wrap ul li a {
+  color: #ffffff !important;
+  font-size: 16px;
+  line-height: 1.8;
+  transition: color 0.2s ease;
+}
+
+.footer-menu-wrap ul li a:hover {
+  color: #3533cd !important;
+}
+
+.footer__social-links a {
+  color: #ffffff;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.footer__social-links a:hover {
+  opacity: 1;
+}
+
+.footer__company-contact {
+  color: rgba(255,255,255,0.8) !important;
+}
+
+/* Social icons in footer */
+.social-links__icon svg path {
+  fill: #ffffff !important;
+}
+
+/* Dark theme adjustments */
+.submenu-wide-container-child {
+  background: #242444 !important;
+}
+
+.sub-menu-desc {
+  color: rgba(255,255,255,0.7) !important;
+}
+
+/* Menu icon for mobile */
+.header-menu-icon span {
+  background: #ffffff !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .header {
+    padding: 10px 0;
+  }
+  
+  .footer {
+    padding: 40px 0;
+  }
+}
+
+/* Additional dark theme adjustments */
+.header__navigation .menu-primary-menu-container {
+  background: #1a1a2e !important;
+}
+
+.submenu.level-2 {
+  background: #242444 !important;
+}
+
+.menu-item-icon img {
+  filter: brightness(2);
+}
+
+.arrow::before {
+  border-color: #ffffff !important;
+}
+
+.header.light-header {
+  background: #1a1a2e !important;
+}
+
+.header.light-header .menu-primary-menu-container ul > li > a {
+  color: #ffffff !important;
+}
+</style>
+
+// ... rest of the code ...
+```
+
+This update:
+1. Forces dark background on header and footer with !important
+2. Makes text white and readable
+3. Adds hover effects in blue
+4. Styles dropdown menus in dark theme
+5. Updates mobile menu styling
+6. Brightens menu icons
+7. Adjusts arrow colors
+8. Makes header fixed
+9. Adds subtle border to header
+10. Ensures consistent dark theme across all header states
+
+Let me know if you'd like any adjustments to the colors or styling!
+
+---
+
+_**User**_
+
+chnage colour of menu and submenu to white colour
+
+---
+
+_**Assistant**_
+
+
+
+I'll help update the menu and submenu text colors to white. Here's the update:
+
+```html:index.html
+<style>
+/* Menu text colors */
+.header__navigation .menu-primary-menu-container ul > li > a,
+.submenu-wide-container-link .sub-menu-text,
+.sub-menu-desc,
+.menu-link {
+  color: #ffffff !important;
+}
+
+/* Submenu styling */
+.submenu.level-1,
+.submenu.level-2,
+.submenu-wide-container,
+.submenu-wide-container-child {
+  background: #1a1a2e !important;
+}
+
+/* Menu hover states */
+.header__navigation .menu-primary-menu-container ul > li:hover > a,
+.submenu-wide-container-link:hover .sub-menu-text,
+.menu-link:hover {
+  color: #3533cd !important;
+  opacity: 0.9;
+}
+
+/* Mobile menu */
+@media (max-width: 992px) {
+  .header__navigation {
+    background: #1a1a2e !important;
+  }
+  
+  .header-menu-icon span {
+    background: #ffffff !important;
+  }
+  
+  .submenu.level-1,
+  .submenu.level-2 {
+    background: #1a1a2e !important;
+  }
+}
+
+/* Arrow color */
+.arrow::before {
+  border-color: #ffffff !important;
+}
+
+/* Menu icons */
+.menu-item-icon img {
+  filter: brightness(2);
+}
+
+/* Active menu item */
+.header__navigation .menu-primary-menu-container ul > li.active > a {
+  color: #3533cd !important;
+}
+</style>
+```
+
+This update will:
+1. Make all menu text white
+2. Keep dark background for menus
+3. Add blue hover effect
+4. Style dropdown menus consistently
+5. Update mobile menu colors
+6. Make menu arrows white
+7. Brighten menu icons
+8. Style active menu items
+
+Let me know if you'd like any adjustments to the colors!
+
+---
+
+_**User**_
+
+submenu like custody solutions ISO20022 are still not white in colour and hovering effet is ont roepr... chekc and apply changes
+
+---
+
+_**Assistant**_
+
+
+
+I'll help update the submenu colors and hover effects. Here's the fix:
+
+```html:index.html
+<style>
+/* Submenu text and hover colors */
+.submenu-wide-container-link .sub-menu-text,
+.submenu-wide-container-desc .sub-menu-text,
+.sub-menu-desc,
+.submenu.level-2 a {
+  color: #ffffff !important;
+}
+
+/* Submenu hover effects */
+.submenu-wide-container-link:hover,
+.submenu-wide-container-link.active {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.submenu-wide-container-link:hover .sub-menu-text,
+.submenu-wide-container-link.active .sub-menu-text,
+.submenu.level-2 a:hover {
+  color: #3533cd !important;
+  opacity: 1;
+}
+
+/* Submenu background colors */
+.submenu-wide-container,
+.submenu-wide-container-child,
+.submenu.level-2 {
+  background: #1a1a2e !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Submenu description text */
+.submenu-wide-container-desc .sub-menu-desc {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Menu icons in submenu */
+.menu-item-icon img,
+.menu-item-main_icon img {
+  filter: brightness(2);
+}
+
+/* Mobile submenu adjustments */
+@media (max-width: 992px) {
+  .submenu.level-2,
+  .submenu-wide-container {
+    background: #1a1a2e !important;
+  }
+  
+  .submenu-wide-container-link {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+</style>
+```
+
+This update will:
+1. Make all submenu text white
+2. Add proper hover effects with blue color
+3. Fix submenu backgrounds to dark color
+4. Add subtle borders and shadows
+5. Brighten menu icons
+6. Improve mobile menu appearance
+7. Add proper transitions
+8. Fix submenu descriptions opacity
+9. Ensure consistent styling across all menu levels
+10. Add proper spacing and borders
+
+Let me know if you need any adjustments!
+
+---
+
+_**User**_
+
+still not working
+
+---
+
+_**Assistant**_
+
+
+
+Let me help fix the submenu colors and hover effects. Here's the updated CSS:
+
+```html:index.html
+<style>
+/* Override all submenu text colors */
+.submenu-wide-container-link .sub-menu-text,
+.submenu-wide-container-desc .sub-menu-text,
+.submenu-wide-container-desc .sub-menu-desc,
+.menu-link,
+.sub-menu-text,
+.sub-menu-desc {
+  color: #ffffff !important;
+}
+
+/* Fix submenu background */
+.submenu-wide-container,
+.submenu-wide-container-child,
+.submenu.level-2,
+.submenu.level-1 {
+  background-color: #1a1a2e !important;
+}
+
+/* Fix hover effects */
+.submenu-wide-container-link:hover,
+.submenu-wide-container-link.active {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.submenu-wide-container-link:hover .sub-menu-text,
+.submenu-wide-container-link.active .sub-menu-text,
+.menu-link:hover {
+  color: #3533cd !important;
+}
+
+/* Fix submenu icons */
+.menu-item-icon img,
+.menu-item-main_icon img {
+  filter: brightness(10);
+}
+
+/* Fix mobile menu */
+@media (max-width: 992px) {
+  .header__navigation,
+  .submenu.level-1,
+  .submenu.level-2,
+  .submenu-wide-container {
+    background: #1a1a2e !important;
+  }
+  
+  .menu-link,
+  .sub-menu-text {
+    color: #ffffff !important;
+  }
+  
+  .header-menu-icon span {
+    background: #ffffff !important;
+  }
+}
+
+/* Fix arrow colors */
+.arrow::before,
+.arrow-dropdown::before {
+  border-color: #ffffff !important;
+}
+
+/* Fix active states */
+.submenu-wide-container-link.active .sub-menu-text {
+  color: #3533cd !important;
+}
+
+/* Fix submenu borders */
+.submenu-wide-container {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+</style>
+```
+
+This update:
+1. Forces white color on all submenu text
+2. Fixes submenu background color
+3. Improves hover effects
+4. Makes menu icons visible
+5. Fixes mobile menu colors
+6. Updates arrow colors
+7. Fixes active states
+8. Adds proper borders
+9. Ensures consistent styling
+10. Uses !important to override existing styles
+
+Let me know if you need any adjustments!
+
+---
+
+_**User**_
+
+change submenus back to light colour
+
+---
+
+_**Assistant**_
+
+
+
+
+
+I'll help update the submenu colors back to light color while keeping the main menu dark. Here's the fix:
+
+```html:index.html
+<style>
+/* Main menu styling - dark */
+.header {
+  background: #1a1a2e !important;
+}
+
+.header__navigation .menu-primary-menu-container ul > li > a {
+  color: #ffffff !important;
+}
+
+/* Submenu styling - light */
+.submenu-wide-container,
+.submenu-wide-container-child,
+.submenu.level-2 {
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+/* Submenu text colors */
+.submenu-wide-container-link .sub-menu-text,
+.submenu-wide-container-desc .sub-menu-text,
+.submenu-wide-container-desc .sub-menu-desc,
+.sub-menu-text,
+.sub-menu-desc {
+  color: #1a1a2e !important;
+}
+
+/* Submenu hover effects */
+.submenu-wide-container-link:hover,
+.submenu-wide-container-link.active {
+  background: rgba(53, 51, 205, 0.05) !important;
+}
+
+.submenu-wide-container-link:hover .sub-menu-text,
+.submenu-wide-container-link.active .sub-menu-text {
+  color: #3533cd !important;
+}
+
+/* Menu icons in light submenu */
+.menu-item-icon img,
+.menu-item-main_icon img {
+  filter: none;
+}
+
+/* Mobile menu adjustments */
+@media (max-width: 992px) {
+  .header__navigation {
+    background: #1a1a2e !important;
+  }
+  
+  .submenu.level-1,
+  .submenu.level-2,
+  .submenu-wide-container {
+    background: #ffffff !important;
+  }
+  
+  .submenu-wide-container-link {
+    border-bottom: 1px solid #e5e7eb;
+  }
+}
+</style>
+```
+
+
+This update will:
+1. Keep the main header dark
+2. Make submenus light colored
+3. Use dark text in submenus
+4. Add subtle hover effects
+5. Fix menu icons for light background
+6. Add proper borders and shadows
+7. Maintain mobile menu functionality
+8. Keep consistent styling
+9. Improve readability
+10. Fix submenu transitions
+
+Let me know if you need any adjustments!
+
+---
+
+_**User**_
+
+submenu should display line by line but without wrap
+
+---
+
+_**Assistant**_
+
+
+
+I'll help update the submenu styling to display items in a line without wrapping. Here's the fix:
+
+```html:index.html
+<style>
+/* Submenu container styling */
+.submenu-wide-container {
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  min-width: 280px;
+  padding: 12px 0;
+}
+
+/* Submenu links layout */
+.submenu-wide-container-links {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.submenu-wide-container-link {
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+/* Submenu text styling */
+.submenu-wide-container-link .sub-menu-text {
+  color: #1a1a2e !important;
+  font-size: 16px;
+  margin-left: 12px;
+}
+
+/* Submenu hover effects */
+.submenu-wide-container-link:hover {
+  background: rgba(53, 51, 205, 0.05) !important;
+}
+
+.submenu-wide-container-link:hover .sub-menu-text {
+  color: #3533cd !important;
+}
+
+/* Menu icons */
+.menu-item-icon {
+  display: flex;
+  align-items: center;
+  width: 24px;
+}
+
+.menu-item-icon img {
+  width: 100%;
+  height: auto;
+}
+
+/* Active submenu item */
+.submenu-wide-container-link.active {
+  background: rgba(53, 51, 205, 0.05) !important;
+}
+
+.submenu-wide-container-link.active .sub-menu-text {
+  color: #3533cd !important;
+}
+</style>
+```
+
+This update will:
+1. Display submenu items in a vertical list
+2. Prevent text wrapping with white-space: nowrap
+3. Add proper spacing and alignment
+4. Keep consistent icon sizing
+5. Improve hover effects
+6. Fix active state styling
+7. Add smooth transitions
+8. Maintain proper padding
+9. Keep light background
+10. Add subtle shadows
+
+Let me know if you need any adjustments!
+
+---
+
+_**User**_
+
+menu options ar ot visbile on mbile.. can you check theme elated issue
+
+---
+
+_**Assistant**_
+
+I'll help fix the mobile menu visibility issue. Here's the update:
+
+```html:index.html
+<style>
+/* Mobile menu fixes */
+@media (max-width: 992px) {
+  /* Fix mobile menu background and visibility */
+  .header__navigation.open {
+    display: block !important;
+    background: #ffffff !important;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+    z-index: 1000;
+  }
+
+  /* Fix submenu container on mobile */
+  .submenu.level-1,
+  .submenu.level-2,
+  .submenu-wide-container {
+    background: #ffffff !important;
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
+
+  /* Fix menu items visibility and styling */
+  .submenu-wide-container-link {
+    display: flex !important;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  /* Fix menu text colors for mobile */
+  .submenu-wide-container-link .sub-menu-text,
+  .menu-link,
+  .header__navigation .menu-primary-menu-container ul > li > a {
+    color: #1a1a2e !important;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  /* Fix menu toggle button */
+  .header-menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .header-menu-icon span {
+    background: #ffffff !important;
+  }
+
+  /* Fix submenu arrows */
+  .arrow,
+  .arrow-dropdown {
+    border-color: #1a1a2e !important;
+  }
+
+  /* Fix menu icons */
+  .menu-item-icon img {
+    filter: none;
+    width: 24px;
+    height: 24px;
+  }
+
+  /* Fix active states */
+  .submenu-wide-container-link.active,
+  .submenu-wide-container-link:hover {
+    background: rgba(53, 51, 205, 0.05) !important;
+  }
+
+  /* Fix submenu layout */
+  .submenu-wide-container-links {
+    display: block !important;
+    width: 100%;
+  }
+
+  /* Ensure submenus are visible when parent is clicked */
+  .has-submenu.open > .submenu {
+    display: block !important;
+  }
+}
+</style>
+```
+
+This update will:
+1. Fix mobile menu visibility
+2. Ensure proper background colors
+3. Fix menu item spacing and alignment
+4. Make text readable
+5. Fix menu toggle functionality
+6. Ensure proper submenu display
+7. Fix icon visibility
+8. Improve touch targets
+9. Add proper hover states
+10. Fix menu hierarchy
+
+Let me know if you need any adjustments!
+
+---
+
+_**User**_
+
+Still menu and submeny otions is not visible on mobile view
+
+---
+
+_**Assistant**_
+
+Let me help fix the mobile menu visibility issues. Here's the updated CSS:
+
+```html:index.html
+<style>
+/* Mobile menu fixes */
+@media (max-width: 992px) {
+  /* Show menu icon */
+  .header-menu-icon {
+    display: block !important;
+    position: relative;
+    width: 30px;
+    height: 25px;
+    margin-left: auto;
+    z-index: 1001;
+  }
+
+  .header-menu-icon span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #ffffff;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+  }
+
+  .header-menu-icon span:nth-child(1) { top: 0px; }
+  .header-menu-icon span:nth-child(2) { top: 10px; }
+  .header-menu-icon span:nth-child(3) { top: 20px; }
+
+  /* Mobile navigation container */
+  .header__navigation {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: #ffffff !important;
+    overflow-y: auto;
+    z-index: 1000;
+    padding: 20px 0;
+  }
+
+  /* Show navigation when open class is added */
+  .header__navigation.open {
+    display: block !important;
+  }
+
+  /* Main menu items */
+  .navigation-primary > ul > li {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .navigation-primary > ul > li > a {
+    display: block;
+    padding: 15px 20px;
+    color: #1a1a2e !important;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  /* Submenu container */
+  .submenu.level-2,
+  .submenu-wide-container {
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: #f8f9fa !important;
+  }
+
+  /* Hide submenus by default */
+  .submenu {
+    display: none;
+  }
+
+  /* Show submenu when parent is active */
+  .has-submenu.active > .submenu {
+    display: block !important;
+  }
+
+  /* Submenu links */
+  .submenu-wide-container-link {
+    padding: 12px 20px 12px 40px !important;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .submenu-wide-container-link .sub-menu-text {
+    color: #1a1a2e !important;
+    font-size: 14px;
+  }
+
+  /* Menu arrows */
+  .arrow, .arrow-dropdown {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+  }
+
+  .has-submenu.active > a > .arrow {
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  /* Menu icons */
+  .menu-item-icon {
+    width: 20px;
+    margin-right: 10px;
+  }
+
+  /* Fix button alignment */
+  .header__navigation .cta_button {
+    margin: 20px;
+    width: calc(100% - 40px);
+    text-align: center;
+  }
+}
+</style>
+
+<script>
+// Add this JavaScript to handle mobile menu toggling
+$(document).ready(function() {
+  $('.header-menu-icon').click(function() {
+    $('.header__navigation').toggleClass('open');
+    $(this).toggleClass('active');
+  });
+
+  $('.has-submenu > a').click(function(e) {
+    if (window.innerWidth <= 992) {
+      e.preventDefault();
+      $(this).parent().toggleClass('active');
+    }
+  });
+});
+</script>
+```
+
+This update will:
+1. Fix mobile menu toggle button visibility and functionality
+2. Ensure proper display of main menu items
+3. Fix submenu visibility and nesting
+4. Add proper spacing and borders
+5. Improve menu item touch targets
+6. Fix menu arrows and icons
+7. Add smooth transitions
+8. Handle submenu toggling
+9. Fix button placement
+10. Add proper JavaScript handlers for menu interaction
+
+The key changes are:
+- Making the menu toggle button visible and functional
+- Ensuring submenus are properly nested and toggleable
+- Adding proper event handlers for menu interaction
+- Fixing the menu hierarchy and visibility
+- Improving the mobile UI/UX
+
+Let me know if you need any adjustments!
+
+---
+
+_**User**_
+
+in mobile view only Our offereing emnu is shoing but not collapsed and XDC networ menu is not able to expand
+
+---
+
+_**Assistant**_
+
+
+
+Let me help fix the mobile menu issues. We need to update the JavaScript and CSS to properly handle all menu items including "XDC Network". Here's the fix:
+
+```html:index.html
+<style>
+/* Mobile menu fixes */
+@media (max-width: 992px) {
+  /* Fix menu visibility */
+  .header__navigation {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: #ffffff !important;
+    overflow-y: auto;
+    z-index: 1000;
+    padding: 20px 0;
+  }
+
+  /* Show all menu items */
+  .navigation-primary > ul {
+    display: block !important;
+    width: 100%;
+  }
+
+  /* Fix submenu visibility */
+  .submenu.level-1,
+  .submenu.level-2,
+  .submenu-wide-container {
+    display: none;
+    width: 100% !important;
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+  }
+
+  /* Show submenu when active */
+  .has-submenu.active > .submenu,
+  .has-submenu.active > .submenu-wide-container {
+    display: block !important;
+  }
+
+  /* Fix menu item styling */
+  .navigation-primary > ul > li > a,
+  .submenu-wide-container-link {
+    display: block;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e5e7eb;
+    color: #1a1a2e !important;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+  }
+
+  /* Fix arrow indicators */
+  .arrow, 
+  .arrow-dropdown {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #1a1a2e;
+    border-bottom: 2px solid #1a1a2e;
+    transform: translateY(-50%) rotate(45deg);
+    transition: transform 0.3s ease;
+  }
+
+  .has-submenu.active > a > .arrow,
+  .has-submenu.active > a > .arrow-dropdown {
+    transform: translateY(-50%) rotate(-135deg);
+  }
+}
+</style>
+
+<script>
+// Updated JavaScript for mobile menu handling
+$(document).ready(function() {
+  // Toggle mobile menu
+  $('.header-menu-icon').click(function() {
+    $('.header__navigation').toggleClass('open');
+    $(this).toggleClass('active');
+  });
+
+  // Handle all menu items with submenus
+  $('.has-submenu > a, .submenu-wide-container-parent > a').click(function(e) {
+    if (window.innerWidth <= 992) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      // Toggle active class on parent
+      $(this).parent().toggleClass('active');
+      
+      // Toggle submenu visibility
+      let submenu = $(this).parent().find('.submenu, .submenu-wide-container').first();
+      submenu.slideToggle(300);
+      
+      // Close other open submenus
+      $('.has-submenu.active').not($(this).parent()).removeClass('active')
+        .find('.submenu, .submenu-wide-container').slideUp(300);
+    }
+  });
+
+  // Reset menu state on window resize
+  $(window).resize(function() {
+    if (window.innerWidth > 992) {
+      $('.submenu, .submenu-wide-container').removeAttr('style');
+      $('.has-submenu').removeClass('active');
+    }
+  });
+});
+</script>
+```
+
+This update will:
+1. Fix the visibility of all menu items on mobile
+2. Properly handle submenu toggling for both "Our Offerings" and "XDC Network"
+3. Add smooth animations for menu transitions
+4. Improve arrow indicators
+5. Fix menu item styling
+6. Handle menu state on window resize
+7. Close other open menus when opening a new one
+8. Fix submenu positioning
+9. Add proper touch targets
+10. Improve overall mobile menu UX
+
+Let me know if you need any adjustments!
+
+---
+
+_**User**_
+
+Both menu are visble now but submenus are not showing while expanding
+
+---
+
+_**Assistant**_
+
+
+
+Let me help fix the submenu expansion issue. The problem seems to be with the submenu selectors and event handling. Here's the updated code:
+
+```html:index.html
+<style>
+/* Mobile menu fixes */
+@media (max-width: 992px) {
+  /* Fix submenu visibility and nesting */
+  .submenu-wide-container,
+  .submenu.level-2 {
+    display: none;
+    position: static !important;
+    width: 100% !important;
+    background: #f8f9fa !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Fix submenu links */
+  .submenu-wide-container-link {
+    padding: 12px 20px 12px 40px !important;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  /* Fix submenu container */
+  .submenu-wide-container-links {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  /* Fix menu arrows */
+  .arrow, 
+  .arrow-dropdown {
+    border-color: #ffffff !important;
+  }
+
+  /* Fix submenu text */
+  .submenu-wide-container-link .sub-menu-text {
+    color: #1a1a2e !important;
+    font-size: 14px;
+    padding-left: 15px;
+  }
+}
+</style>
+
+<script>
+$(document).ready(function() {
+  // Toggle mobile menu
+  $('.header-menu-icon').click(function() {
+    $('.header__navigation').toggleClass('open');
+  });
+
+  // Handle menu item clicks
+  $('.has-submenu > a, .submenu-wide-container-parent > a').click(function(e) {
+    if (window.innerWidth <= 992) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      var $parent = $(this).parent();
+      var $submenu = $parent.find('.submenu-wide-container, .submenu.level-2').first();
+      
+      // Toggle active class
+      $parent.toggleClass('active');
+      
+      // Toggle submenu with animation
+      $submenu.slideToggle(300);
+      
+      // Close other open submenus
+      $('.has-submenu.active').not($parent).each(function() {
+        $(this).removeClass('active');
+        $(this).find('.submenu-wide-container, .submenu.level-2').slideUp(300);
+      });
+    }
+  });
+
+  // Handle window resize
+  $(window).on('resize', function() {
+    if (window.innerWidth > 992) {
+      // Reset mobile menu states
+      $('.header__navigation').removeClass('open');
+      $('.has-submenu').removeClass('active');
+      $('.submenu-wide-container, .submenu.level-2').removeAttr('style');
+    }
+  });
+});
+</script>
+```
+
+Key changes:
+1. Fixed submenu visibility and display properties
+2. Improved submenu container styling
+3. Fixed submenu link padding and alignment
+4. Updated event handlers to target correct elements
+5. Added proper animation for submenu toggling
+6. Fixed menu arrow colors
+7. Improved submenu text styling
+8. Added proper event propagation handling
+9. Fixed submenu nesting issues
+10. Added proper reset on window resize
+
+Let me know if you need any adjustments!
+
+---
+
+_**User**_
+
+still submenus not visble on mobile broswers
+
+---
+
+_**Assistant**_
+
+
+
+Let me help fix the submenu visibility issue. The problem seems to be with the menu structure and event handling. Here's the updated code:
+
+```html:index.html
+<style>
+/* Mobile menu fixes */
+@media (max-width: 992px) {
+  /* Navigation container */
+  .header__navigation {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: #ffffff !important;
+    overflow-y: auto;
+    z-index: 1000;
+  
+
+---
+
+_**User**_
+
+and no opton to expand
+
+---
+
+_**Assistant**_
+
+
+
+Let me help fix both the submenu visibility and expansion issues. Here's the corrected code:
+
+```html:index.html
+<style>
+/* Mobile menu fixes */
+@media (max-width: 992px) {
+  /* Main menu container */
+  .header__navigation {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: #ffffff !important;
+    overflow-y: auto;
+    z-index: 1000;
+  }
+
+  .header__navigation.open {
+    display: block !important;
+  }
+
+  /* Main menu items */
+  .navigation-primary > ul > li {
+    display: block;
+    width: 100%;
+  }
+
+  /* Submenu containers */
+  .submenu-wide-container,
+  .submenu.level-2 {
+    display: none;
+    width: 100% !important;
+    position: static !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+    border: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+  }
+
+  /* Menu items styling */
+  .menu-link,
+  .submenu-wide-container-link {
+    display: block !important;
+    padding: 15px 20px !important;
+    border-bottom: 1px solid #e5e7eb;
+    position: relative;
+  }
+
+  /* Arrow indicators */
+  .arrow,
+  .arrow-dropdown {
+    position: absolute !important;
+    right: 15px !important;
+    top: 50% !important;
+    width: 10px !important;
+    height: 10px !important;
+    border-right: 2px solid #1a1a2e !important;
+    border-bottom: 2px solid #1a1a2e !important;
+    transform: translateY(-50%) rotate(45deg) !important;
+    transition: transform 0.3s ease !important;
+    pointer-events: none;
+  }
+
+  /* Active state for arrows */
+  .has-submenu.active > a > .arrow,
+  .has-submenu.active > a > .arrow-dropdown {
+    transform: translateY(-50%) rotate(-135deg) !important;
+  }
+
+  /* Submenu text */
+  .sub-menu-text {
+    color: #1a1a2e !important;
+    font-size: 16px;
+  }
+}
+</style>
+
+<script>
+$(document).ready(function() {
+  // Toggle mobile menu
+  $('.header-menu-icon').click(function() {
+    $('.header__navigation').toggleClass('open');
+  });
+
+  // Handle submenu toggles
+  $('.has-submenu > a, .submenu-wide-container-parent > a').click(function(e) {
+    if (window.innerWidth <= 992) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      var $parent = $(this).closest('.has-submenu, .submenu-wide-container-parent');
+      var $submenu = $parent.find('.submenu-wide-container, .submenu.level-2').first();
+      
+      // Toggle active class and slide submenu
+      $parent.toggleClass('active');
+      $submenu.slideToggle(300);
+      
+      // Close other open submenus
+      $('.has-submenu.active, .submenu-wide-container-parent.active').not($parent).each(function() {
+        $(this).removeClass('active');
+        $(this).find('.submenu-wide-container, .submenu.level-2').slideUp(300);
+      });
+    }
+  });
+
+  // Reset menu state on window resize
+  $(window).on('resize', function() {
+    if (window.innerWidth > 992) {
+      $('.header__navigation').removeClass('open');
+      $('.has-submenu, .submenu-wide-container-parent').removeClass('active');
+      $('.submenu-wide-container, .submenu.level-2').removeAttr('style');
+    }
+  });
+});
+</script>
+```
+
+Key changes:
+1. Fixed submenu container visibility
+2. Added proper arrow indicators
+3. Improved click handling for menu items
+4. Fixed menu item styling
+5. Added proper transitions
+6. Improved submenu toggling
+7. Fixed menu hierarchy
+8. Added proper event delegation
+9. Fixed mobile menu state management
+10. Added proper reset on window resize
+
+Let me know if you need any adjustments!
+
+---
+
+_**User**_
+
+can you change the menu and submenu style only for mobile broswer view and make it proepr visblilty and collpase
+
+---
+
+_**Assistant**_
+
+
+
+I'll help fix the mobile menu and submenu styling. Here's the updated code focusing only on mobile view:
+
+```html:index.html
+<style>
+/* Mobile Menu Styles */
+@media (max-width: 992px) {
+  /* Menu toggle button */
+  .header-menu-icon {
+    display: block !important;
+    width: 30px;
+    height: 22px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .header-menu-icon span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #ffffff;
+    transition: .25s ease-in-out;
+  }
+
+  .header-menu-icon span:nth-child(1) { top: 0; }
+  .header-menu-icon span:nth-child(2) { top: 10px; }
+  .header-menu-icon span:nth-child(3) { top: 20px; }
+
+  /* Main navigation container */
+  .header__navigation {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: #ffffff !important;
+    overflow-y: auto;
+    z-index: 999;
+  }
+
+  .header__navigation.open {
+    display: block;
+  }
+
+  /* Main menu items */
+  .navigation-primary > ul > li {
+    display: block;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .navigation-primary > ul > li > a {
+    display: block;
+    padding: 15px 20px;
+    color: #1a1a2e !important;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+  }
+
+  /* Submenu container */
+  .submenu-wide-container {
+    display: none;
+    position: static !important;
+    width: 100% !important;
+    background: #f8f9fa !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+  }
+
+  /* Submenu items */
+  .submenu-wide-container-link {
+    display: block !important;
+    padding: 12px 20px 12px 40px !important;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .submenu-wide-container-link .sub-menu-text {
+    color: #1a1a2e !important;
+    font-size: 14px;
+  }
+
+  /* Arrow indicators */
+  .arrow, 
+  .arrow-dropdown {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #1a1a2e;
+    border-bottom: 2px solid #1a1a2e;
+    transform: translateY(-50%) rotate(45deg);
+    transition: transform 0.3s ease;
+  }
+
+  /* Active states */
+  .has-submenu.active > a > .arrow {
+    transform: translateY(-50%) rotate(-135deg);
+  }
+
+  .submenu-wide-container-link:hover,
+  .submenu-wide-container-link.active {
+    background: rgba(53, 51, 205, 0.05) !important;
+  }
+
+  /* Hide desktop-specific elements */
+  .submenu-wide-container-desc,
+  .submenu-wide-container-child {
+    display: none !important;
+  }
+}
+</style>
+
+<script>
+$(document).ready(function() {
+  if (window.innerWidth <= 992) {
+    // Toggle mobile menu
+    $('.header-menu-icon').click(function() {
+      $(this).toggleClass('active');
+      $('.header__navigation').toggleClass('open');
+    });
+
+    // Handle submenu toggles
+    $('.has-submenu > a').click(function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      var $parent = $(this).parent();
+      var $submenu = $parent.find('.submenu-wide-container').first();
+      
+      // Close other open submenus
+      $('.has-submenu.active').not($parent).each(function() {
+        $(this).removeClass('active');
+        $(this).find('.submenu-wide-container').slideUp(300);
+      });
+
+      // Toggle current submenu
+      $parent.toggleClass('active');
+      $submenu.slideToggle(300);
+    });
+  }
+
+  // Reset on window resize
+  $(window).resize(function() {
+    if (window.innerWidth > 992) {
+      $('.header__navigation').removeClass('open');
+      $('.has-submenu').removeClass('active');
+      $('.submenu-wide-container').removeAttr('style');
+    }
+  });
+});
+</script>
+```
+
+Key changes:
+1. Simplified mobile menu structure
+2. Improved toggle button styling
+3. Fixed submenu visibility and collapse
+4. Added proper transitions and animations
+5. Improved touch targets
+6. Fixed menu hierarchy
+7. Added clear active states
+8. Improved arrow indicators
+9. Fixed spacing and alignment
+10. Added proper event handling
+
+Let me know if you need any adjustments!
+
+---
+
+_**User**_
+
+click on menu items submenu is not visble on mobilebroswer
+
+---
+
+_**Assistant**_
+
+
+
+Let me help fix the submenu visibility issue on mobile. The problem seems to be with the event handling and submenu selectors. Here's the corrected code:
+
+```html:index.html
+<style>
+/* Mobile menu fixes */
+@media (max-width: 992px) {
+  /* Main menu container */
+  .header__navigation {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: #ffffff !important;
+    overflow-y: auto;
+    z-index: 1000;
+  }
+
+  .header__navigation.open {
+    display: block !important;
+  }
+
+  /* Main menu items */
+  .navigation-primary > ul > li {
+    display: block;
+    width: 100%;
+  }
+
+  /* Submenu container */
+  .submenu-wide-container,
+  .submenu.level-2 {
+    display: none;
+    width: 100% !important;
+    background: #f8f9fa !important;
+    padding: 0 !important;
+  }
+
+  /* Menu items */
+  .menu-link,
+  .submenu-wide-container-link {
+    display: block !important;
+    padding: 15px 20px !important;
+    border-bottom: 1px solid #e5e7eb;
+    color: #1a1a2e !important;
+    position: relative;
+  }
+
+  /* Arrow indicators */
+  .arrow,
+  .arrow-dropdown {
+    position: absolute !important;
+    right: 15px !important;
+    top: 50% !important;
+    width: 8px !important;
+    height: 8px !important;
+    border-right: 2px solid #1a1a2e !important;
+    border-bottom: 2px solid #1a1a2e !important;
+    transform: translateY(-50%) rotate(45deg) !important;
+    transition: transform 0.3s ease !important;
+  }
+
+  /* Active states */
+  .has-submenu.active > a > .arrow {
+    transform: translateY(-50%) rotate(-135deg) !important;
+  }
+}
+</style>
+
+<script>
+$(document).ready(function() {
+  // Toggle mobile menu
+  $('.header-menu-icon').click(function() {
+    $('.header__navigation').toggleClass('open');
+  });
+
+  // Handle all menu items with submenus
+  $('.navigation-primary .has-submenu > a').click(function(e) {
+    if (window.innerWidth <= 992) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      var $parent = $(this).closest('.has-submenu');
+      var $submenu = $parent.find('.submenu-wide-container').first();
+      
+      // Toggle active class
+      $parent.toggleClass('active');
+      
+      // Toggle submenu with animation
+      if ($parent.hasClass('active')) {
+        $submenu.slideDown(300);
+      } else {
+        $submenu.slideUp(300);
+      }
+      
+      // Close other open submenus
+      $('.has-submenu.active').not($parent).each(function() {
+        $(this).removeClass('active');
+        $(this).find('.submenu-wide-container').slideUp(300);
+      });
+    }
+  });
+
+  // Reset menu state on window resize
+  $(window).on('resize', function() {
+    if (window.innerWidth > 992) {
+      $('.header__navigation').removeClass('open');
+      $('.has-submenu').removeClass('active');
+      $('.submenu-wide-container').css('display', '');
+    }
+  });
+});
+</script>
+```
+
+Key changes:
+1. Simplified menu structure
+2. Fixed submenu selectors
+3. Added proper event delegation
+4. Improved submenu toggling
+5. Fixed animation handling
+6. Added proper active states
+7. Fixed arrow indicators
+8. Improved menu visibility
+9. Added proper event bubbling prevention
+10. Fixed menu state management
+
+Let me know if you need any adjustments!
+
+---
+
+_**User**_
+
+can you show menu i n any other ways with proper submenu n mobile browser.. still menu o exmaonind..
+
+---
+
+_**Assistant**_
+
+
+
+
+
+I'll help create a simpler and more reliable mobile menu structure. Here's the updated code:
+
+```html:index.html
+<style>
+/* Mobile Menu Styles - New Version */
+@media (max-width: 992px) {
+  /* Menu toggle button */
+  .header-menu-icon {
+    display: block !important;
+    width: 30px;
+    height: 24px;
+    position: relative;
+    margin-left: auto;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .header-menu-icon span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #ffffff;
+    left: 0;
+    transition: .25s ease-in-out;
+  }
+
+  .header-menu-icon span:nth-child(1) { top: 0; }
+  .header-menu-icon span:nth-child(2) { top: 10px; }
+  .header-menu-icon span:nth-child(3) { top: 20px; }
+
+  /* Mobile navigation */
+  .header__navigation {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: #ffffff !important;
+    overflow-y: auto;
+    padding: 20px 0;
+    z-index: 1000;
+  }
+
+  .header__navigation.open {
+    display: block;
+  }
+
+  /* Main menu items */
+  .navigation-primary > ul {
+    display: block;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navigation-primary > ul > li {
+    display: block;
+    margin: 0;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .navigation-primary > ul > li > a {
+    display: block;
+    padding: 15px 20px;
+    color: #1a1a2e !important;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+  }
+
+  /* Submenu styles */
+  .submenu-wide-container {
+    display: none;
+    background: #f8f9fa !important;
+    padding: 0 !important;
+  }
+
+  .submenu-wide-container-links {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .submenu-wide-container-link {
+    display: block !important;
+    padding: 12px 20px 12px 40px !important;
+    border-bottom: 1px solid #e5e7eb;
+    background: #f8f9fa;
+  }
+
+  .submenu-wide-container-link .sub-menu-text {
+    color: #1a1a2e !important;
+    font-size: 14px;
+  }
+
+  /* Arrow indicator */
+  .has-submenu > a:after {
+    content: '';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #1a1a2e;
+    border-bottom: 2px solid #1a1a2e;
+    transform: translateY(-50%) rotate(45deg);
+    transition: transform 0.3s ease;
+  }
+
+  .has-submenu.active > a:after {
+    transform: translateY(-50%) rotate(-135deg);
+  }
+
+  /* Active states */
+  .submenu-wide-container-link:hover,
+  .submenu-wide-container-link.active {
+    background: rgba(53, 51, 205, 0.05) !important;
+  }
+}
+</style>
+
+<script>
+$(document).ready(function() {
+  // Toggle mobile menu
+  $('.header-menu-icon').click(function() {
+    $(this).toggleClass('active');
+    $('.header__navigation').toggleClass('open');
+  });
+
+  // Handle menu items with submenus
+  $('.has-submenu > a').click(function(e) {
+    if (window.innerWidth <= 992) {
+      e.preventDefault();
+      
+      var $menuItem = $(this).parent();
+      var $submenu = $menuItem.find('.submenu-wide-container');
+      
+      if ($menuItem.hasClass('active')) {
+        // Close this submenu
+        $menuItem.removeClass('active');
+        $submenu.slideUp(300);
+      } else {
+        // Close other submenus
+        $('.has-submenu.active').removeClass('active')
+          .find('.submenu-wide-container').slideUp(300);
+        
+        // Open this submenu
+        $menuItem.addClass('active');
+        $submenu.slideDown(300);
+      }
+    }
+  });
+
+  // Close menu on window resize
+  $(window).resize(function() {
+    if (window.innerWidth > 992) {
+      $('.header-menu-icon').removeClass('active');
+      $('.header__navigation').removeClass('open');
+      $('.has-submenu').removeClass('active');
+      $('.submenu-wide-container').removeAttr('style');
+    }
+  });
+});
+</script>
+```
+
+Key improvements:
+1. Simplified menu structure
+2. Clearer submenu expansion/collapse
+3. Better touch targets
+4. Improved visual hierarchy
+5. Smoother animations
+6. Better arrow indicators
+7. More reliable event handling
+8. Cleaner styling
+9. Better state management
+10. Improved mobile UX
+
+The main changes are:
+- Simplified HTML structure
+- More reliable click handling
+- Clearer visual feedback
+- Better submenu animations
+- Improved mobile-specific styling
+
+Let me know if you need any adjustments!
+
+---
+
+_**User**_
+
+perfect. our offeeings is working fine. can you apply same for next menu XDC network also
+
+---
+
+_**Assistant**_
+
+
+
+
+
+I'll help update the code to make the XDC Network menu work the same way as Our Offerings. Here's the fix:
+
+```html:index.html
+<style>
+/* Mobile Menu Styles - Updated */
+@media (max-width: 992px) {
+  /* Submenu styles - updated to include level-2 */
+  .submenu-wide-container,
+  .submenu.level-2 {
+    display: none;
+    background: #f8f9fa !important;
+    padding: 0 !important;
+  }
+
+  /* Submenu items - updated selectors */
+  .submenu-wide-container-link,
+  .submenu.level-2 > li > a {
+    display: block !important;
+    padding: 12px 20px 12px 40px !important;
+    border-bottom: 1px solid #e5e7eb;
+    background: #f8f9fa;
+  }
+
+  .submenu-wide-container-link .sub-menu-text,
+  .submenu.level-2 > li > a {
+    color: #1a1a2e !important;
+    font-size: 14px;
+  }
+
+  /* Arrow indicator - updated selectors */
+  .has-submenu > a:after,
+  .submenu-wide-container-parent > a:after {
+    content: '';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #1a1a2e;
+    border-bottom: 2px solid #1a1a2e;
+    transform: translateY(-50%) rotate(45deg);
+    transition: transform 0.3s ease;
+  }
+
+  .has-submenu.active > a:after,
+  .submenu-wide-container-parent.active > a:after {
+    transform: translateY(-50%) rotate(-135deg);
+  }
+
+  /* Active states - updated selectors */
+  .submenu-wide-container-link:hover,
+  .submenu-wide-container-link.active,
+  .submenu.level-2 > li > a:hover {
+    background: rgba(53, 51, 205, 0.05) !important;
+  }
+}
+</style>
+
+<script>
+$(document).ready(function() {
+  // Toggle mobile menu
+  $('.header-menu-icon').click(function() {
+    $(this).toggleClass('active');
+    $('.header__navigation').toggleClass('open');
+  });
+
+  // Handle all menu items with submenus
+  $('.has-submenu > a, .submenu-wide-container-parent > a').click(function(e) {
+    if (window.innerWidth <= 992) {
+      e.preventDefault();
+      
+      var $menuItem = $(this).parent();
+      var $submenu = $menuItem.find('.submenu-wide-container, .submenu.level-2').first();
+      
+      if ($menuItem.hasClass('active')) {
+        // Close this submenu
+        $menuItem.removeClass('active');
+        $submenu.slideUp(300);
+      } else {
+        // Close other open submenus
+        $('.has-submenu.active, .submenu-wide-container-parent.active').not($menuItem).each(function() {
+          $(this).removeClass('active');
+          $(this).find('.submenu-wide-container, .submenu.level-2').slideUp(300);
+        });
+        
+        // Open this submenu
+        $menuItem.addClass('active');
+        $submenu.slideDown(300);
+      }
+    }
+  });
+
+  // Close menu on window resize
+  $(window).resize(function() {
+    if (window.innerWidth > 992) {
+      $('.header-menu-icon').removeClass('active');
+      $('.header__navigation').removeClass('open');
+      $('.has-submenu, .submenu-wide-container-parent').removeClass('active');
+      $('.submenu-wide-container, .submenu.level-2').removeAttr('style');
+    }
+  });
+});
+</script>
+```
+
+Key changes:
+1. Added support for `.submenu.level-2` elements
+2. Updated selectors to handle both menu types
+3. Added arrow indicators for both menu types
+4. Fixed hover and active states for all menu items
+5. Updated click handlers to work with both menu structures
+6. Improved submenu animations
+7. Fixed menu state management
+8. Added proper event delegation
+9. Improved mobile UX
+10. Fixed menu hierarchy
+
+Let me know if you need any adjustments!
+
+---
+
+_**User**_
+
+can you make XDC network menu option to navigate to @https://xinfin.org/  and remove al other submenus
+
+---
+
+_**Assistant**_
+
+
+
+
+
+I'll help update the XDC Network menu to directly link to xinfin.org and remove its submenus. Here's the fix:
+
+```html:index.html
+<style>
+/* Update XDC Network menu link */
+@media (max-width: 992px) {
+  /* Remove submenu arrow for XDC Network */
+  .navigation-primary > ul > li.xdc-network > a:after {
+    display: none !important;
+  }
+  
+  /* Remove submenu container for XDC Network */
+  .xdc-network .submenu-wide-container,
+  .xdc-network .submenu.level-2 {
+    display: none !important;
+  }
+}
+</style>
+
+<script>
+$(document).ready(function() {
+  // Remove submenu classes and add direct link for XDC Network
+  $('.navigation-primary > ul > li').each(function() {
+    if($(this).find('a:first').text().trim().toLowerCase().includes('xdc network')) {
+      $(this).removeClass('has-submenu submenu-wide-container-parent');
+      $(this).addClass('xdc-network');
+      $(this).find('a:first').attr('href', 'https://xinfin.org/');
+      $(this).find('.submenu-wide-container, .submenu.level-2').remove();
+      
+      // Remove click event handler for this item
+      $(this).find('a:first').unbind('click').click(function(e) {
+        if (window.innerWidth <= 992) {
+          window.location.href = 'https://xinfin.org/';
+        }
+      });
+    }
+  });
+});
+</script>
+```
+
+This update will:
+1. Remove submenu functionality from XDC Network menu item
+2. Add direct link to xinfin.org
+3. Remove submenu arrow indicator
+4. Remove submenu containers
+5. Clean up menu classes
+6. Ensure proper mobile navigation
+7. Keep other menu items unchanged
+8. Maintain mobile menu styling
+9. Remove unnecessary event handlers
+10. Improve user experience
+
+Let me know if you need any adjustments!
+
+---
+
+
+
+---
+
